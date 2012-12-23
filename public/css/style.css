@@ -1,37 +1,197 @@
-body {
-    padding-top: 60px;
-    padding-bottom: 40px;
+/* ---------------------------------------------------------------------------------------------- */
+/* -----| GENERAL |------------------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------------------------------- */
+
+.scrolled #site-containter {
+    padding-top: 64px;
 }
 
-.zf-green {
-    color: #68b604;
+/* ---------------------------------------------------------------------------------------------- */
+/* -----| HEADER |------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+
+#site-header {
+    background-color: #FAFAFA;
+    background-image: linear-gradient(to bottom, #FFFFFF, #F2F2F2);
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #D4D4D4;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
-.btn-success {
-  background-color: #57a900;
-  background-image: -moz-linear-gradient(top, #70d900, #57a900);
-  background-image: -ms-linear-gradient(top, #70d900, #57a900);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#70d900), to(#57a900));
-  background-image: -webkit-linear-gradient(top, #70d900, #57a900);
-  background-image: -o-linear-gradient(top, #70d900, #57a900);
-  background-image: linear-gradient(top, #70d900, #57a900);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#70d900', endColorstr='#57a900', GradientType=0);
+#site-title {
+    color: #777;
+    display: inline-block;
+    float: left;
+    font-size: 28px;
+    text-decoration: none;
 }
 
-.btn-success:hover,
-.btn-success:active,
-.btn-success.active,
-.btn-success.disabled,
-.btn-success[disabled] {
-  background-color: #57a900;
+#site-title:hover {
+    text-decoration: none;
 }
 
-.btn-success:active, .btn-success.active {
-  background-color: #57a900;
+#social-buttons a {
+    color: #777;
+    display: inline-block;
+    float: left;
+    font-size: 20px;
+    padding: 5px;
+    text-decoration: none;
 }
 
-div.container a.brand {
-    background: url("../images/zf2-logo.png") no-repeat scroll 0 10px transparent;
-    margin-left: 0;
-    padding: 8px 20px 12px 40px;
+#download-btn {
+    margin-left: 12px;
+}
+
+
+/* ---------------------------------------------------------------------------------------------- */
+/* -----| NAVIGATION |--------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+
+#site-navigation {
+    background-color: #333;
+    border-radius: 4px;
+    display: block;
+    margin: 0 0 20px;
+}
+
+#site-navigation li {
+    list-style: none;
+    float: left;
+}
+
+#site-navigation li a {
+    color: #FFF;
+    display: block;
+    padding: 12px;
+}
+
+#site-navigation li:first-child a {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.scrolled #site-navigation li:first-child a {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 4px;
+}
+
+#site-navigation li:last-child {
+    float: right;
+}
+
+#site-navigation li:last-child a {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.scrolled #site-navigation li:last-child a {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 4px;
+}
+
+#site-navigation li a:hover {
+    background-color: #232323;
+    text-decoration: none;
+}
+
+#page-top-link {
+    display: none;
+    font-size: 16px;
+}
+
+.scrolled #site-navigation {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    position: fixed;
+    width: 940px;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* ---------------------------------------------------------------------------------------------- */
+/* -----| CONTENT |------------------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------------------------------- */
+
+#site-content {}
+
+.content-section {
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+.content-section h2 {
+    font-size: 1.4em;
+    line-height: normal;
+    border-bottom: 1px solid #CCC;
+}
+
+.content-section ul,
+.content-section ol {
+    padding-left: 20px;
+}
+
+
+/* ---------------------------------------------------------------------------------------------- */
+/* -----| SIDE BAR |----------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+
+#side-bar > *:last-child {
+    margin-bottom: 0;
+}
+
+.side-box {
+    background-color: #EEE;
+    border-radius: 3px;
+    text-align: justify;
+    padding: 3px;
+    margin-bottom: 20px;
+}
+
+.side-box-inner {
+    background-color: #FFF;
+    border: 1px solid #CCC;
+    padding: 10px;
+}
+
+.side-box-inner > *:first-child {
+    margin-top: 0;
+}
+
+.side-box-inner > *:last-child {
+    margin-bottom: 0;
+}
+
+.side-box h3 {
+    font-size: 1em;
+    line-height: normal;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 5px;
+}
+
+.side-box h3 small {
+    float: right;
+    font-size: .9em;
+    line-height: normal;
+    margin-top: 1px;
+}
+
+.side-box p {
+    font-size: .9em;
+    line-height: normal;
+}
+
+
+/* ---------------------------------------------------------------------------------------------- */
+/* -----| FOOTER |------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+
+#site-footer {
+    color: #777;
+    font-size: 0.9em;
+    margin: 0.25em 0;
+    text-align: center;
 }
