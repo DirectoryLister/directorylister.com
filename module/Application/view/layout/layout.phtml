@@ -33,12 +33,12 @@
                 
                 <div class="pull-right">
                     <span id="social-buttons">
-                        <a href="https://github.com/DirectoryLister/DirectoryLister/"><i class="icon-github-alt"></i></a>
-                        <a href="https://twitter.com/directorylister"><i class="icon-twitter"></i></a>
-                        <a href="https://plus.google.com/communities/112615185904533662084"><i class="icon-google-plus-sign"></i></a>
+                        <a href="https://github.com/DirectoryLister/DirectoryLister/" rel="tooltip" title="Follow on GitHub" data-placement="bottom"><i class="icon-github-alt"></i></a>
+                        <a href="https://twitter.com/directorylister" rel="tooltip" title="Follow on Twitter" data-placement="bottom"><i class="icon-twitter"></i></a>
+                        <a href="https://plus.google.com/communities/112615185904533662084" rel="tooltip" title="Follow on Google+" data-placement="bottom"><i class="icon-google-plus-sign"></i></a>
                     </span>
                 
-                    <a href="#dlModal" data-toggle="modal" id="download-btn" class="btn btn-info pull-right"><i class="icon-download-alt"></i> Download</a>
+                    <a href="#dlModal"id="download-btn" class="btn btn-info pull-right" data-toggle="modal"><i class="icon-download-alt"></i> Download</a>
                 </div>
             
             </div>
@@ -52,37 +52,7 @@
             <div id="side-bar" class="span3">
                 <div id="side-bar-inner" data-spy="affix">
                 
-                    <ul id="site-navigation" class="nav nav-pills nav-stacked">
-                        <li><a href="#intro">Introduction</a></li>
-                        <li><a href="#instal">Installation</a></li>
-                        <li><a href="#troubleshooting">Troubleshooting</a></li>
-                        <li><a href="#faq">F.A.Q.</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                    
-                    <div class="side-box">
-                        <div class="side-box-inner">
-                            <h3>Follow Development</h3>
-                            <p>Follow development or contribute to Directory Lister on <a href="https://github.com/DirectoryLister">GitHub</a>,
-                            the social coding platform.</p>
-                            
-                            <center>
-                                <iframe src="http://ghbtns.com/github-btn.html?user=DirectoryLister&repo=DirectoryLister&type=watch&count=true"
-                                allowtransparency="true" frameborder="0" scrolling="0" width="90" height="20"></iframe>
-                                
-                                <iframe src="http://ghbtns.com/github-btn.html?user=DirectoryLister&repo=DirectoryLister&type=fork&count=true"
-                                allowtransparency="true" frameborder="0" scrolling="0" width="90" height="20"></iframe>
-                            </center>
-                            
-                        </div>
-                    </div>
-                    
-                    <div class="side-box">
-                        <div class="side-box-inner">
-                            <h3>Share Directory Lister</h3>
-                            <p>Promote Directory Lister through your favorite social networks!</p>
-                        </div>
-                    </div>
+                    <?php echo $this->partial('partial/sideBar.phtml'); ?>
                 
                 </div>
             </div>
@@ -102,27 +72,7 @@
             
         </div>
         
-        <div id="dlModal" class="modal fade hide">
-            
-            <div class="modal-header">
-                <a class="close" data-dismiss="modal">×</a>
-                <h3>Download Directory Lister <small>v2.0.4</small></h3>
-            </div>
-            
-            <div class="modal-body">
-                <center>
-                    <a href="#" class="btn btn-info btn-large"><i class="icon-download-alt"></i> Download zip</a>
-                    &nbsp;&nbsp;
-                    <a href="#" class="btn btn-info btn-large"><i class="icon-download-alt"></i> Download tar.gz</a>
-                </center>
-                
-                <hr/>
-                
-                <p>Tag list here...</p>
-                
-            </div>
-            
-        </div>
+        <?php echo $this->partial('partial/dlModal.phtml', array('tags' => $this->tags)); ?>
         
     </div>
     

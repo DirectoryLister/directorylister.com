@@ -31,6 +31,21 @@ body {
 
 
 /* ---------------------------------------------------------------------------------------------- */
+/* -----| NAVIGATION |--------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------------------------------- */
+
+#site-navigation i {
+    float: right;
+    margin-top: 6px;
+}
+
+#site-navigation li.active a {
+    background-color: #08C;
+    color: #FFF;
+}
+
+
+/* ---------------------------------------------------------------------------------------------- */
 /* -----| SIDE BAR |----------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------- */
 
@@ -50,17 +65,19 @@ body {
     margin-bottom: 20px;
 }
 
-.side-box-inner {
+.side-box .side-box-inner {
     background-color: #FFF;
     border: 1px solid #CCC;
+    border-radius: 0;
+    margin: none;
     padding: 10px;
 }
 
-.side-box-inner > *:first-child {
+.side-box .side-box-inner > *:first-child {
     margin-top: 0;
 }
 
-.side-box-inner > *:last-child {
+.side-box .side-box-inner > *:last-child {
     margin-bottom: 0;
 }
 
@@ -90,8 +107,12 @@ body {
 
 #site-content {}
 
+.hero-unit {
+    margin: 0;
+}
+
 .content-section {
-    margin-bottom: 50px;
+    padding: 50px 0 0;
     text-align: justify;
 }
 
@@ -115,7 +136,7 @@ body {
     border-top: 1px solid #CCC;
     color: #777;
     font-size: 0.9em;
-    margin: 20px 0 0;
+    margin: 50px 0 0;
     padding: 10px;
     text-align: center;
 }
