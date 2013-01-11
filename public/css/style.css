@@ -10,12 +10,18 @@ body {
 /* -----| HEADER |------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------- */
 
+#social-buttons {
+    margin-top: 5px;
+    display: inline-block;
+}
+
 #social-buttons a {
     color: #777;
     display: inline-block;
     float: left;
-    font-size: 20px;
+    font-size: 18px;
     padding: 5px;
+    margin: 0 2px;
     text-decoration: none;
 }
 
