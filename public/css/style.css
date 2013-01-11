@@ -2,36 +2,13 @@
 /* -----| GENERAL |------------------------------------------------------------------------------ */
 /* ---------------------------------------------------------------------------------------------- */
 
-.scrolled #site-containter {
-    padding-top: 64px;
+body {
+    padding-top: 60px;
 }
 
 /* ---------------------------------------------------------------------------------------------- */
 /* -----| HEADER |------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------- */
-
-#site-header {
-    background-color: #FAFAFA;
-    background-image: linear-gradient(to bottom, #FFFFFF, #F2F2F2);
-    background-repeat: repeat-x;
-    border-bottom: 1px solid #D4D4D4;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 10px;
-}
-
-#site-title {
-    color: #777;
-    display: inline-block;
-    float: left;
-    font-size: 24px;
-    line-height: normal;
-    text-decoration: none;
-}
-
-#site-title:hover {
-    text-decoration: none;
-}
 
 #social-buttons a {
     color: #777;
@@ -48,97 +25,12 @@
 
 
 /* ---------------------------------------------------------------------------------------------- */
-/* -----| NAVIGATION |--------------------------------------------------------------------------- */
-/* ---------------------------------------------------------------------------------------------- */
-
-#site-navigation {
-    background-color: #333;
-    border-radius: 4px;
-    display: block;
-    margin: 0 0 20px;
-}
-
-#site-navigation li {
-    list-style: none;
-    float: left;
-}
-
-#site-navigation li a {
-    color: #FFF;
-    display: block;
-    padding: 12px;
-}
-
-#site-navigation li:first-child a {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-}
-
-.scrolled #site-navigation li:first-child a {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 4px;
-}
-
-#site-navigation li:last-child {
-    float: right;
-}
-
-#site-navigation li:last-child a {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-
-.scrolled #site-navigation li:last-child a {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 4px;
-}
-
-#site-navigation li a:hover {
-    background-color: #232323;
-    text-decoration: none;
-}
-
-#page-top-link {
-    display: none;
-    font-size: 16px;
-}
-
-.scrolled #site-navigation {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    position: fixed;
-    width: 940px;
-    top: 0;
-    z-index: 1000;
-}
-
-
-/* ---------------------------------------------------------------------------------------------- */
-/* -----| CONTENT |------------------------------------------------------------------------------ */
-/* ---------------------------------------------------------------------------------------------- */
-
-#site-content {}
-
-.content-section {
-    margin-bottom: 50px;
-    text-align: justify;
-}
-
-.content-section h2 {
-    font-size: 1.4em;
-    line-height: normal;
-    border-bottom: 1px solid #CCC;
-}
-
-.content-section ul,
-.content-section ol {
-    padding-left: 20px;
-}
-
-
-/* ---------------------------------------------------------------------------------------------- */
 /* -----| SIDE BAR |----------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------- */
+
+#side-bar-inner {
+    width: 220px;
+}
 
 #side-bar > *:last-child {
     margin-bottom: 0;
@@ -183,6 +75,29 @@
 .side-box p {
     font-size: .9em;
     line-height: normal;
+}
+
+
+/* ---------------------------------------------------------------------------------------------- */
+/* -----| CONTENT |------------------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------------------------------- */
+
+#site-content {}
+
+.content-section {
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+.content-section h2 {
+    font-size: 1.4em;
+    line-height: normal;
+    border-bottom: 1px solid #CCC;
+}
+
+.content-section ul,
+.content-section ol {
+    padding-left: 20px;
 }
 
 
