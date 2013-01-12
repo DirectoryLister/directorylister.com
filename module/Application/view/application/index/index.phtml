@@ -1,55 +1,110 @@
-<div class="hero-unit">
-    <center>
-        <h2>The Simple Web Directory Lister</h2>
-        <a href="#" class="btn btn-large btn-success">View the Demo</a>
-    </center>
-</div>
+<div class="row">
+            
+            <div id="side-bar" class="span3">
+                <div id="side-bar-inner" data-spy="affix">
+                    
+                    <div  id="page-navigation">
+                        <ul class="nav nav-tabs nav-stacked">
+                            <li><a href="#intro">Introduction <i class="icon-angle-right"></i></a></li>
+                            <li><a href="#install">Installation <i class="icon-angle-right"></i></a></li>
+                            <li><a href="#troubleshooting">Troubleshooting <i class="icon-angle-right"></i></a></li>
+                            <li><a href="#faq">F.A.Q. <i class="icon-angle-right"></i></a></li>
+                            <li><a href="#contact">Contact <i class="icon-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="side-box">
+                        <div class="side-box-inner">
+                            <h3>Follow Development</h3>
+                            <p>Follow development or contribute to Directory Lister on <a href="https://github.com/DirectoryLister">GitHub</a>,
+                            the social coding platform.</p>
+                            
+                            <center>
+                                <a href="https://github.com/DirectoryLister/DirectoryLister/star" class="btn btn-mini">
+                                    <i class="icon-github icon-large"></i> Star
+                                </a>
+                                <a href="https://github.com/DirectoryLister/DirectoryLister/stargazers" class="badge badge-info">
+                                    <?php echo $stargazers; ?>
+                                </a>
+                                
+                                &nbsp;&nbsp;
+                                
+                                <a href="https://github.com/DirectoryLister/DirectoryLister" class="btn btn-mini">
+                                    <i class="icon-github icon-large"></i> Fork
+                                </a>
+                                <a href="https://github.com/DirectoryLister/DirectoryLister/network" class="badge badge-info">
+                                    <?php echo $forks; ?>
+                                </a>
+                            </center>
+                        </div>
+                    </div>
+                    
+                    <div class="side-box">
+                        <div class="side-box-inner">
+                            <h3>Share Directory Lister</h3>
+                            <p>Promote Directory Lister through your favorite social networks!</p>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
 
-<div id="site-content">
-    
-    <div id="intro" class="content-section">
-        <h2>Introduction</h2>
-        <p>Directory Lister is a simple PHP based script created to let you list the contents of
-        a directory and all it's sub-directories and allow you to navigate there within. Just
-        download and install Directory Lister to any web directory and have immediate access to
-        all files and sub-directories under that directory.</p>
-         
-        <p>We have extensively tested Directory Lister with all major browsers (and several
-        non-major ones) to ensure the best experience to the maximum number of users. This 
-        ensures you and your users, no matter what browser they're using, will have the best
-        possible experience when using Directory Lister.</p>
-     
-    </div>
-    
-    <div id="install" class="content-section">
-        <h2>Installation</h2>
-        <p>The process to install Directory Lister is simple:</p>
-        
-        <ol>
-            <li><a href="http://www.directorylister.com.dev/#dlModal" data-toggle="modal">Download</a> and extract directory lister</li>
-            <li>Upload index.php and the resources folder to your server in the folder you want listed</li>
-            <li>Upload additional files to the same directory as index.php</li>
-            <li>Use your web browser to navigate to the URL for the directory</li>
-        </ol>
-
-        <p>That's it! You should now see a listing of the contents of that directory.</p>
-    </div>
-    
-    <div id="troubleshooting" class="content-section">
-        <h2>Troubleshooting</h2>
-        <p>Content...</p>
-    </div>
-    
-    
-    <div id="faq" class="content-section">
-        <h2>Frequently Asked Questions</h2>
-        <p>Content...</p>
-    </div>
-    
-    
-    <div id="contact" class="content-section">
-        <h2>Contact Info</h2>
-        <p>Content...</p>
-    </div>
-    
-</div>
+            <div id="page-content" class="span9">
+                
+                <div class="hero-unit">
+                    <center>
+                        <h2>The Simple Web Directory Lister</h2>
+                        <a href="#" class="btn btn-large btn-success">View the Demo</a>
+                    </center>
+                </div>
+                
+                    
+                <div id="intro" class="content-section">
+                    <h2>Introduction</h2>
+                    <p>Directory Lister is a simple PHP based script created to let you list the contents of
+                    a directory and all it's sub-directories and allow you to navigate there within. Just
+                    download and install Directory Lister to any web directory and have immediate access to
+                    all files and sub-directories under that directory.</p>
+                     
+                    <p>We have extensively tested Directory Lister with all major browsers (and several
+                    non-major ones) to ensure the best experience to the maximum number of users. This 
+                    ensures you and your users, no matter what browser they're using, will have the best
+                    possible experience when using Directory Lister.</p>
+                 
+                </div>
+                
+                <div id="install" class="content-section">
+                    <h2>Installation</h2>
+                    <p>The process to install Directory Lister is simple:</p>
+                    
+                    <ol>
+                        <li><a href="http://www.directorylister.com.dev/#dlModal" data-toggle="modal">Download</a> and extract directory lister</li>
+                        <li>Upload index.php and the resources folder to your server in the folder you want listed</li>
+                        <li>Upload additional files to the same directory as index.php</li>
+                        <li>Use your web browser to navigate to the URL for the directory</li>
+                    </ol>
+            
+                    <p>That's it! You should now see a listing of the contents of that directory.</p>
+                </div>
+                
+                <div id="troubleshooting" class="content-section">
+                    <h2>Troubleshooting</h2>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu nisi ac enim feugiat accumsan sit amet ac nisi. Phasellus sit amet nibh metus. Vestibulum nulla elit, sagittis a eleifend quis, vehicula fermentum urna. Vestibulum feugiat, lorem vitae condimentum mattis, felis ipsum pellentesque ligula, non malesuada elit velit sit amet erat. Duis tempus commodo elementum. Phasellus felis velit, hendrerit sed scelerisque malesuada, pellentesque ut risus. Integer laoreet nunc sed leo dapibus at dictum purus varius. Duis eu risus nisl, eu condimentum est.</p>
+                </div>
+                
+                
+                <div id="faq" class="content-section">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Vivamus pharetra lorem elit. Maecenas malesuada dignissim diam ac tincidunt. Nunc in nisl in nisl sagittis pretium. Vestibulum nec convallis libero. Fusce a odio non nulla pulvinar convallis. Integer justo mi, ultricies ac ultricies sed, iaculis vel dui. Duis blandit ligula in odio euismod ullamcorper. Ut elit ante, ultricies vitae ornare vitae, rutrum non elit. </p>
+                </div>
+                
+                
+                <div id="contact" class="content-section">
+                    <h2>Contact Info</h2>
+                    <p>Directory Lister news and updates can be found by following us on Twitter.</p>
+                    <p>To report a bug, visit the issue tracker on Github at: http://github.com/UberGallery/ubergallery/issues</p>
+                </div>
+                    
+            </div>
+            
+        </div>

@@ -16,6 +16,30 @@ class IndexController extends AbstractActionController
 {
     public function indexAction()
     {
-        return new ViewModel();
+        
+        // Instantiate the view object
+        $view = new ViewModel();
+        
+        // Fetch stargazers from GitHub
+        $apiResults = file_get_contents('https://api.github.com/repos/DirectoryLister/DirectoryLister/stargazers');
+        $stargazers = json_decode($apiResults);
+        
+        // Pass stargazer count to the view
+        $view->stargazers = count($stargazers);
+        
+        
+        // Fetch forks from GitHub
+        $apiResults = file_get_contents('https://api.github.com/repos/DirectoryLister/DirectoryLister/forks');
+        $forks      = json_decode($apiResults);
+        
+        // Pass stargazer count to the view
+        $view->forks = count($forks);
+        
+        
+        // // Fetch Github downloads via the Github API
+        // $apiResults = file_get_contents('https://api.github.com/repos/DirectoryLister/DirectoryLister/tags');
+        // $tags       = json_decode($apiResults);
+        
+        return $view;
     }
 }

@@ -22,13 +22,13 @@
     <meta charset="utf-8">
 </head>
 
-<body data-spy="scroll" data-target="#site-navigation">
+<body>
     <div id="site-header" class="navbar navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
             
                 <a href="<?php echo $this->url('home'); ?>" id="site-title" class="brand">
-                    <i class="icon-folder-open"></i> Directory Lister
+                    <i class="icon-folder-open"></i> Directory Lister <?php echo $this->stargazers; ?>
                 </a>
                 
                 <div class="pull-right">
@@ -47,23 +47,7 @@
     
     <div id="site-containter" class="container">
         
-        <div class="row">
-            
-            <div id="side-bar" class="span3">
-                <div id="side-bar-inner" data-spy="affix">
-                
-                    <?php echo $this->partial('partial/sideBar.phtml'); ?>
-                
-                </div>
-            </div>
-
-            <div class="span9">
-                
-                <?php echo $this->content; ?>
-                
-            </div>
-            
-        </div>
+        <?php echo $this->content; ?>
         
         <div id="site-footer">
             
@@ -72,7 +56,7 @@
             
         </div>
         
-        <?php echo $this->partial('partial/dlModal.phtml', array('tags' => $this->tags)); ?>
+        <?php echo $this->partial('partial/dl-modal.phtml', array('tags' => $this->tags)); ?>
         
     </div>
     
