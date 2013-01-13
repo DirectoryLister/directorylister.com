@@ -6,23 +6,51 @@ body {
     padding-top: 60px;
 }
 
+
 /* ---------------------------------------------------------------------------------------------- */
 /* -----| HEADER |------------------------------------------------------------------------------- */
 /* ---------------------------------------------------------------------------------------------- */
+
+#site-title {
+    color: #FFF;
+    font-family: Arvo, serif;
+    letter-spacing: 1.5px;
+}
 
 #social-buttons {
     margin-top: 5px;
     display: inline-block;
 }
 
-#social-buttons a {
-    color: #777;
+#social-buttons {
+    color: #FFF;
+    margin: 6px 0 0;
+}
+
+#social-buttons li {
     display: inline-block;
+    list-style: none;
     float: left;
+}
+
+#social-buttons li.social-btn-title {
+    color: #ACACAC;
+    font-size: .9em;
+    margin: 0 2px;
+    padding: 5px 0;
+}
+
+#social-buttons li a {
+    color: #FFF;
+    display: block;
     font-size: 18px;
     padding: 5px;
     margin: 0 2px;
     text-decoration: none;
+}
+
+#social-buttons li a:hover {
+    color: #CCC;
 }
 
 #download-btn {
@@ -82,17 +110,12 @@ body {
 }
 
 .side-box h3 {
+    font-family: Arvo, serif;
     font-size: 1em;
+    font-weight: normal;
     line-height: normal;
     border-bottom: 1px solid #CCC;
     padding-bottom: 5px;
-}
-
-.side-box h3 small {
-    float: right;
-    font-size: .9em;
-    line-height: normal;
-    margin-top: 1px;
 }
 
 .side-box p {
@@ -115,7 +138,9 @@ body {
 }
 
 .content-section h2 {
-    font-size: 1.4em;
+    font-family: Arvo, serif;
+    font-size: 1.75em;
+    font-weight: normal;
     line-height: normal;
     border-bottom: 1px solid #CCC;
 }

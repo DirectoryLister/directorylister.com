@@ -18,12 +18,15 @@
     <?php $this->headScript()->appendFile($this->basePath() . '/js/directorylister.js'); ?>
     <?php echo $this->headScript(); ?>
     
+    <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    
     <!-- META TAGS -->
     <meta charset="utf-8">
 </head>
 
 <body>
-    <div id="site-header" class="navbar navbar-fixed-top">
+    <div id="site-header" class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
             
@@ -32,11 +35,12 @@
                 </a>
                 
                 <div class="pull-right">
-                    <span id="social-buttons" class="pull-left">
-                        <a href="https://github.com/DirectoryLister/DirectoryLister/" rel="tooltip" title="Follow on GitHub" data-placement="bottom"><i class="icon-github-alt"></i></a>
-                        <a href="https://twitter.com/directorylister" rel="tooltip" title="Follow on Twitter" data-placement="bottom"><i class="icon-twitter"></i></a>
-                        <a href="https://plus.google.com/communities/112615185904533662084" rel="tooltip" title="Follow on Google+" data-placement="bottom"><i class="icon-google-plus-sign"></i></a>
-                    </span>
+                    <ul id="social-buttons" class="pull-left">
+                        <li class="social-btn-title">Follow:</li>
+                        <li><a href="https://github.com/DirectoryLister/DirectoryLister/" id="social-btn-github" title="Follow on GitHub"><i class="icon-github-alt"></i></a></li>
+                        <li><a href="https://twitter.com/directorylister" id="social-btn-twitter" title="Follow on Twitter"><i class="icon-twitter"></i></a></li>
+                        <li><a href="https://plus.google.com/communities/112615185904533662084" id="social-btn-googleplus" title="Follow on Google+"><i class="icon-google-plus-sign"></i></a></li>
+                    </ul>
                 
                     <a href="#dlModal" id="download-btn" class="btn btn-info pull-right" data-toggle="modal"><i class="icon-download-alt"></i> Download</a>
                 </div>
