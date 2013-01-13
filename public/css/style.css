@@ -137,6 +137,10 @@ body {
     text-align: justify;
 }
 
+.content-section > *:last-child {
+    margin-bottom: 0;
+}
+
 .content-section h2 {
     font-family: Arvo, serif;
     font-size: 1.75em;
@@ -148,6 +152,16 @@ body {
 .content-section ul,
 .content-section ol {
     padding-left: 20px;
+}
+
+#feature-list {
+    padding: 20px 30px;
+}
+
+#feature-list h3 {
+    font-family: Arvo, serif;
+    font-weight: normal;
+    line-height: normal;
 }
 
 
