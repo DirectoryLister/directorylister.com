@@ -60,7 +60,8 @@
             
         </div>
         
-        <?php echo $this->partial('partial/dl-modal.phtml', array('tags' => $this->tags)); ?>
+        <?php $children = $this->viewModel()->getCurrent()->getChildren(); $child = $children[0]; ?>
+        <?php echo $this->partial('partial/dl-modal.phtml', array('tags' => $child->tags)); ?>
         
     </div>
     

@@ -18,7 +18,32 @@
         
         <hr/>
         
-        <p>Tag list here...</p>
+        <table id="download-tags" class="table table-striped">
+            
+            <thead>
+                <tr>
+                    <th><i class="icon-tag"></i> Tag</th>
+                    <th><i class="icon-map-marker"></i> Hash</th>
+                    <th colspan="2"><i class="icon-download-alt"></i> Download</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <?php foreach ($this->tags as $tag): ?>
+                    <tr>
+                        <td class="col-tag-name"><?php echo $tag->name; ?></td>
+                        <td class="col-commit-hash">
+                            <a href="<?php echo $tag->commit->url; ?>">
+                                <?php echo substr($tag->commit->sha, 0, 10); ?>
+                            </a>
+                        </td>
+                        <td class="col-zibball"><a href="<?php echo $tag->zipball_url; ?>" class="btn btn-small"><i class="icon-download"></i> zip</a></td>
+                        <td class="col-tarball"><a href="<?php echo $tag->tarball_url; ?>" class="btn btn-small"><i class="icon-download"></i> tar</a></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+            
+        </table>
         
     </div>
 

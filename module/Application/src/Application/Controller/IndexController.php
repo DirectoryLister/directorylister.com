@@ -36,9 +36,13 @@ class IndexController extends AbstractActionController
         $view->forks = count($forks);
         
         
-        // // Fetch Github downloads via the Github API
-        // $apiResults = file_get_contents('https://api.github.com/repos/DirectoryLister/DirectoryLister/tags');
-        // $tags       = json_decode($apiResults);
+        // Fetch tags from GitHub
+        $apiResults = file_get_contents('https://api.github.com/repos/DirectoryLister/DirectoryLister/tags');
+        $tags       = json_decode($apiResults);
+        
+        // Pass tags to the view
+        $view->tags = $tags;
+        
         
         return $view;
     }
