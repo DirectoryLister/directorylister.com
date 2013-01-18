@@ -178,18 +178,25 @@ body {
     width: 15%;
 }
 
+#doanload-tags .col-spacer {
+    width: auto;
+}
+
 #download-tags .col-commit-hash {
+    font-size: .85em;
+    padding: 11px 8px;
     text-align: center;
+    width: 20%;
 }
 
 #download-tags .col-zibball {
     text-align: center;
-    width: 15%
+    width: 10%
 }
 
 #download-tags .col-tarball {
     text-align: center;
-    width: 15%
+    width: 10%
 }
 
 
