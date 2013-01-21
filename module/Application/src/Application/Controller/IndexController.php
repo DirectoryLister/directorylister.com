@@ -11,6 +11,7 @@ namespace Application\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
+use Zend\Cache\StorageFactory;
 
 class IndexController extends AbstractActionController
 {
@@ -20,28 +21,70 @@ class IndexController extends AbstractActionController
         // Instantiate the view object
         $view = new ViewModel();
         
-        // Fetch stargazers from GitHub
-        $apiResults = file_get_contents('https://api.github.com/repos/DirectoryLister/DirectoryLister/stargazers');
-        $stargazers = json_decode($apiResults);
         
-        // Pass stargazer count to the view
-        $view->stargazers = count($stargazers);
+        // Instantiate the cache object
+        $cache = StorageFactory::factory(array(
+            'adapter' => array(
+                'name' => 'filesystem',
+                'options' => array(
+                    'ttl' => 21600 // 6 hours
+                )
+            ),
+            'plugins' => array(
+                'exception_handler' => array('throw_exceptions' => false),
+            )
+        ));
         
         
-        // Fetch forks from GitHub
-        $apiResults = file_get_contents('https://api.github.com/repos/DirectoryLister/DirectoryLister/forks');
-        $forks      = json_decode($apiResults);
+        // Attempt to fetch stargazers from the cache
+        $view->stargazers = $cache->getItem('stargazers', $success);
         
-        // Pass stargazer count to the view
-        $view->forks = count($forks);
+        if (!$success) {
+            
+            // Fetch stargazers from GitHub
+            $apiResults = file_get_contents('https://api.github.com/repos/DirectoryLister/DirectoryLister/stargazers');
+            $stargazers = json_decode($apiResults);
+            
+            // Pass stargazer count to the view
+            $view->stargazers = count($stargazers);
+            
+            $cache->setItem('stargazers', $view->stargazers);
+            
+        }
         
         
-        // Fetch tags from GitHub
-        $apiResults = file_get_contents('https://api.github.com/repos/DirectoryLister/DirectoryLister/tags');
-        $tags       = json_decode($apiResults);
+        // Attempt to fetch forks from the cache
+        $view->forks = $cache->getItem('forks', $success);
         
-        // Pass tags to the view
-        $view->tags = $tags;
+        if (!$success) {
+            
+            // Fetch forks from GitHub
+            $apiResults = file_get_contents('https://api.github.com/repos/DirectoryLister/DirectoryLister/forks');
+            $forks      = json_decode($apiResults);
+            
+            // Pass fork count to the view
+            $view->forks = count($forks);
+            
+            $cache->setItem('forks', $view->forks);
+            
+        }
+        
+        
+        // Attempt to fetch forks from the cache
+        $view->tags = $cache->getItem('tags', $success);
+        
+        if (!$success) {
+            
+            // Fetch tags from GitHub
+            $apiResults = file_get_contents('https://api.github.com/repos/DirectoryLister/DirectoryLister/tags');
+            $tags       = json_decode($apiResults);
+            
+            // Pass tags to the view
+            $view->tags = $tags;
+            
+            $cache->setItem('tags', $view->tags);
+            
+        }
         
         
         return $view;

@@ -35,7 +35,7 @@
                         <td class="col-tag-name"><?php echo $tag->name; ?></td>
                         <td class="col-spacer">&nbsp;</td>
                         <td class="col-commit-hash">
-                            <a href="<?php echo $tag->commit->url; ?>">
+                            <a href="https://github.com/DirectoryLister/DirectoryLister/commit/<?php echo $tag->commit->sha; ?>">
                                 <?php echo substr($tag->commit->sha, 0, 10); ?>
                             </a>
                         </td>
