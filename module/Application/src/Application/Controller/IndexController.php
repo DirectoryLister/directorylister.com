@@ -31,6 +31,7 @@ class IndexController extends AbstractActionController
                 )
             ),
             'plugins' => array(
+                'Serializer',
                 'exception_handler' => array('throw_exceptions' => false),
             )
         ));
@@ -43,14 +44,17 @@ class IndexController extends AbstractActionController
             
             // Fetch stargazers from GitHub
             $apiResults = file_get_contents('https://api.github.com/repos/DirectoryLister/DirectoryLister/stargazers');
-            $stargazers = json_decode($apiResults);
+            $dataObject = json_decode($apiResults);
             
             // Pass stargazer count to the view
-            $view->stargazers = count($stargazers);
+            $view->stargazers = count($dataObject);
             
+            // Cache the data
             $cache->setItem('stargazers', $view->stargazers);
             
         }
+        
+        // print_r($view->stargazers); die(); // Debugging
         
         
         // Attempt to fetch forks from the cache
@@ -60,14 +64,17 @@ class IndexController extends AbstractActionController
             
             // Fetch forks from GitHub
             $apiResults = file_get_contents('https://api.github.com/repos/DirectoryLister/DirectoryLister/forks');
-            $forks      = json_decode($apiResults);
+            $dataObject = json_decode($apiResults);
             
             // Pass fork count to the view
-            $view->forks = count($forks);
+            $view->forks = count($dataObject);
             
+            // Cache the data
             $cache->setItem('forks', $view->forks);
             
         }
+
+        // print_r($view->forks); die(); // Debugging
         
         
         // Attempt to fetch forks from the cache
@@ -77,14 +84,16 @@ class IndexController extends AbstractActionController
             
             // Fetch tags from GitHub
             $apiResults = file_get_contents('https://api.github.com/repos/DirectoryLister/DirectoryLister/tags');
-            $tags       = json_decode($apiResults);
             
             // Pass tags to the view
-            $view->tags = $tags;
+            $view->tags = json_decode($apiResults);
             
+            // Cache the data
             $cache->setItem('tags', $view->tags);
             
         }
+        
+        // print_r($view->tags); die(); // Debugging
         
         
         return $view;
