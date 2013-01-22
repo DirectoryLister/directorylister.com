@@ -13,7 +13,7 @@
     <?php echo $this->headLink(); ?>
     
     <!-- SCRIPTS -->
-    <?php $this->headScript()->appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'); ?>
+    <?php $this->headScript()->appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'); ?>
     <?php $this->headScript()->appendFile($this->basePath() . '/js/bootstrap.min.js'); ?>
     <?php $this->headScript()->appendFile($this->basePath() . '/js/directorylister.js'); ?>
     <?php echo $this->headScript(); ?>
@@ -45,6 +45,8 @@
                     <a href="#dlModal" id="download-btn" class="btn btn-info pull-right" data-toggle="modal"><i class="icon-download-alt"></i> Download</a>
                 </div>
             
+                <a href="#" id="top-button" class="btn btn-link"><i class="icon-arrow-up"></i></a>
+                
             </div>
         </div>
     </div>
