@@ -53,11 +53,15 @@
 
             <div id="page-content" class="span9">
                 
-                <?php if (strstr($_SERVER['HTTP_USER_AGENT'], 'Linux')): ?>
-                    <img src="img/directory-lister-nix.png" />
-                <?php else: ?>
-                    <img src="img/directory-lister-win.png" />
-                <?php endif; ?>
+                <a href="http://demo.directorylister.com" class="screenshot-link">
+                    <?php if (strstr($_SERVER['HTTP_USER_AGENT'], 'Linux')): ?>
+                        <img src="img/directory-lister-nix.png" />
+                    <?php else: ?>
+                        <img src="img/directory-lister-win.png" />
+                    <?php endif; ?>
+                    
+                    <span class="demo-text">View Demo <i class="icon-circle-arrow-right"></i></span>
+                </a>
                     
                 <div id="intro" class="content-section">
                     <h2>Introduction</h2>
