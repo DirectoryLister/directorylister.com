@@ -63,7 +63,7 @@
         </div>
         
         <?php $children = $this->viewModel()->getCurrent()->getChildren(); $child = $children[0]; ?>
-        <?php echo $this->partial('partial/dl-modal.phtml', array('tags' => $child->tags)); ?>
+        <?php echo $this->partial('partial/dl-modal.phtml', array('tags' => $child->tags, 'dlZip' => $child->dlZip, 'dlTar' => $child->dlTar)); ?>
         
     </div>
     

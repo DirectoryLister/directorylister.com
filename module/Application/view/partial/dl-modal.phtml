@@ -7,11 +7,11 @@
     
     <div class="modal-body">
         <center>
-            <a href="#" class="btn btn-info btn-large" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
+            <a href="<?php echo $dlZip; ?>" class="btn btn-info btn-large" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
                 <i class="icon-download-alt"></i> Download zip
             </a>
             &nbsp;&nbsp;
-            <a href="#" class="btn btn-info btn-large" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
+            <a href="<?php echo $dlTar; ?>" class="btn btn-info btn-large" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
                 <i class="icon-download-alt"></i> Download tar.gz
             </a>
             
