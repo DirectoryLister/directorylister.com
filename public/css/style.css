@@ -157,17 +157,18 @@ body {
 .screenshot-link .demo-text {
     font-family: Arvo, serif;
     font-size: 1.2em;
-    background: rgba(0, 0, 0, .5);
-    bottom: 30px;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 3px;
+    bottom: -5px;
     color: #FFF;
     display: inline-block;
-    padding: 10px 15px;
+    padding: 12px 16px;
     position: absolute;
-    right: 0;
+    right: -5px;
 }
 
 .screenshot-link:hover .demo-text {
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, .7);
     color: #FFF;
     text-decoration: none;
 }
