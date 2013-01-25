@@ -167,7 +167,7 @@ body {
     right: -5px;
 }
 
-.screenshot-link:hover .demo-text {
+.screenshot-link .demo-text:hover {
     background: rgba(0, 0, 0, .7);
     color: #FFF;
     text-decoration: none;
