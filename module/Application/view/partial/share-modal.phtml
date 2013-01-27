@@ -1,4 +1,4 @@
-<div id="dlModal" class="modal fade hide">
+<div id="share-modal" class="modal fade hide">
             
     <div class="modal-header">
         <a class="close" data-dismiss="modal">×</a>
@@ -6,104 +6,51 @@
     </div>
     
     <div class="modal-body">
+        
         <center>
-            <a href="<?php echo $dlZip; ?>" class="btn btn-info btn-large" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
-                <i class="icon-download-alt"></i> Download zip
-            </a>
-            &nbsp;&nbsp;
-            <a href="<?php echo $dlTar; ?>" class="btn btn-info btn-large" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
-                <i class="icon-download-alt"></i> Download tar.gz
-            </a>
-            
-            <br/><br/>
-            
-            <p class="muted"><i class="icon-info-sign"></i> <small>Directory Lister requires PHP 5.3+ and has been tested with Apache and Nginx.</small></p>
+            <p class="muted">Promote Directory Lister through your favorite social networks!</p>
         </center>
         
         <hr/>
         
-        <table id="download-tags" class="table table-striped">
-            
-            <thead>
-                <tr>
-                    <th><i class="icon-tag"></i> Tag</th>
-                    <th>&nbsp;</th>
-                    <th><i class="icon-map-marker"></i> Commit</th>
-                    <th colspan="2"><i class="icon-download-alt"></i> Download</th>
-                </tr>
-            </thead>
-            
+        <table id="share-buttons">
             <tbody>
-                <?php foreach ($this->tags as $tag): ?>
-                    <tr>
-                        <td class="col-tag-name"><?php echo $tag->name; ?></td>
-                        <td class="col-spacer">&nbsp;</td>
-                        <td class="col-commit-hash">
-                            <a href="https://github.com/DirectoryLister/DirectoryLister/commit/<?php echo $tag->commit->sha; ?>">
-                                <?php echo substr($tag->commit->sha, 0, 10); ?>
-                            </a>
-                        </td>
-                        <td class="col-zibball">
-                            <a href="<?php echo $tag->zipball_url; ?>" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
-                                zip
-                            </a>
-                        </td>
-                        <td class="col-tarball">
-                            <a href="<?php echo $tag->tarball_url; ?>" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
-                                tar.gz
-                            </a>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
+                <tr>
+                    <td>
+                        <!-- Place this tag where you want the +1 button to render. -->
+                        <div class="g-plusone" data-size="medium"></div>
+                        
+                        <!-- Place this tag after the last +1 button tag. -->
+                        <script type="text/javascript">
+                          (function() {
+                            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                            po.src = 'https://apis.google.com/js/plusone.js';
+                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                          })();
+                        </script>
+                    </td>
+                    
+                    <td>
+                        <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="DirectoryLister">Tweet</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    </td>
+                    
+                    <td>
+                        <div id="fb-root"></div>
+                        <script>(function(d, s, id) {
+                          var js, fjs = d.getElementsByTagName(s)[0];
+                          if (d.getElementById(id)) return;
+                          js = d.createElement(s); js.id = id;
+                          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                          fjs.parentNode.insertBefore(js, fjs);
+                        }(document, 'script', 'facebook-jssdk'));</script>
+                        <div class="fb-like" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false"></div>
+                    </td>
+                    
+                </tr>
             </tbody>
-            
         </table>
         
     </div>
-
+    
 </div>
-
-
-
-<table class="share-buttons">
-    <tbody>
-        
-        <tr>
-            <td>
-                <!-- Place this tag where you want the +1 button to render. -->
-                <div class="g-plusone"></div>
-                
-                <!-- Place this tag after the last +1 button tag. -->
-                <script type="text/javascript">
-                  (function() {
-                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                    po.src = 'https://apis.google.com/js/plusone.js';
-                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                  })();
-                </script>
-            </td>
-        
-            <td>
-                <div id="fb-root"></div>
-                <script>(function(d, s, id) {
-                  var js, fjs = d.getElementsByTagName(s)[0];
-                  if (d.getElementById(id)) return;
-                  js = d.createElement(s); js.id = id;
-                  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-                  fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));</script>
-                <div class="fb-like" data-href="http://www.directorylister.com" data-send="false" data-layout="button_count" data-width="200" data-show-faces="true"></div>
-            </td>
-        
-            <td>
-                <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="DirectoryLister">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </td>
-        </tr>
-        
-    </tbody>
-</table>
-
-
-
-

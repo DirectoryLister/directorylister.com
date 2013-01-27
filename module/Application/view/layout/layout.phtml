@@ -42,7 +42,7 @@
                         <li><a href="https://plus.google.com/communities/112615185904533662084" id="social-btn-googleplus" title="Follow on Google+"><i class="icon-google-plus-sign"></i></a></li>
                     </ul>
                     
-                    <a href="#dlModal" id="download-btn" class="btn btn-info pull-right" data-toggle="modal"><i class="icon-download-alt"></i> Download</a>
+                    <a href="#dl-modal" id="download-btn" class="btn btn-info pull-right" data-toggle="modal"><i class="icon-download-alt"></i> Download</a>
                 </div>
             
                 <a href="#" id="top-button"><i class="icon-circle-arrow-up"></i></a>
@@ -62,10 +62,11 @@
         
     </div>
     
+    <a href="#share-modal" id="share-tab" data-toggle="modal"><i class="icon-share"></i></a>
+    <?php echo $this->partial('partial/share-modal.phtml'); ?>
+    
     <?php $children = $this->viewModel()->getCurrent()->getChildren(); $child = $children[0]; ?>
     <?php echo $this->partial('partial/dl-modal.phtml', array('tags' => $child->tags, 'name' => $child->name, 'dlZip' => $child->dlZip, 'dlTar' => $child->dlTar)); ?>
-    
-    <?php echo $this->partial('partial/modal-buttons.phtml'); ?>
     
     <?php echo $this->partial('partial/google-analytics.phtml'); ?>
     
