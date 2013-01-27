@@ -288,3 +288,13 @@ body {
 #site-footer > *:last-child {
     margin-bottom: 0;
 }
+
+.share-buttons {
+    border: 0;
+    margin: 0 auto;
+    width: 600px
+}
+
+.share-buttons td {
+    width: 33%;
+}

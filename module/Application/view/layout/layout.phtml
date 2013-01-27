@@ -56,16 +56,16 @@
         <?php echo $this->content; ?>
         
         <div id="site-footer">
-            
             <p>Directory Lister is distributed under the terms of the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>.</p>
             <p>Copyright &copy; <?php echo date('Y'); ?> <a href="http://www.chriskankiewicz.com">Chris Kankiewicz</a></p>
-            
         </div>
         
-        <?php $children = $this->viewModel()->getCurrent()->getChildren(); $child = $children[0]; ?>
-        <?php echo $this->partial('partial/dl-modal.phtml', array('tags' => $child->tags, 'dlZip' => $child->dlZip, 'dlTar' => $child->dlTar)); ?>
-        
     </div>
+    
+    <?php $children = $this->viewModel()->getCurrent()->getChildren(); $child = $children[0]; ?>
+    <?php echo $this->partial('partial/dl-modal.phtml', array('tags' => $child->tags, 'name' => $child->name, 'dlZip' => $child->dlZip, 'dlTar' => $child->dlTar)); ?>
+    
+    <?php echo $this->partial('partial/modal-buttons.phtml'); ?>
     
     <?php echo $this->partial('partial/google-analytics.phtml'); ?>
     

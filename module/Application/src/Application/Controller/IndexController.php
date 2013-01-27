@@ -95,8 +95,9 @@ class IndexController extends AbstractActionController
         
         // print_r($view->tags); die(); // Debugging
         
-                
+        
         // Latest download links
+        $view->name  = $view->tags[0]->name;
         $view->dlZip = $view->tags[0]->zipball_url;
         $view->dlTar = $view->tags[0]->tarball_url;
         
