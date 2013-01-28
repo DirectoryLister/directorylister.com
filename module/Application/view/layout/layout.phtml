@@ -55,15 +55,17 @@
         
         <?php echo $this->content; ?>
         
+        
         <div id="site-footer">
+            
+            <?php echo $this->partial('partial/social-buttons.phtml'); ?>
+            
             <p>Directory Lister is distributed under the terms of the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>.</p>
             <p>Copyright &copy; <?php echo date('Y'); ?> <a href="http://www.chriskankiewicz.com">Chris Kankiewicz</a></p>
+            
         </div>
         
     </div>
-    
-    <a href="#share-modal" id="share-tab" data-toggle="modal"><i class="icon-share"></i> Spread the Word</a>
-    <?php echo $this->partial('partial/share-modal.phtml'); ?>
     
     <?php $children = $this->viewModel()->getCurrent()->getChildren(); $child = $children[0]; ?>
     <?php echo $this->partial('partial/dl-modal.phtml', array('tags' => $child->tags, 'name' => $child->name, 'dlZip' => $child->dlZip, 'dlTar' => $child->dlTar)); ?>

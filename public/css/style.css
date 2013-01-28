@@ -276,31 +276,28 @@ body {
 /* -----| SHARE BUTTONS |------------------------------------------------------------------------ */
 /* ---------------------------------------------------------------------------------------------- */
 
-#share-tab {
-    background: rgba(0, 0, 0, .66);
-    bottom: 0;
-    color: #FFF;
-    display: inline-block;
-    padding: 10px 15px;
-    position: fixed;
-    left: 60px;
+#social-buttons {
+    border-bottom: 1px solid #CCC;
+    border-top: 1px solid #CCC;
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
-#share-tab:hover {
-    background: rgba(0, 0, 0, .75);
-    color: #FFF;
-    text-decoration: none;
-}
-
-#share-buttons {
+#social-buttons table {
     border: 0;
     margin: 0 auto;
-    width: 80%;
+    width: 50%;
 }
 
-#share-buttons td {
+#social-buttons table td {
+    font-size: normal;
+    line-height: 0;
     text-align: center;
-    width: 33%;
+    width: 25%;
+}
+
+#___plusone_0, .fb-like, .twitter-share-button {
+    width: 82px !important;
 }
 
 
@@ -309,7 +306,6 @@ body {
 /* ---------------------------------------------------------------------------------------------- */
 
 #site-footer {
-    border-top: 1px solid #CCC;
     color: #777;
     font-size: 0.9em;
     margin: 50px 0 0;
