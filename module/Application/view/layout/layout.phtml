@@ -35,11 +35,11 @@
                 </a>
                 
                 <div class="pull-right">
-                    <ul id="social-buttons" class="pull-left">
-                        <li class="social-btn-title">Follow:</li>
-                        <li><a href="https://github.com/DirectoryLister/DirectoryLister/" id="social-btn-github" title="Follow on GitHub"><i class="icon-github-alt"></i></a></li>
-                        <li><a href="https://twitter.com/directorylister" id="social-btn-twitter" title="Follow on Twitter"><i class="icon-twitter"></i></a></li>
-                        <li><a href="https://plus.google.com/communities/112615185904533662084" id="social-btn-googleplus" title="Follow on Google+"><i class="icon-google-plus-sign"></i></a></li>
+                    <ul id="follow-buttons" class="pull-left">
+                        <li class="follow-btn-title">Follow:</li>
+                        <li><a href="https://github.com/DirectoryLister/DirectoryLister/" title="Follow on GitHub"><i class="icon-github-alt"></i></a></li>
+                        <li><a href="https://twitter.com/directorylister" title="Follow on Twitter"><i class="icon-twitter"></i></a></li>
+                        <li><a href="https://plus.google.com/communities/112615185904533662084" title="Follow on Google+"><i class="icon-google-plus-sign"></i></a></li>
                     </ul>
                     
                     <a href="#dl-modal" id="download-btn" class="btn btn-info pull-right" data-toggle="modal"><i class="icon-download-alt"></i> Download</a>
@@ -62,7 +62,7 @@
         
     </div>
     
-    <a href="#share-modal" id="share-tab" data-toggle="modal"><i class="icon-share"></i></a>
+    <a href="#share-modal" id="share-tab" data-toggle="modal"><i class="icon-share"></i> Spread the Word</a>
     <?php echo $this->partial('partial/share-modal.phtml'); ?>
     
     <?php $children = $this->viewModel()->getCurrent()->getChildren(); $child = $children[0]; ?>
