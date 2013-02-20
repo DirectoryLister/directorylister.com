@@ -16,7 +16,28 @@
     <?php $this->headScript()->appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'); ?>
     <?php $this->headScript()->appendFile($this->basePath() . '/js/bootstrap.min.js'); ?>
     <?php $this->headScript()->appendFile($this->basePath() . '/js/directorylister.js'); ?>
+    <?php $this->headScript()->appendFile('https://checkout.stripe.com/v2/checkout.js'); ?>
     <?php echo $this->headScript(); ?>
+    
+    <script type="text/javascript">
+        $('#donate-button').click(function() {
+            var token = function(res) {
+              console.log('Got token ID:', res.id);
+            };
+            
+            StripeCheckout.open({
+                  key:         'pk_A0WcPcFYbsbtM3TVLYeJMOPAmPbGh',
+                  address:     true,
+                  amount:      500,
+                  name:        'Directory Lister',
+                  description: "Cup o' Joe",
+                  panelLabel:  'Checkout',
+                  token:       token
+            });
+            
+            return false;
+        });
+    </script>
     
     <!-- FONTS -->
     <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
