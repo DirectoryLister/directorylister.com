@@ -11,6 +11,31 @@ $(document).ready(function() {
     $(window).scroll(function() {
         checkTopButtonVisibility('#top-button', '#intro');
     });
+    
+    
+    
+    
+    // Stripe checkout button
+    $('#donate-button').click(function() {
+        console.log('Click');
+        var token = function(res) {
+            console.log('Got token ID:', res.id);
+        };
+        
+        StripeCheckout.open({
+              key:         'pk_A0WcPcFYbsbtM3TVLYeJMOPAmPbGh',
+              address:     true,
+              amount:      500,
+              name:        'Directory Lister',
+              description: "Cup o' Joe ($5.00)",
+              panelLabel:  'Checkout',
+              token:       token
+        });
+        
+        return false;
+    });
+    
+    
 
 });
 

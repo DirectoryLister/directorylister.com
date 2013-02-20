@@ -12,6 +12,7 @@ namespace Application\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Zend\Cache\StorageFactory;
+use Stripe;
 
 class IndexController extends AbstractActionController
 {
@@ -20,6 +21,15 @@ class IndexController extends AbstractActionController
         
         // Instantiate the view object
         $view = new ViewModel();
+        
+        
+        
+        
+        $config = $this->getServiceLocator()->get('config');
+        
+        Stripe::setApiKey($config['stripe']['test']['secret_key']);
+        
+        
         
         
         // Instantiate the cache object
