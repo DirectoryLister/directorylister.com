@@ -11,14 +11,11 @@ $(document).ready(function() {
     $(window).scroll(function() {
         checkTopButtonVisibility('#top-button', '#intro');
     });
-    
-    
-    
+
     
     // Stripe checkout button
     $('#donate-button').click(function() {
         var token = function(res) {
-            console.log('Got token ID:', res.id);
             // Post token to back end for processing
             $.post('/application/payment/donate-post', { stripeToken:res.id });
         };
@@ -31,13 +28,9 @@ $(document).ready(function() {
             token:       token
         });
         
-        
-        
         return false;
     });
     
-    
-
 });
 
 
