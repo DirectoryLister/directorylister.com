@@ -22,6 +22,18 @@ class IndexController extends AbstractActionController
         // Instantiate the view object
         $view = new ViewModel();
         
+        // Get config object
+        $config = $this->getServiceLocator()->get('config');
+        
+        
+        // Pass Stripe key to the view
+        if ($_SERVER['HTTP_HOST'] == 'directorylister.com') {
+            $view->stripeKey = $config['stripe']['live']['publishable_key'];
+        } else {
+            $view->stripeKey = $config['stripe']['test']['publishable_key'];
+        }
+        
+        
         // Instantiate the cache object
         $cache = StorageFactory::factory(array(
             'adapter' => array(

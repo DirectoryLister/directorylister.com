@@ -38,7 +38,7 @@ class PaymentController extends AbstractActionController
                 'card'  => $token
             ));
             
-            die('Payment successfully charged.');
+            die('Payment successfully processed.');
             
         } else {
             

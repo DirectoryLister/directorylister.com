@@ -1,6 +1,8 @@
 <?php echo $this->doctype(); ?>
 <html lang="en">
-    
+
+<?php $children = $this->viewModel()->getCurrent()->getChildren(); $child = $children[0]; ?>
+
 <head>
     <?php echo $this->headTitle('PHP Directory Lister - The Simple Web Directory Lister'); ?>
     
@@ -17,6 +19,28 @@
     <?php $this->headScript()->appendFile($this->basePath() . '/js/bootstrap.min.js'); ?>
     <?php $this->headScript()->appendFile($this->basePath() . '/js/directorylister.js'); ?>
     <?php echo $this->headScript(); ?>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+            // Stripe checkout button
+            $('#donate-button').click(function() {
+                var token = function(res) {
+                    // Post token to back end for processing
+                    $.post('/application/payment/donate-post', { stripeToken: res.id });
+                };
+                
+                StripeCheckout.open({
+                    key:         '<?php echo $child->stripeKey; ?>',
+                    amount:      500,
+                    name:        'Directory Lister',
+                    description: "Cup o' Joe ($5.00)",
+                    token:       token
+                });
+                
+                return false;
+            }); 
+        });
+    </script>
     
     <!-- FONTS -->
     <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
@@ -67,7 +91,6 @@
         
     </div>
     
-    <?php $children = $this->viewModel()->getCurrent()->getChildren(); $child = $children[0]; ?>
     <?php echo $this->partial('partial/dl-modal.phtml', array('tags' => $child->tags, 'name' => $child->name, 'dlZip' => $child->dlZip, 'dlTar' => $child->dlTar)); ?>
     
     <?php echo $this->partial('partial/google-analytics.phtml'); ?>
