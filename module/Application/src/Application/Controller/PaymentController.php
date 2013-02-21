@@ -13,14 +13,23 @@ class PaymentController extends AbstractActionController
     public function donatePostAction()
     {
         
-        if ($this->getRequest()->isPost()) {
+        // Get request object
+        $request = $this->getRequest();
+        
+        if ($request->isPost()) {
+            
+            // Get config object
+            $config = $this->getServiceLocator()->get('config');
             
             // Set Stripe API key
-            $config = $this->getServiceLocator()->get('config');
-            Stripe::setApiKey($config['stripe']['test']['secret_key']);
+            if ($_SERVER['HTTP_HOST'] == 'directorylister.com') {
+                Stripe::setApiKey($config['stripe']['live']['secret_key']);
+            } else {
+                Stripe::setApiKey($config['stripe']['test']['secret_key']);
+            }
             
             // Get Stripe token from post data
-            $token = $this->getRequest()->getPost('stripeToken');
+            $token = $request->getPost('stripeToken');
             
             // Generate Stripe charge
             $charge = Stripe_Charge::create(array(
