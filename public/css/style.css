@@ -208,13 +208,16 @@ body {
 
 #feature-list {
     padding: 20px 30px;
-    margin: 20px 0 0;
 }
 
 #feature-list h3 {
     font-family: Arvo, serif;
     font-weight: normal;
     line-height: normal;
+}
+
+#feature-list p {
+    text-align: justify;
 }
 
 
