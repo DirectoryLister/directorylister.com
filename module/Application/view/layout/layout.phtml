@@ -5,7 +5,7 @@
 
 <head>
     <?php echo $this->headTitle('PHP Directory Lister - The Simple Web Directory Lister'); ?>
-    
+
     <link href="/img/favicon.ico" rel="icon">
 
     <!-- STYLES -->
@@ -13,13 +13,13 @@
     <?php $this->headLink()->appendStylesheet($this->basePath() . '/css/font-awesome.min.css'); ?>
     <?php $this->headLink()->appendStylesheet($this->basePath() . '/css/style.css'); ?>
     <?php echo $this->headLink(); ?>
-    
+
     <!-- SCRIPTS -->
     <?php $this->headScript()->appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'); ?>
     <?php $this->headScript()->appendFile($this->basePath() . '/js/bootstrap.min.js'); ?>
     <?php $this->headScript()->appendFile($this->basePath() . '/js/directorylister.js'); ?>
     <?php echo $this->headScript(); ?>
-    
+
     <?php /*
     <script type="text/javascript">
         $(document).ready(function() {
@@ -29,7 +29,7 @@
                     // Post token to back end for processing
                     $.post('/application/payment/donate-post', { stripeToken: res.id });
                 };
-                
+
                 StripeCheckout.open({
                     key:         '<?php echo $child->stripeKey; ?>',
                     amount:      500,
@@ -37,16 +37,16 @@
                     description: "Cup o' Joe ($5.00)",
                     token:       token
                 });
-                
+
                 return false;
-            }); 
+            });
         });
     </script>
     */ ?>
-    
+
     <!-- FONTS -->
     <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
-    
+
     <!-- META TAGS -->
     <meta charset="utf-8">
 </head>
@@ -55,49 +55,49 @@
     <div id="site-header" class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
-            
+
                 <a href="<?php echo $this->url('home'); ?>" id="site-title" class="brand" title="The Simple Web Directory Lister">
                     <i class="icon-folder-open"></i> Directory Lister
                 </a>
-                
+
                 <div class="pull-right">
                     <ul id="follow-buttons" class="pull-left">
                         <li class="follow-btn-title">Follow:</li>
-                        <li><a href="https://github.com/DirectoryLister/DirectoryLister/" title="Follow on GitHub"><i class="icon-github-alt"></i></a></li>
+                        <li><a href="https://github.com/DirectoryLister/DirectoryLister/" title="Follow on GitHub"><i class="icon-github"></i></a></li>
                         <li><a href="https://twitter.com/directorylister" title="Follow on Twitter"><i class="icon-twitter"></i></a></li>
                         <li><a href="https://plus.google.com/communities/112615185904533662084" title="Follow on Google+"><i class="icon-google-plus-sign"></i></a></li>
                     </ul>
-                    
+
                     <a href="#dl-modal" id="download-btn" class="btn btn-info pull-right" data-toggle="modal"><i class="icon-download-alt"></i> Download</a>
                 </div>
-            
+
                 <a href="#" id="top-button"><i class="icon-circle-arrow-up"></i></a>
-                
+
             </div>
         </div>
     </div>
-    
+
     <div class="container">
-        
+
         <?php echo $this->content; ?>
-        
-        
+
+
         <div id="site-footer">
-            
+
             <?php echo $this->partial('partial/social-buttons.phtml'); ?>
-            
+
             <p>Directory Lister is distributed under the terms of the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>.</p>
             <p>Copyright &copy; <?php echo date('Y'); ?> <a href="http://www.chriskankiewicz.com">Chris Kankiewicz</a></p>
-            
+
         </div>
-        
+
     </div>
-    
+
     <?php echo $this->partial('partial/dl-modal.phtml', array('tags' => $child->tags, 'name' => $child->name, 'dlZip' => $child->dlZip, 'dlTar' => $child->dlTar)); ?>
-    
+
     <?php echo $this->partial('partial/google-analytics.phtml'); ?>
-    
+
     <?php echo $this->inlineScript() ?>
-    
+
 </body>
 </html>
