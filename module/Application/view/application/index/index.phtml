@@ -1,37 +1,37 @@
 <div class="row">
-            
-    <div id="side-bar" class="span3">
+
+    <div id="side-bar" class="col-md-3">
         <div id="side-bar-inner" data-spy="affix">
-            
+
             <div  id="page-navigation">
                 <ul class="nav nav-tabs nav-stacked">
-                    <li><a href="#intro">Introduction <i class="icon-angle-right"></i></a></li>
-                    <li><a href="#install">Installation <i class="icon-angle-right"></i></a></li>
-                    <li><a href="#troubleshooting">Troubleshooting <i class="icon-angle-right"></i></a></li>
-                    <li><a href="#faq">FAQs <i class="icon-angle-right"></i></a></li>
-                    <li><a href="#contact">Contact Info <i class="icon-angle-right"></i></a></li>
+                    <li><a href="#intro">Introduction <i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#install">Installation <i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#troubleshooting">Troubleshooting <i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#faq">FAQs <i class="fa fa-angle-right"></i></a></li>
+                    <li><a href="#contact">Contact Info <i class="fa fa-angle-right"></i></a></li>
                 </ul>
             </div>
-            
+
             <div class="side-box">
                 <div class="side-box-inner">
                     <h3>Follow Development</h3>
-                    
+
                     <p>Follow development or contribute to Directory Lister on <a href="https://github.com/DirectoryLister">GitHub</a>,
                     the social coding platform.</p>
-                    
+
                     <center>
                         <a href="https://github.com/DirectoryLister/DirectoryLister" class="btn btn-mini">
-                            <i class="icon-github icon-large"></i> Star
+                            <i class="fa fa-github icon-large"></i> Star
                         </a>
                         <a href="https://github.com/DirectoryLister/DirectoryLister/stargazers" class="badge badge-info">
                             <?php echo $stargazers; ?>
                         </a>
-                        
+
                         &nbsp;&nbsp;
-                        
+
                         <a href="https://github.com/DirectoryLister/DirectoryLister" class="btn btn-mini">
-                            <i class="icon-github icon-large"></i> Fork
+                            <i class="fa fa-github icon-large"></i> Fork
                         </a>
                         <a href="https://github.com/DirectoryLister/DirectoryLister/network" class="badge badge-info">
                             <?php echo $forks; ?>
@@ -39,124 +39,124 @@
                     </center>
                 </div>
             </div>
-            
+
             <?php /*
             <div class="side-box">
                 <div class="side-box-inner">
                     <h3>Support This Project</h3>
-                    
+
                     <center>
                         <script src="https://checkout.stripe.com/v2/checkout.js"></script>
-                        <button id="donate-button" class="btn btn-block btn-success"><i class="icon-coffee"></i> Buy me a Coffee</button>
+                        <button id="donate-button" class="btn btn-block btn-success"><i class="fa fa-coffee"></i> Buy me a Coffee</button>
                     </center>
                 </div>
             </div>
             */ ?>
-            
+
         </div>
     </div>
 
-    <div id="page-content" class="span9">
-        
+    <div id="page-content" class="col-md-9">
+
         <a href="http://demo.directorylister.com" class="screenshot-link">
             <?php if (strstr($_SERVER['HTTP_USER_AGENT'], 'Linux')): ?>
                 <img src="img/directory-lister-nix.png" />
             <?php else: ?>
                 <img src="img/directory-lister-win.png" />
             <?php endif; ?>
-            
-            <span class="demo-text">View Demo <i class="icon-arrow-right"></i></span>
+
+            <span class="demo-text">View Demo <i class="fa fa-arrow-right"></i></span>
         </a>
-        
+
         <div id="feature-list">
             <div class="row">
-                <div class="span4">
-                    <h3><i class="icon-cloud-upload"></i> Simple Installation</h3>
+                <div class="col-md-4">
+                    <h3><i class="fa fa-cloud-upload"></i> Simple Installation</h3>
                     <p>Our clear and simple installation instructions will help you get up and running with Directory Lister in minutes.</p>
                 </div>
-                
-                <div class="span4 pull-right">
-                    <h3><i class="icon-list-alt"></i> List Any Directory</h3>
+
+                <div class="col-md-4 pull-right">
+                    <h3><i class="fa fa-list-alt"></i> List Any Directory</h3>
                     <p>Upload files to any web-accessible directory and Direcectory Lister will generate listings for you on-the-fly.</p>
                 </div>
             </div>
-            
+
             <div class="row">
-                <div class="span4">
-                    <h3><i class="icon-cogs"></i> Customizable</h3>
+                <div class="col-md-4">
+                    <h3><i class="fa fa-cogs"></i> Customizable</h3>
                     <p>Theme support is built in to fit your uniqe style.  Control your listing with custom sort ordering of files/folders.</p>
                 </div>
-                
-                <div class="span4 pull-right">
-                    <h3><i class="icon-folder-close"></i> Hidden Files</h3>
+
+                <div class="col-md-4 pull-right">
+                    <h3><i class="fa fa-folder-close"></i> Hidden Files</h3>
                     <p>Don't want to share everything with the world? Easily define hidden files to be excluded from your listings.</p>
                 </div>
             </div>
         </div>
-            
+
         <div id="intro" class="content-section">
             <h2>Introduction</h2>
-            
+
             <p>Directory Lister is a simple PHP based script created to let you list the contents of
             a directory and all it's sub-directories and allow you to navigate there within. Just
             download and install Directory Lister to any web directory and have immediate access to
             all files and sub-directories under that directory.</p>
-             
+
             <p>We have extensively tested Directory Lister with all major browsers (and several
-            non-major ones) to ensure the best experience for the maximum number of users. This 
+            non-major ones) to ensure the best experience for the maximum number of users. This
             ensures you and your users, no matter what browser they're using, will have the best
             possible experience when using Directory Lister.</p>
         </div>
-        
+
         <div id="install" class="content-section">
             <h2>Installation</h2>
-            
+
             <p>The process to install Directory Lister is simple:</p>
-            
+
             <ol>
                 <li>Download and extract Directory Lister</li>
                 <li>Copy <code>resources/default.config.php</code> to <code>resources/config.php</code></li>
                 <li>Upload <code>index.php</code> and the <code>resources</code> folder to the folder you want listed</li>
                 <li>Upload additional files to the same directory as index.php</li>
             </ol>
-    
+
             <p>That's it! You should now see a directory listing when browsing to your directory.</p>
         </div>
-        
+
         <div id="troubleshooting" class="content-section">
             <h2>Troubleshooting</h2>
-            
+
             <p>Ensure you have the latest version of Directory Lister installed.</p>
-            
+
             <p>Verify that you have PHP 5.3 or later installed. You can verify your PHP version by running:</p>
             <pre>php --version</pre>
         </div>
-        
+
         <div id="faq" class="content-section">
             <h2>Frequently Asked Questions</h2>
-            
+
             <dl id="faq-list">
                 <dt>Can I use Directory Lister in a project I'm working on for a client / company?</dt>
                     <dd>Yes, Directory Lister is released under the <a href="http://opensource.org/licenses/MIT">MIT</a> license. The rights granted by this licenses should be sufficient for most purposes.</dd>
-                
+
                 <dt>Where can I get Directory Lister news and updates?</dt>
                     <dd>Currently, the best way to get updates is to follow <a href="https://twitter.com/directorylister">@DirectoryLister</a> on Twitter.</dd>
             </dl>
         </div>
-        
+
         <div id="contact" class="content-section">
             <h2>Contact Info</h2>
-            
+
             <p>Contact us via our mailling list at <a href="mailto:Directory-Lister@GoogleGroups.com">Directory-Lister@GoogleGroups.com</a>
             or <a href="https://groups.google.com/forum/?fromgroups#!forum/directory-lister">join our Google Group</a> online.</p>
-            
+
             <p>Follow Directory Lister on Twitter at <a href="https://twitter.com/directorylister">@DirectoryLister</a>
             or follow the developer at <a href="https://twitter.com/PHLAK">@PHLAK</a></p>
-            
-            <p>Find a problem or bug with Directory Lister? <a href="https://github.com/DirectoryLister/DirectoryLister/issues">Open an issue</a> 
+
+            <p>Find a problem or bug with Directory Lister? <a href="https://github.com/DirectoryLister/DirectoryLister/issues">Open an issue</a>
             on GitHub.</p>
         </div>
-            
+
     </div>
-    
+
 </div>

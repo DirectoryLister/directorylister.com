@@ -15,7 +15,7 @@
     <?php echo $this->headLink(); ?>
 
     <!-- SCRIPTS -->
-    <?php $this->headScript()->appendFile('//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'); ?>
+    <?php $this->headScript()->appendFile('//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'); ?>
     <?php $this->headScript()->appendFile($this->basePath() . '/js/bootstrap.min.js'); ?>
     <?php $this->headScript()->appendFile($this->basePath() . '/js/directorylister.js'); ?>
     <?php echo $this->headScript(); ?>
@@ -45,7 +45,7 @@
     */ ?>
 
     <!-- FONTS -->
-    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 
     <!-- META TAGS -->
     <meta charset="utf-8">
@@ -57,21 +57,21 @@
             <div class="container">
 
                 <a href="<?php echo $this->url('home'); ?>" id="site-title" class="brand" title="The Simple Web Directory Lister">
-                    <i class="icon-folder-open"></i> Directory Lister
+                    <i class="fa fa-folder-open"></i> Directory Lister
                 </a>
 
                 <div class="pull-right">
                     <ul id="follow-buttons" class="pull-left">
                         <li class="follow-btn-title">Follow:</li>
-                        <li><a href="https://github.com/DirectoryLister/DirectoryLister/" title="Follow on GitHub"><i class="icon-github"></i></a></li>
-                        <li><a href="https://twitter.com/directorylister" title="Follow on Twitter"><i class="icon-twitter"></i></a></li>
-                        <li><a href="https://plus.google.com/communities/112615185904533662084" title="Follow on Google+"><i class="icon-google-plus-sign"></i></a></li>
+                        <li><a href="https://github.com/DirectoryLister/DirectoryLister/" title="Follow on GitHub"><i class="fa fa-github"></i></a></li>
+                        <li><a href="https://twitter.com/directorylister" title="Follow on Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://plus.google.com/communities/112615185904533662084" title="Follow on Google+"><i class="fa fa-google-plus-sign"></i></a></li>
                     </ul>
 
-                    <a href="#dl-modal" id="download-btn" class="btn btn-info pull-right" data-toggle="modal"><i class="icon-download-alt"></i> Download</a>
+                    <a href="#dl-modal" id="download-btn" class="btn btn-info pull-right" data-toggle="modal"><i class="fa fa-download-alt"></i> Download</a>
                 </div>
 
-                <a href="#" id="top-button"><i class="icon-circle-arrow-up"></i></a>
+                <a href="#" id="top-button"><i class="fa fa-circle-arrow-up"></i></a>
 
             </div>
         </div>
