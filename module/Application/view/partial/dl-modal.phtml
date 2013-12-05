@@ -1,64 +1,69 @@
-<div id="dl-modal" class="modal fade hide">
-            
-    <div class="modal-header">
-        <a class="close" data-dismiss="modal">×</a>
-        <h3>Download Directory Lister <small>v<?php echo $name; ?></small></h3>
-    </div>
-    
-    <div class="modal-body">
-        <center>
-            <a href="<?php echo $dlZip; ?>" class="btn btn-info btn-large" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
-                <i class="icon-download-alt"></i> Download zip
-            </a>
-            &nbsp;&nbsp;
-            <a href="<?php echo $dlTar; ?>" class="btn btn-info btn-large" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
-                <i class="icon-download-alt"></i> Download tar.gz
-            </a>
-            
-            <br/><br/>
-            
-            <p class="muted"><i class="icon-info-sign"></i> <small>Directory Lister requires PHP 5.3+ and has been tested with Apache and Nginx.</small></p>
-        </center>
-        
-        <hr/>
-        
-        <table id="download-tags" class="table table-striped">
-            
-            <thead>
-                <tr>
-                    <th><i class="icon-tag"></i> Tag</th>
-                    <th>&nbsp;</th>
-                    <th><i class="icon-map-marker"></i> Commit</th>
-                    <th colspan="2"><i class="icon-download-alt"></i> Download</th>
-                </tr>
-            </thead>
-            
-            <tbody>
-                <?php foreach ($this->tags as $tag): ?>
-                    <tr>
-                        <td class="col-tag-name"><?php echo $tag->name; ?></td>
-                        <td class="col-spacer">&nbsp;</td>
-                        <td class="col-commit-hash">
-                            <a href="https://github.com/DirectoryLister/DirectoryLister/commit/<?php echo $tag->commit->sha; ?>">
-                                <?php echo substr($tag->commit->sha, 0, 10); ?>
-                            </a>
-                        </td>
-                        <td class="col-zibball">
-                            <a href="<?php echo $tag->zipball_url; ?>" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
-                                zip
-                            </a>
-                        </td>
-                        <td class="col-tarball">
-                            <a href="<?php echo $tag->tarball_url; ?>" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
-                                tar.gz
-                            </a>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-            
-        </table>
-        
-    </div>
+<div id="dl-modal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
 
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4>Download Directory Lister <small>v<?php echo $name; ?></small></h4>
+            </div>
+
+            <div class="modal-body">
+
+                <center>
+                    <a href="<?php echo $dlZip; ?>" class="btn btn-info btn-large" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
+                        <i class="fa fa-download"></i> Download zip
+                    </a>
+                    &nbsp;&nbsp;
+                    <a href="<?php echo $dlTar; ?>" class="btn btn-info btn-large" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
+                        <i class="fa fa-download"></i> Download tar.gz
+                    </a>
+
+                    <br/><br/>
+
+                    <p class="muted"><i class="fa fa-info-circle"></i> <small>Directory Lister requires PHP 5.3+ and has been tested with Apache and Nginx.</small></p>
+                </center>
+
+                <hr/>
+
+                <table class="download-tags table table-hover">
+
+                    <thead>
+                        <tr>
+                            <th><i class="fa fa-tag"></i> Tag</th>
+                            <th>&nbsp;</th>
+                            <th><i class="fa fa-code-fork"></i> Commit</th>
+                            <th colspan="2"><i class="fa fa-download"></i> Download</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <?php foreach ($this->tags as $tag): ?>
+                            <tr>
+                                <td class="col-tag-name"><?php echo $tag->name; ?></td>
+                                <td class="col-spacer">&nbsp;</td>
+                                <td class="col-commit-hash">
+                                    <a href="https://github.com/DirectoryLister/DirectoryLister/commit/<?php echo $tag->commit->sha; ?>">
+                                        <?php echo substr($tag->commit->sha, 0, 10); ?>
+                                    </a>
+                                </td>
+                                <td class="col-zibball">
+                                    <a href="<?php echo $tag->zipball_url; ?>" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
+                                        zip
+                                    </a>
+                                </td>
+                                <td class="col-tarball">
+                                    <a href="<?php echo $tag->tarball_url; ?>" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
+                                        tar.gz
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+    </div>
 </div>

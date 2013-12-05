@@ -17,6 +17,7 @@
     <!-- SCRIPTS -->
     <?php $this->headScript()->appendFile('//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js'); ?>
     <?php $this->headScript()->appendFile($this->basePath() . '/js/bootstrap.min.js'); ?>
+    <?php $this->headScript()->appendFile($this->basePath() . '/js/ZeroClipboard.min.js'); ?>
     <?php $this->headScript()->appendFile($this->basePath() . '/js/directorylister.js'); ?>
     <?php echo $this->headScript(); ?>
 
@@ -52,52 +53,49 @@
 </head>
 
 <body>
-    <div id="site-header" class="navbar navbar-inverse navbar-fixed-top">
+
+    <nav id="site-header" class="navbar navbar-inverse navbar-fixed-top">
         <div class="navbar-inner">
             <div class="container">
 
-                <a href="<?php echo $this->url('home'); ?>" id="site-title" class="brand" title="The Simple Web Directory Lister">
+                <a href="<?php echo $this->url('home'); ?>" id="site-title" class="navbar-brand" title="The Simple Web Directory Lister">
                     <i class="fa fa-folder-open"></i> Directory Lister
                 </a>
 
-                <div class="pull-right">
-                    <ul id="follow-buttons" class="pull-left">
-                        <li class="follow-btn-title">Follow:</li>
-                        <li><a href="https://github.com/DirectoryLister/DirectoryLister/" title="Follow on GitHub"><i class="fa fa-github"></i></a></li>
-                        <li><a href="https://twitter.com/directorylister" title="Follow on Twitter"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="https://plus.google.com/communities/112615185904533662084" title="Follow on Google+"><i class="fa fa-google-plus-sign"></i></a></li>
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#intro">Intro</a></li>
+                        <li><a href="#install">Installation</a></li>
+                        <li><a href="#troubleshooting">Troubleshooting</a></li>
+                        <li><a href="#faq">FAQs</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
-
-                    <a href="#dl-modal" id="download-btn" class="btn btn-info pull-right" data-toggle="modal"><i class="fa fa-download-alt"></i> Download</a>
                 </div>
-
-                <a href="#" id="top-button"><i class="fa fa-circle-arrow-up"></i></a>
 
             </div>
         </div>
-    </div>
+    </nav>
+
+    <?php echo $this->content; ?>
 
     <div class="container">
-
-        <?php echo $this->content; ?>
-
-
         <div id="site-footer">
-
-            <?php echo $this->partial('partial/social-buttons.phtml'); ?>
 
             <p>Directory Lister is distributed under the terms of the <a href="http://www.opensource.org/licenses/mit-license.php">MIT License</a>.</p>
             <p>Copyright &copy; <?php echo date('Y'); ?> <a href="http://www.chriskankiewicz.com">Chris Kankiewicz</a></p>
 
         </div>
-
     </div>
+
+    <a href="#" class="top-button" title="Top of Page">
+        <i class="fa fa-arrow-up"></i>
+    </a>
 
     <?php echo $this->partial('partial/dl-modal.phtml', array('tags' => $child->tags, 'name' => $child->name, 'dlZip' => $child->dlZip, 'dlTar' => $child->dlTar)); ?>
 
     <?php echo $this->partial('partial/google-analytics.phtml'); ?>
 
-    <?php echo $this->inlineScript() ?>
+    <?php echo $this->inlineScript(); ?>
 
 </body>
 </html>

@@ -50,9 +50,9 @@ class IndexController extends AbstractActionController
 
 
         // Attempt to fetch stargazers from the cache
-        $view->stargazers = $cache->getItem('stargazers', $success);
+        $view->stargazers = $cache->getItem('stargazers', $stargazersSuccess);
 
-        if (!$success) {
+        if (!$stargazersSuccess) {
 
             // Initialize curl
             $curl = curl_init();
@@ -81,9 +81,9 @@ class IndexController extends AbstractActionController
 
 
         // Attempt to fetch forks from the cache
-        $view->forks = $cache->getItem('forks', $success);
+        $view->forks = $cache->getItem('forks', $forksSuccess);
 
-        if (!$success) {
+        if (!$forksSuccess) {
 
             // Initialize curl
             $curl = curl_init();
@@ -112,9 +112,9 @@ class IndexController extends AbstractActionController
 
 
         // Attempt to fetch forks from the cache
-        $view->tags = $cache->getItem('tags', $success);
+        $view->tags = $cache->getItem('tags', $tagsSuccess);
 
-        if (!$success) {
+        if (!$tagsSuccess) {
 
             // Initialize curl
             $curl = curl_init();
