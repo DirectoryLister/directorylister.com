@@ -10,17 +10,17 @@
             <div class="modal-body">
 
                 <center>
-                    <a href="<?php echo $dlZip; ?>" class="btn btn-info btn-large" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
+                    <a href="<?php echo $dlZip; ?>" class="btn btn-info btn-lg" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
                         <i class="fa fa-download"></i> Download zip
                     </a>
                     &nbsp;&nbsp;
-                    <a href="<?php echo $dlTar; ?>" class="btn btn-info btn-large" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
+                    <a href="<?php echo $dlTar; ?>" class="btn btn-info btn-lg" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
                         <i class="fa fa-download"></i> Download tar.gz
                     </a>
 
                     <br/><br/>
 
-                    <p class="muted"><i class="fa fa-info-circle"></i> <small>Directory Lister requires PHP 5.3+ and has been tested with Apache and Nginx.</small></p>
+                    <p class="muted"><i class="fa fa-info-circle"></i> <small>Directory Lister requires PHP 5.3+ and has been tested on Apache and Nginx.</small></p>
                 </center>
 
                 <hr/>
@@ -61,6 +61,10 @@
                     </tbody>
 
                 </table>
+
+                <a href="https://github.com/DirectoryLister/DirectoryLister/releases" class="btn btn-default btn-block">
+                    See all Releases
+                </a>
 
             </div>
 

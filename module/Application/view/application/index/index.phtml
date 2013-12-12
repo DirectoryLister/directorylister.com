@@ -9,7 +9,7 @@
                     <h2>List the contents of any directory in minutes.</h2>
 
                     <a href="#dl-modal" id="download-btn" class="btn btn-primary btn-lg" data-toggle="modal">
-                        <i class="fa fa-download"></i> Download Directory Lister
+                        <i class="fa fa-download fa-fw"></i> Download Directory Lister
                     </a>
 
                 </div>
@@ -119,44 +119,52 @@
             download and install Directory Lister to any web directory and have immediate access to
             all files and sub-directories under that directory.</p>
 
-            <div class="feature-list row">
+            <div class="feature-list">
+                <div class="row">
 
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-box-inner">
+                    <div class="feature-box col-md-4">
 
-                            <h3><i class="fa fa-cloud-upload fa-fw"></i> Simple Installation</h3>
+                        <h4>
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-cloud-upload fa-stack-1x fa-inverse"></i>
+                            </span>
+                            Simple Installation
+                        </h4>
 
-                            <p>Our clear and simple installation instructions will help you get up and running with Directory Lister in minutes.</p>
+                        <p>Our clear and simple installation instructions will help you get up and running with Directory Lister in minutes.</p>
 
-                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-box-inner">
+                    <div class="feature-box col-md-4">
 
-                            <h3><i class="fa fa-list-alt fa-fw"></i> List Any Directory</h3>
+                        <h4>
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-folder fa-stack-1x fa-inverse"></i>
+                            </span>
+                            List Any Directory
+                        </h4>
 
-                            <p>Upload files to any web-accessible directory and Direcectory Lister will generate listings for you on-the-fly.</p>
+                        <p>Upload files to any web-accessible directory and Direcectory Lister will generate listings for you on-the-fly.</p>
 
-                        </div>
                     </div>
-                </div>
 
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-box-inner">
+                    <div class="feature-box col-md-4">
 
-                            <h3><i class="fa fa-cogs fa-fw"></i> Customizable</h3>
+                        <h4>
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+                            </span>
+                            Customizable
+                        </h4>
 
-                            <p>Theme support is built in to fit your uniqe style.  Control your listing with custom sort ordering of files/folders.</p>
+                        <p>Theme support is built in to fit your uniqe style.  Control your listing with custom sort ordering of files/folders.</p>
 
-                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
 
             <div class="alert alert-warning">
@@ -180,44 +188,56 @@
         </div>
     </div>
 
-    <div class="row">
+    <div id="install" class="row content-section">
+        <div class="col-md-12">
 
-        <div id="install" class="content-section col-md-6">
             <h2>Installation</h2>
 
-            <p>The process to install Directory Lister is simple:</p>
+            <div class="row">
 
-            <ol class="installation-instructions">
-                <li>Download and extract Directory Lister</li>
-                <li>Copy <code>resources/default.config.php</code> to <code>resources/config.php</code></li>
-                <li>Upload <code>index.php</code> and the <code>resources</code> folder to the folder you want listed</li>
-                <li>Upload additional files to the same directory as index.php</li>
-            </ol>
+                <div class="col-md-6">
 
-            <p>That's it! You should now see a directory listing when browsing to your directory.</p>
-        </div>
+                    <p>The process to install Directory Lister is simple:</p>
 
-        <div id="troubleshooting" class="content-section col-md-6">
-            <h2>Troubleshooting</h2>
+                    <ol class="installation-instructions">
+                        <li>Download and extract Directory Lister</li>
+                        <li>Copy <code>resources/default.config.php</code> to <code>resources/config.php</code></li>
+                        <li>Upload <code>index.php</code> and the <code>resources</code> folder to the folder you want listed</li>
+                        <li>Upload additional files to the same directory as index.php</li>
+                    </ol>
 
-            <p>If you're having trouble getting Directory Lister working, try the following:</p>
+                    <p>That's it! You should now see a directory listing when browsing to your directory.</p>
 
-            <ul>
-                <li>Ensure you have the latest version of Directory Lister installed. The current
-                version available is <code>v<?php echo $name; ?></code></li>
+                </div>
 
-                <li>Verify you have PHP 5.3 or later installed. You can verify your PHP version by
-                running: <code>php --version</code></li>
-            </ul>
+                <div class="col-md-6">
 
-            <p>Additional help is available via our mailing list at
-            <a href="mailto:Directory-Lister@GoogleGroups.com">Directory-Lister@GoogleGroups.com</a></p>
+                    <div class="install-help-text well">
+                        <p>Having trouble getting Directory Lister working?</p>
+
+                        <ul>
+                            <li>Ensure you have the latest version of Directory Lister installed. The current
+                            version available is <code>v<?php echo $name; ?></code></li>
+
+                            <li>Verify you have PHP 5.3 or later installed. You can verify your PHP version by
+                            running: <code>php --version</code></li>
+                        </ul>
+
+                        <p>Additional help is available via our mailing list at
+                        <a href="mailto:Directory-Lister@GoogleGroups.com">Directory-Lister@GoogleGroups.com</a></p>
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
     </div>
 
-    <div class="row">
 
-        <div id="faq" class="content-section col-md-6">
+    <div id="install" class="row content-section">
+        <div class="col-md-12">
+
             <h2>Frequently Asked Questions</h2>
 
             <dl id="faq-list">
@@ -227,9 +247,13 @@
                 <dt>Where can I get Directory Lister news and updates?</dt>
                     <dd>Currently, the best way to get updates is to follow <a href="https://twitter.com/directorylister">@DirectoryLister</a> on Twitter.</dd>
             </dl>
-        </div>
 
-        <div id="contact" class="content-section col-md-6">
+        </div>
+    </div>
+
+    <div id="contact" class="row content-section">
+        <div class="col-md-12">
+
             <h2>Contact Info</h2>
 
             <p>Contact us via our mailling list at <a href="mailto:Directory-Lister@GoogleGroups.com">Directory-Lister@GoogleGroups.com</a>
@@ -240,8 +264,8 @@
 
             <p>Find a problem or bug with Directory Lister? <a href="https://github.com/DirectoryLister/DirectoryLister/issues">Open an issue</a>
             on GitHub.</p>
-        </div>
 
+        </div>
     </div>
 
 </div>

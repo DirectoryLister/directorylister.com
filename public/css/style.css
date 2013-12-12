@@ -2,6 +2,10 @@
 /* -----| GENERAL |---------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .container {
     position: relative;
 }
@@ -155,8 +159,53 @@
     padding-left: 24px;
 }
 
+.install-help-text {
+    margin: 0;
+}
+
+.install-help-text > *:last-child {
+    margin-bottom: 0;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* -----| FEATURE LIST |----------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+
 .feature-list {
-    margin-top: 20px;
+    background-color: #EEE;
+    border-radius: 4px;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.feature-box {
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #DDD;
+    text-align: justify;
+}
+
+.feature-box h4 {
+    color: #666;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.feature-list > .row > .feature-box:first-child {
+    border-left: none;
+}
+
+.feature-list > .row > .feature-box:last-child {
+    border-right: none;
+}
+
+.feature-box > *:first-child {
+    margin-top: 0;
+}
+
+.feature-box > *:last-child {
+    margin-bottom: 0;
 }
 
 

@@ -138,6 +138,9 @@ class IndexController extends AbstractActionController
 
         }
 
+        // Slice off first 5 tags from object
+        $view->tags = array_slice($view->tags, 0, 5);
+
         // print_r($view->tags); die(); // Debugging
 
 
