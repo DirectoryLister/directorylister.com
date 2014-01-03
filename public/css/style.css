@@ -328,8 +328,6 @@ body {
 /* -----| RESPONSIVE |------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
-
-
 @media (min-width: 992px) and (max-width: 1200px) {
 
     .screenshot {
@@ -361,7 +359,6 @@ body {
         padding-bottom: 10px;
         text-align: center;
     }
-
 
     .feature-list > .row > .feature-box:first-child {
         border-top: none;
