@@ -328,26 +328,62 @@ body {
 /* -----| RESPONSIVE |------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
+
+
+@media (min-width: 992px) and (max-width: 1200px) {
+
+    .screenshot {
+        margin-bottom: -215px;
+    }
+
+}
+
+@media (max-width: 991px) {
+
+    .screenshot {
+        margin-bottom: -175px;
+    }
+
+    .social-buttons table {
+        width: 65%;
+    }
+
+    .feature-list > .row {
+        margin: 0;
+    }
+
+    .feature-box {
+        border-top: 1px solid #FFF;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #DDD;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+
+    .feature-list > .row > .feature-box:first-child {
+        border-top: none;
+        padding-top: 0;
+    }
+
+    .feature-list > .row > .feature-box:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+}
+
+
 @media (max-width: 767px) {
 
     .screenshot {
         margin-bottom: -150px;
     }
 
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-
-    .screenshot {
-        margin-bottom: -175px;
-    }
-
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
-
-    .screenshot {
-        margin-bottom: -215px;
+    .social-buttons table {
+        width: 80%;
     }
 
 }
