@@ -13,14 +13,29 @@ $(document).ready(function() {
 
     // Scroll page on click action
     $('.top-button').click(function(event) {
-        $('html, body').animate({ scrollTop: 0 }, 'fast');
+
+        // Prevent default action
         event.preventDefault();
+
+        // Animate scroll to top of page
+        $('html, body').animate({ scrollTop: 0 }, 'fast', function() {
+
+            // Clear URL hash
+            location.hash = null;
+
+        });
+
     });
 
     // Highlight bitcoin address on click
     $('#bitcoin-address').on('mouseup', function(event) {
-        $(this).select();
+
+        // Prevent default action
         event.preventDefault();
+
+        // Select text
+        $(this).select();
+
     });
 
     // Initialize ZeroClipboard
