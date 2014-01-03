@@ -64,10 +64,29 @@
 
                 <div class="navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="#intro">Intro</a></li>
-                        <li><a href="#install">Install</a></li>
-                        <li><a href="#faq">FAQs</a></li>
-                        <li><a href="#contact">Contact</a></li>
+
+                        <li>
+                            <a href="#" class="top-button" title="Top of Page" rel="tooltip" data-placement="bottom">
+                                <i class="fa fa-arrow-up"></i>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#intro">Intro</a>
+                        </li>
+
+                        <li>
+                            <a href="#install">Install</a>
+                        </li>
+
+                        <li>
+                            <a href="#faq">FAQs</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+
                     </ul>
                 </div>
 
@@ -85,10 +104,6 @@
 
         </div>
     </div>
-
-    <a href="#" class="top-button" title="Top of Page">
-        <i class="fa fa-arrow-up"></i>
-    </a>
 
     <?php echo $this->partial('partial/dl-modal.phtml', array('tags' => $child->tags, 'name' => $child->name, 'dlZip' => $child->dlZip, 'dlTar' => $child->dlTar)); ?>
 
