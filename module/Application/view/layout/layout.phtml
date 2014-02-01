@@ -58,36 +58,51 @@
         <div class="navbar-inner">
             <div class="container">
 
-                <a href="<?php echo $this->url('home'); ?>" id="site-title" class="navbar-brand" title="The Simple Web Directory Lister">
-                    <i class="fa fa-folder-open"></i> Directory Lister
-                </a>
+                <div class="navbar-header">
 
-                <div class="navbar-right">
-                    <ul class="nav navbar-nav">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
 
-                        <li>
-                            <a href="#" class="top-button" title="Top of Page" rel="tooltip" data-placement="bottom">
-                                <i class="fa fa-arrow-up"></i>
-                            </a>
-                        </li>
+                    <a href="<?php echo $this->url('home'); ?>" id="site-title" class="navbar-brand" title="The Simple Web Directory Lister">
+                        <i class="fa fa-folder-open"></i> Directory Lister
+                    </a>
 
-                        <li>
-                            <a href="#intro">Intro</a>
-                        </li>
+                </div>
 
-                        <li>
-                            <a href="#install">Install</a>
-                        </li>
+                <div id="nav-collapse" class="collapse navbar-collapse navbar-right">
 
-                        <li>
-                            <a href="#faq">FAQs</a>
-                        </li>
+                    <div class="">
+                        <ul class="nav navbar-nav">
 
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
+                            <li>
+                                <a href="#" class="top-button" title="Top of Page" rel="tooltip" data-placement="bottom">
+                                    <i class="fa fa-arrow-up"></i>
+                                </a>
+                            </li>
 
-                    </ul>
+                            <li>
+                                <a href="#intro">Intro</a>
+                            </li>
+
+                            <li>
+                                <a href="#install">Install</a>
+                            </li>
+
+                            <li>
+                                <a href="#faq">FAQs</a>
+                            </li>
+
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
                 </div>
 
             </div>
