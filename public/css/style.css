@@ -41,7 +41,7 @@ body {
     left: 0;
     margin-top: 40px;
     max-width: 100%;
-    margin-bottom: -250px;
+    margin-bottom: -25%;
     right: 0;
 }
 
@@ -329,19 +329,8 @@ body {
 /* -----| RESPONSIVE |------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
-@media (min-width: 992px) and (max-width: 1200px) {
-
-    .screenshot {
-        margin-bottom: -215px;
-    }
-
-}
-
 @media (max-width: 991px) {
 
-    .screenshot {
-        margin-bottom: -175px;
-    }
 
     .social-buttons table {
         width: 65%;
@@ -373,15 +362,18 @@ body {
 
 }
 
-
-@media (max-width: 767px) {
-
-    .screenshot {
-        margin-bottom: -150px;
-    }
+@media (max-width: 640px) {
 
     .social-buttons table {
         width: 80%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .social-buttons table {
+        width: 95%;
     }
 
 }
