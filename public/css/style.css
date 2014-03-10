@@ -25,7 +25,7 @@ body {
     background: url(/img/patterns/retina_wood.png) transparent repeat center center;
     overflow: hidden;
     margin-bottom: 0;
-    padding-top: 100px;
+    padding-top: 80px;
     position: relative;
     text-align: center;
 }
@@ -371,6 +371,10 @@ body {
 }
 
 @media (max-width: 480px) {
+
+    .jumbotron {
+        padding: 80px 10px 30px;
+    }
 
     .social-buttons table {
         width: 95%;
