@@ -234,6 +234,11 @@ body {
 /* -----| DL MODAL |--------------------------------------------------------- */
 /* -------------------------------------------------------------------------- */
 
+.download-zip,
+.download-tar-gz {
+    margin: 0 10px;
+}
+
 .download-tags th {
     text-align: center;
 }
@@ -364,6 +369,10 @@ body {
 
 @media (max-width: 640px) {
 
+    .screenshot {
+       border-radius: 4px;
+    }
+
     .social-buttons table {
         width: 80%;
     }
@@ -376,8 +385,17 @@ body {
         padding: 80px 10px 30px;
     }
 
+    .screenshot {
+       border-radius: 3px;
+    }
+
     .social-buttons table {
         width: 95%;
+    }
+
+    .download-zip,
+    .download-tar-gz {
+        margin: 5px 10px;
     }
 
 }
