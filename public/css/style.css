@@ -175,7 +175,7 @@ body {
 .feature-list {
     background-color: #EEE;
     border-radius: 4px;
-    margin: 20px 0;
+    margin: 30px 0;
     padding: 20px;
 }
 
@@ -185,10 +185,16 @@ body {
     text-align: justify;
 }
 
+.feature-box .feature-icon {
+    font-size: 6em;
+    color: #555;
+}
+
 .feature-box h4 {
-    color: #666;
+    color: #555;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
+    margin: 0 0 15px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -341,6 +347,18 @@ body {
         width: 65%;
     }
 
+}
+
+@media (max-width: 640px) {
+
+    .screenshot {
+       border-radius: 4px;
+    }
+
+    .social-buttons table {
+        width: 80%;
+    }
+
     .feature-list > .row {
         margin: 0;
     }
@@ -363,18 +381,6 @@ body {
     .feature-list > .row > .feature-box:last-child {
         border-bottom: none;
         padding-bottom: 0;
-    }
-
-}
-
-@media (max-width: 640px) {
-
-    .screenshot {
-       border-radius: 4px;
-    }
-
-    .social-buttons table {
-        width: 80%;
     }
 
 }
