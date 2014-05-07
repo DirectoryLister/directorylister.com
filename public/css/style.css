@@ -21,6 +21,30 @@ body {
     letter-spacing: 1.5px;
 }
 
+.title-img {
+    background-color: #0072BC;
+    border-radius: 50%;
+    display: block;
+    padding: 3px;
+    position: absolute;
+    top: -8px;
+    width: 66px;
+}
+
+.site-logo {
+    color: #FFF;
+}
+
+.title-text {
+    display: inline-block;
+    margin-left: 80px;
+}
+
+.title-text h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
 .jumbotron {
     background: url(/img/patterns/retina_wood.png) transparent repeat center center;
     overflow: hidden;
