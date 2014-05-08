@@ -415,6 +415,14 @@ body {
 
 @media (max-width: 480px) {
 
+    .title-img {
+        display: none;
+    }
+
+    .title-text {
+        margin-left: 0;
+    }
+
     .jumbotron {
         padding: 80px 10px 30px;
     }
