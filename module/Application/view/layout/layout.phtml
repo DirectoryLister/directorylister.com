@@ -133,7 +133,7 @@
         </div>
     </div>
 
-    <?php echo $this->partial('partial/dl-modal.phtml', array('tags' => $child->tags, 'name' => $child->name, 'dlZip' => $child->dlZip, 'dlTar' => $child->dlTar)); ?>
+    <?php echo $this->partial('partial/dl-modal.phtml', array('releases' => $child->releases, 'tag' => $child->tag, 'dlZip' => $child->dlZip, 'dlTar' => $child->dlTar)); ?>
 
     <?php echo $this->partial('partial/google-analytics.phtml'); ?>
 

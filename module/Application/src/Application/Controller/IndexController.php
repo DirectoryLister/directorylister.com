@@ -112,42 +112,39 @@ class IndexController extends AbstractActionController
 
 
         // Attempt to fetch forks from the cache
-        $view->tags = $cache->getItem('tags', $tagsSuccess);
+        $view->releases = $cache->getItem('releases', $releasesSuccess);
 
-        if (!$tagsSuccess) {
+        if (!$releasesSuccess) {
 
             // Initialize curl
             $curl = curl_init();
 
             // Set curl options
-            curl_setopt($curl, CURLOPT_URL, 'https://api.github.com/repos/DirectoryLister/DirectoryLister/tags');
+            curl_setopt($curl, CURLOPT_URL, 'https://api.github.com/repos/DirectoryLister/DirectoryLister/releases');
             curl_setopt($curl, CURLOPT_USERAGENT, 'http://www.directorylister.com');
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-            // Fetch tags from GitHub
+            // Fetch releases from GitHub
             $apiResults = curl_exec($curl);
 
-            // Pass tags to the view
-            $view->tags = json_decode($apiResults);
+            // Pass releases to the view
+            $view->releases = json_decode($apiResults);
 
             // Cache the data
-            $cache->setItem('tags', $view->tags);
+            $cache->setItem('releases', $view->releases);
 
             // Close curl handle
             curl_close($curl);
 
         }
 
-        // Slice off first 5 tags from object
-        $view->tags = array_slice($view->tags, 0, 5);
-
-        // print_r($view->tags); die(); // Debugging
-
+        // Slice off first 5 releases from object
+        $view->releases = array_slice($view->releases, 0, 5);
 
         // Latest download links
-        $view->name  = $view->tags[0]->name;
-        $view->dlZip = $view->tags[0]->zipball_url;
-        $view->dlTar = $view->tags[0]->tarball_url;
+        $view->tag   = $view->releases[0]->tag_name;
+        $view->dlZip = $view->releases[0]->zipball_url;
+        $view->dlTar = $view->releases[0]->tarball_url;
 
 
         // Return the view

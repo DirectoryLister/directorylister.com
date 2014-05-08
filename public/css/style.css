@@ -269,32 +269,36 @@ body {
     margin: 0 10px;
 }
 
-.download-tags th {
+.download-releases th {
     text-align: center;
 }
 
-.download-tags .col-tag-name {
-    text-align: center;
-    width: 12%;
+.download-releases th.col-release-header {
+    text-align: left;
 }
 
-.doanload-tags .col-spacer {
+
+.download-releases .col-release-name {
+    width: 50%;
+}
+
+.doanload-releases .col-spacer {
     width: auto;
 }
 
-.download-tags .col-commit-hash {
+.download-releases .col-tag {
     font-family: monospace;
     font-size: .85em;
     text-align: center;
-    width: 25%;
+    width: 15%;
 }
 
-.download-tags .col-zibball {
+.download-releases .col-zibball {
     text-align: center;
     width: 8%
 }
 
-.download-tags .col-tarball {
+.download-releases .col-tarball {
     text-align: center;
     width: 12%
 }

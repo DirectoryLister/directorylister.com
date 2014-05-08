@@ -4,7 +4,7 @@
 
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4>Download Directory Lister <small>v<?php echo $name; ?></small></h4>
+                <h4>Download Directory Lister <small>v<?php echo $tag; ?></small></h4>
             </div>
 
             <div class="modal-body">
@@ -27,34 +27,38 @@
 
                 <hr/>
 
-                <table class="download-tags table table-hover">
+                <table class="download-releases table table-hover">
 
                     <thead>
                         <tr>
-                            <th><i class="fa fa-tag"></i> Tag</th>
+                            <th class="col-release-header"><i class="fa fa-flag"></i> Release</th>
                             <th>&nbsp;</th>
-                            <th><i class="fa fa-code-fork"></i> Commit</th>
-                            <th colspan="2"><i class="fa fa-download"></i> Download</th>
+                            <th class="col-tag-header"><i class="fa fa-tag"></i> Tag</th>
+                            <th class="col-download-header" colspan="2"><i class="fa fa-download"></i> Download</th>
                         </tr>
                     </thead>
 
                     <tbody>
-                        <?php foreach ($this->tags as $tag): ?>
+                        <?php foreach ($this->releases as $release): ?>
                             <tr>
-                                <td class="col-tag-name"><?php echo $tag->name; ?></td>
+                                <td class="col-release-name">
+                                    <a href="<?php echo $release->url; ?>">
+                                        <?php echo $release->name; ?>
+                                    </a>
+                                </td>
                                 <td class="col-spacer">&nbsp;</td>
-                                <td class="col-commit-hash">
-                                    <a href="https://github.com/DirectoryLister/DirectoryLister/commit/<?php echo $tag->commit->sha; ?>">
-                                        <?php echo substr($tag->commit->sha, 0, 10); ?>
+                                <td class="col-tag">
+                                    <a href="https://github.com/DirectoryLister/DirectoryLister/tree/<?php echo $release->tag_name; ?>">
+                                        <?php echo $release->tag_name; ?>
                                     </a>
                                 </td>
                                 <td class="col-zibball">
-                                    <a href="<?php echo $tag->zipball_url; ?>" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
+                                    <a href="<?php echo $release->zipball_url; ?>" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
                                         zip
                                     </a>
                                 </td>
                                 <td class="col-tarball">
-                                    <a href="<?php echo $tag->tarball_url; ?>" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
+                                    <a href="<?php echo $release->tarball_url; ?>" target="_blank" onclick="_gaq.push(['_trackEvent', 'File', 'Download', this.href]);">
                                         tar.gz
                                     </a>
                                 </td>
