@@ -66,10 +66,10 @@
                 <div class="navbar-header">
 
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
 
                     <a href="<?php echo $this->url('home'); ?>" id="site-title" class="navbar-brand" title="The Simple Web Directory Lister">
@@ -79,7 +79,10 @@
                         </span>
 
                         <span class="title-text">
-                            <h1>Directory Lister</h1>
+                            <h1>
+                                Directory Lister
+                                <small>v<?php echo $child->tag; ?></small>
+                            </h1>
                         </span>
 
                     </a>
