@@ -9,7 +9,6 @@
     "homepage": "http://framework.zend.com/",
     "require": {
         "php": ">=5.3.3",
-        "zendframework/zendframework": "2.*",
-        "stripe/stripe-php": "1.7.*"
+        "zendframework/zendframework": "2.*"
     }
 }

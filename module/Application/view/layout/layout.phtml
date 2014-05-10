@@ -31,30 +31,6 @@
 
     <?php echo $this->headScript(); ?>
 
-    <?php /*
-    <script type="text/javascript">
-        $(document).ready(function() {
-            // Stripe checkout button
-            $('#donate-button').click(function() {
-                var token = function(res) {
-                    // Post token to back end for processing
-                    $.post('/application/payment/donate-post', { stripeToken: res.id });
-                };
-
-                StripeCheckout.open({
-                    key:         '<?php echo $child->stripeKey; ?>',
-                    amount:      500,
-                    name:        'Directory Lister',
-                    description: "Cup o' Joe ($5.00)",
-                    token:       token
-                });
-
-                return false;
-            });
-        });
-    </script>
-    */ ?>
-
 </head>
 
 <body>
