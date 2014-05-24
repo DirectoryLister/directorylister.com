@@ -29,6 +29,7 @@ body {
     position: absolute;
     top: -8px;
     width: 66px;
+    z-index: 1;
 }
 
 .site-logo {
