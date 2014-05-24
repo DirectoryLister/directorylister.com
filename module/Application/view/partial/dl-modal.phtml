@@ -32,8 +32,8 @@
                     <thead>
                         <tr>
                             <th class="col-release-header"><i class="fa fa-flag"></i> Release</th>
-                            <th>&nbsp;</th>
-                            <th class="col-tag-header"><i class="fa fa-tag"></i> Tag</th>
+                            <th class="hidden-xs">&nbsp;</th>
+                            <th class="col-tag-header hidden-xs"><i class="fa fa-tag"></i> Tag</th>
                             <th class="col-download-header" colspan="2"><i class="fa fa-download"></i> Download</th>
                         </tr>
                     </thead>
@@ -46,8 +46,8 @@
                                         <?php echo $release->name; ?>
                                     </a>
                                 </td>
-                                <td class="col-spacer">&nbsp;</td>
-                                <td class="col-tag">
+                                <td class="col-spacer hidden-xs">&nbsp;</td>
+                                <td class="col-tag hidden-xs">
                                     <a href="https://github.com/DirectoryLister/DirectoryLister/tree/<?php echo $release->tag_name; ?>">
                                         <?php echo $release->tag_name; ?>
                                     </a>
