@@ -1,22 +1,23 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
     ],
     "hash": "3d8fc311b085e1e9bc4ed181947f205d",
     "packages": [
         {
             "name": "zendframework/zendframework",
-            "version": "2.3.1",
+            "version": "2.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zf2.git",
-                "reference": "055eac4314425c291f3ef0e104a6196a8fc24cd5"
+                "reference": "88c9b6f566fc1097f64ead155625db9bdfee531e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zf2/zipball/055eac4314425c291f3ef0e104a6196a8fc24cd5",
-                "reference": "055eac4314425c291f3ef0e104a6196a8fc24cd5",
+                "url": "https://api.github.com/repos/zendframework/zf2/zipball/88c9b6f566fc1097f64ead155625db9bdfee531e",
+                "reference": "88c9b6f566fc1097f64ead155625db9bdfee531e",
                 "shasum": ""
             },
             "require": {
@@ -78,7 +79,7 @@
             },
             "require-dev": {
                 "doctrine/annotations": ">=1.0",
-                "fabpot/php-cs-fixer": "*@dev",
+                "fabpot/php-cs-fixer": "dev-master#fcbb09b5204",
                 "ircmaxell/random-lib": "dev-master",
                 "ircmaxell/security-lib": "dev-master",
                 "mikey179/vfsstream": "1.2.*",
@@ -121,7 +122,7 @@
                 "framework",
                 "zf2"
             ],
-            "time": "2014-04-15 14:47:18"
+            "time": "2014-09-16 22:58:11"
         },
         {
             "name": "zendframework/zendxml",
@@ -179,6 +180,7 @@
     "stability-flags": [
 
     ],
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.3.3"
     },
