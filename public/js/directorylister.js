@@ -27,47 +27,6 @@ $(document).ready(function() {
 
     });
 
-    // Highlight bitcoin address on click
-    $('#bitcoin-address').on('mouseup', function(event) {
-
-        // Prevent default action
-        event.preventDefault();
-
-        // Select text
-        $(this).select();
-
-    });
-
-    // Initialize ZeroClipboard
-    var clip = new ZeroClipboard($('#bitcoin-button'));
-
-    // ZeroClipboard on mouseover event
-    clip.on('mouseover', function() {
-        $(this).tooltip('destroy');
-        $(this).tooltip({
-            title: 'Copy address to clipboard',
-            trigger: 'manual',
-            placement: 'top',
-            container: 'body'
-        }).tooltip('show');
-    });
-
-    // ZeroClipboard on mouseout event
-    clip.on('mouseout', function() {
-        $(this).tooltip('destroy');
-    });
-
-    // ZeroClipboard on complete event
-    clip.on('complete', function() {
-        $(this).tooltip('destroy');
-        $(this).tooltip({
-            title: 'Copied!',
-            trigger: 'manual',
-            placement: 'top',
-            container: 'body'
-        }).tooltip('show');
-    });
-
 });
 
 
