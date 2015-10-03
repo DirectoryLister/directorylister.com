@@ -192,6 +192,10 @@ body {
     margin-bottom: 0;
 }
 
+.banner-ad {
+    margin: 20px 0;
+}
+
 
 /* -------------------------------------------------------------------------- */
 /* -----| FEATURE LIST |----------------------------------------------------- */
@@ -342,7 +346,7 @@ body {
     border-top: 1px solid #DDD;
     color: #777;
     font-size: 0.9em;
-    margin: 50px 0 0;
+    margin: 20px 0 0;
     padding: 20px 0;
     text-align: center;
 }
