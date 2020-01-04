@@ -1,0 +1,47 @@
+version: '3.4'
+
+services:
+  app:
+    container_name: directorylister-dot-com-app
+    build:
+      context: .
+      target: development
+    environment:
+      APP_ENV: 'docker'
+      LOG_CHANNEL: 'stderr'
+      DB_HOST: 'directorylister-dot-com-mysql'
+      DB_PORT: 3306
+      DB_DATABASE: ${DB_DATABASE:-homestead}
+      DB_USERNAME: ${DB_USERNAME:-homestead}
+      DB_PASSWORD: ${DB_PASSWORD:-secret}
+      CACHE_DRIVER: 'redis'
+      REDIS_HOST: 'directorylister-dot-com-redis'
+      REDIS_PORT: 6379
+      VIRTUAL_HOST: directorylister.com.local
+    volumes:
+      - ./:/var/www/html
+    restart: unless-stopped
+
+  mysql:
+    container_name: directorylister-dot-com-mysql
+    image: mysql:5.7
+    ports:
+      - ${DB_PORT:-3306}:3306
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
+      MYSQL_DATABASE: ${DB_DATABASE:-homestead}
+      MYSQL_USER: ${DB_USERNAME:-homestead}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-secret}
+    restart: unless-stopped
+
+  redis:
+    container_name: directorylister-dot-com-redis
+    image: redis:5.0
+    ports:
+      - ${REDIS_PORT:-6379}:6379
+    restart: unless-stopped
+
+networks:
+  default:
+    external:
+      name: development
