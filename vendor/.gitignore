@@ -1,7 +1,0 @@
-!.gitignore
-.composer
-composer
-bin
-stripe
-zendframework
-autoload.php
