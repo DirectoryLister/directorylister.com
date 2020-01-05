@@ -17478,7 +17478,6 @@ video {
 
 body {
   min-height: 100vh;
-  background-color: #ebf8ff;
 }
 
 @media (min-width: 640px){
