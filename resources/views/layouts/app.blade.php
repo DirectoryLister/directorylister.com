@@ -9,7 +9,7 @@
 
 <title>Directory Lister</title>
 
-<div id="app" class="min-h-screen font-sans text-gray-900">
+<div id="app" class="font-sans text-gray-900">
     @yield('content')
 </div>
 

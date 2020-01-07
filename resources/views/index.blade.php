@@ -68,35 +68,33 @@
         <div class="container max-w-4xl mx-auto py-24 px-4 lg:px-0">
             <div class="flex items-center mb-24">
                 <div class="mr-4 w-2/5 leading-relaxed">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Aliquam dicta cupiditate fuga provident recusandae.
+                    Find the files you're looking for quickly with built-in
+                    directory search.
                 </div>
 
                 <div class="flex-grow ml-4 w-3/5">
-                    <img src="{{ asset('images/file-info.png') }}" class="rounded-lg shadow-lg">
+                    <img src="{{ asset('images/features/search.png') }}" class="rounded-lg shadow-lg">
                 </div>
             </div>
 
             <div class="flex items-center mb-24">
                 <div class="mr-4 w-3/5">
-                    <img src="{{ asset('images/file-info.png') }}" class="rounded-lg shadow-lg">
+                    <img src="{{ asset('images/features/file-info.png') }}" class="rounded-lg shadow-lg">
                 </div>
 
                 <div class="ml-4 w-2/5 leading-relaxed">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Nostrum necessitatibus quo mollitia quia dolorem animi suscipit
-                    aliquam officiis atque repudiandae iusto iure quibusdam.
+                    Retrieve file hashes to validate downloaded files, improving
+                    trust and reliability.
                 </div>
             </div>
 
             <div class="flex items-center">
                 <div class="mr-4 w-2/5 leading-relaxed">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Aliquam dicta cupiditate fuga provident recusandae.
+                    Render README files directly in the page.
                 </div>
 
                 <div class="flex-grow ml-4 w-3/5">
-                    <img src="{{ asset('images/file-info.png') }}" class="rounded-lg shadow-lg">
+                    <img src="{{ asset('images/features/readme.png') }}" class="rounded-lg shadow-lg">
                 </div>
             </div>
         </div>
