@@ -17,7 +17,7 @@ services:
       CACHE_DRIVER: 'redis'
       REDIS_HOST: 'directorylister-dot-com-redis'
       REDIS_PORT: 6379
-      VIRTUAL_HOST: directorylister.com.local
+      VIRTUAL_HOST: directorylister.local
     volumes:
       - ./:/var/www/html
     restart: unless-stopped
