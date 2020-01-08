@@ -3,13 +3,13 @@
         <div class="flex items-center">
             <img src="{{ asset('images/directory-lister.svg') }}" class="w-12 h-12 mr-4" alt="Directory Lister Logo">
 
-            <h1 class="font-serif text-3xl">
+            <h1 class="font-serif text-2xl sm:text-3xl">
                 Directory Lister
             </h1>
         </div>
 
         <div class="flex items-center">
-            <a href="#" class="text-gray-600 hover:text-gray-800 hover:underline">
+            <a href="#" class="text-gray-600 hover:text-gray-800 hidden hover:underline sm:inline-block">
                 v3.0.0
             </a>
 

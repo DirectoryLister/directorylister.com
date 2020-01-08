@@ -5,7 +5,7 @@
 
     <div class="bg-blue-100">
         <div class="container max-w-4xl mx-auto px-4 py-12 lg:px-0">
-            <p class="font-serif leading-loose text-xl mb-12">
+            <p class="font-serif leading-loose text-lg mb-12 sm:text-xl">
                 <span class="font-bold">Directory Lister</span> is the easiest way
                 to share the contents of any web-accessable folder and navigate
                 there within. With a zero configuration, drag-and-drop
@@ -31,8 +31,8 @@
 
     <div class="bg-blue-100">
         <div class="container max-w-4xl mx-auto py-24 px-4 lg:px-0">
-            <div class="flex items-center mb-24">
-                <div class="mr-4 w-2/5 leading-relaxed">
+            <div class="flex flex-col mb-24 md:flex-row md:items-center">
+                <div class="leading-relaxed mb-4 md:w-2/5 md:mr-4 md:mb-0">
                     <h3 class="font-bold text-gray-600 uppercase mb-4">
                         Directory Search
                     </h3>
@@ -40,17 +40,13 @@
                     Find what you're looking for fast with built-in search.
                 </div>
 
-                <div class="flex-grow ml-4 w-3/5">
+                <div class="flex-grow md:w-3/5 md:ml-4">
                     <img src="{{ asset('images/features/search.png') }}" class="rounded-lg shadow-lg">
                 </div>
             </div>
 
-            <div class="flex items-center mb-24">
-                <div class="mr-4 w-3/5">
-                    <img src="{{ asset('images/features/file-info.png') }}" class="rounded-lg shadow-lg">
-                </div>
-
-                <div class="ml-4 w-2/5 leading-relaxed">
+            <div class="flex flex-col mb-24 md:flex-row-reverse md:items-center">
+                <div class="leading-relaxed mb-4 md:w-2/5 md:ml-4 md:mb-0">
                     <h3 class="font-bold text-gray-600 uppercase mb-4">
                         File Hashes
                     </h3>
@@ -58,10 +54,14 @@
                     Improve trust and reliability with quick access to file
                     hashes for validating downloaded files against the source.
                 </div>
+
+                <div class="md:w-3/5 md:mr-4">
+                    <img src="{{ asset('images/features/file-info.png') }}" class="rounded-lg shadow-lg">
+                </div>
             </div>
 
-            <div class="flex items-center">
-                <div class="mr-4 w-2/5 leading-relaxed">
+            <div class="flex flex-col md:flex-row md:items-center">
+                <div class="mr-4 leading-relaxed mb-4 md:w-2/5 md:mb-0">
                     <h3 class="font-bold text-gray-600 uppercase mb-4">
                         Readme Rendering
                     </h3>
@@ -70,7 +70,7 @@
                     provide customized, relevant info to your users.
                 </div>
 
-                <div class="flex-grow ml-4 w-3/5">
+                <div class="flex-grow md:w-3/5 md:ml-4">
                     <img src="{{ asset('images/features/readme.png') }}" class="rounded-lg shadow-lg">
                 </div>
             </div>
@@ -83,8 +83,8 @@
                 Features
             </h2>
 
-            <div class="flex">
-                <div class="w-1/2 px-4">
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 md:px-4">
                     <ul class="list-outside pl-6 list-disc">
                         <li class="py-4">
                             <span class="font-bold">Simple installation</span>
@@ -104,7 +104,7 @@
                     </ul>
                 </div>
 
-                <div class="w-1/2 px-4">
+                <div class="md:w-1/2 md:px-4">
                     <ul class="list-outside pl-6 list-disc">
                         <li class="py-4">
                             <span class="bg-green-600 text-white text-xs rounded px-2 py-1 uppercase">New</span>
