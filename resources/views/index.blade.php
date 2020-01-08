@@ -8,7 +8,9 @@
             <p class="font-serif leading-loose text-xl mb-12">
                 <span class="font-bold">Directory Lister</span> is the easiest way
                 to share the contents of any web-accessable folder and navigate
-                there within.
+                there within. With a zero configuration, drag-and-drop
+                installation you'll be up and running in
+                <span class="underline">less than a minute</span>.
             </p>
 
             <div id="beer-slider" class="beer-slider rounded-lg shadow-lg mb-6" data-beer-label="Dark">
@@ -25,24 +27,17 @@
         </div>
     </div>
 
-    <div class="bg-blue-900 text-white">
-        <div class="container max-w-4xl mx-auto py-12 px-4 text-center lg:px-0">
-            <a href="#" class="inline-block rounded-lg bg-blue-600 px-6 py-4 text-lg hover:bg-blue-700 hover:shadow-md">
-                Get Directory Lister
-            </a>
-
-            <p class="mt-6 font-serif font-light text-lg">
-                List the contents of any web-accessible directory in less than a minute.
-            </p>
-        </div>
-    </div>
+    @include('components.getting-started')
 
     <div class="bg-blue-100">
         <div class="container max-w-4xl mx-auto py-24 px-4 lg:px-0">
             <div class="flex items-center mb-24">
                 <div class="mr-4 w-2/5 leading-relaxed">
-                    Find the files you're looking for quickly with built-in
-                    directory search.
+                    <h3 class="font-bold text-gray-600 uppercase mb-4">
+                        Directory Search
+                    </h3>
+
+                    Find what you're looking for fast with built-in search.
                 </div>
 
                 <div class="flex-grow ml-4 w-3/5">
@@ -56,14 +51,23 @@
                 </div>
 
                 <div class="ml-4 w-2/5 leading-relaxed">
-                    Retrieve file hashes to validate downloaded files, improving
-                    trust and reliability.
+                    <h3 class="font-bold text-gray-600 uppercase mb-4">
+                        File Hashes
+                    </h3>
+
+                    Improve trust and reliability with quick access to file
+                    hashes for validating downloaded files against the source.
                 </div>
             </div>
 
             <div class="flex items-center">
                 <div class="mr-4 w-2/5 leading-relaxed">
-                    Render README files directly in the page.
+                    <h3 class="font-bold text-gray-600 uppercase mb-4">
+                        Readme Rendering
+                    </h3>
+
+                    Render README files directly in your directory listing to
+                    provide customized, relevant info to your users.
                 </div>
 
                 <div class="flex-grow ml-4 w-3/5">
@@ -82,24 +86,44 @@
             <div class="flex">
                 <div class="w-1/2 px-4">
                     <ul class="list-outside pl-6 list-disc">
-                        <li class="py-2">
-                            <span class="font-bold">Lorem ipsum, dolor sit amet</span> consectetur adipisicing elit.
+                        <li class="py-4">
+                            <span class="font-bold">Simple installation</span>
+                            allows you to be up and running in less than a minute.
                         </li>
 
-                        <li class="py-2">
-                            <span class="font-bold">Dolorem velit officia mollitia</span> consequuntur consequatur veniam tempore sint corrupti provident quidem fugiat.
+                        <li class="py-4">
+                            <span class="bg-green-600 text-white text-xs rounded px-2 py-1 uppercase">New</span>
+                            <span class="font-bold">Light and dark themes</span>
+                            to suit your professional needs or personal style.
+                        </li>
+
+                        <li class="py-4">
+                            <span class="font-bold">Custom sort ordering</span>
+                            gives you control of the ordering of your files/folders.
                         </li>
                     </ul>
                 </div>
 
                 <div class="w-1/2 px-4">
                     <ul class="list-outside pl-6 list-disc">
-                        <li class="py-2">
-                            <span class="font-bold">Dolorem velit officia mollitia</span> consequuntur consequatur veniam tempore sint corrupti provident quidem fugiat.
+                        <li class="py-4">
+                            <span class="bg-green-600 text-white text-xs rounded px-2 py-1 uppercase">New</span>
+                            <span class="font-bold">Directory search</span>
+                            helps you locate the files you need quickly and
+                            efficiently.
                         </li>
 
-                        <li class="py-2">
-                            <span class="font-bold">Lorem ipsum, dolor sit amet</span> consectetur adipisicing elit.
+                        <li class="py-4">
+                            <span class="font-bold">File hashes</span>
+                            instill confidence when downloading files through
+                            verification.
+                        </li>
+
+                        <li class="py-4">
+                            <span class="bg-green-600 text-white text-xs rounded px-2 py-1 uppercase">New</span>
+                            <span class="font-bold">Readme rendering</span>
+                            allows exposing the contents of READMEs directly on
+                            the page.
                         </li>
                     </ul>
                 </div>
