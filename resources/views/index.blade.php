@@ -22,7 +22,7 @@
             </div>
 
             <p class="text-lg text-center text-gray-500">
-                Check out the demo...
+                Demo coming soon...
             </p>
         </div>
     </div>
