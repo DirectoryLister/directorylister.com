@@ -9,19 +9,19 @@
         </div>
 
         <div class="flex items-center">
-            <a href="#" class="text-gray-600 hover:text-gray-800 hidden hover:underline sm:inline-block">
-                v3.0.0
+            <a href="https://github.com/PHLAK/SemVer/releases" class="text-gray-600 hover:text-gray-800 hidden hover:underline sm:inline-block">
+                v3.0.0-beta
             </a>
 
-            <a href="#" title="GitHub" class="text-gray-600 ml-4 hover:text-gray-800">
+            <a href="https://github.com/DirectoryLister/DirectoryLister" title="GitHub" class="text-gray-600 ml-4 hover:text-gray-800">
                 <i class="fab fa-github fa-lg"></i>
             </a>
 
-            <a href="#" title="Twitter" class="text-gray-600 ml-4 hover:text-gray-800">
+            <a href="https://twitter.com/DirectoryLister" title="Twitter" class="text-gray-600 ml-4 hover:text-gray-800">
                 <i class="fab fa-twitter fa-lg"></i>
             </a>
 
-            <a href="#" title="Slack" class="text-gray-600 ml-4 hover:text-gray-800">
+            <a href="https://ln.phlak.net/join-slack" title="Slack" class="text-gray-600 ml-4 hover:text-gray-800">
                 <i class="fab fa-slack fa-lg"></i>
             </a>
         </div>
