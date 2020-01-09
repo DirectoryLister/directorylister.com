@@ -131,7 +131,7 @@
         </div>
     </div>
 
-    @include('components.getting-started')
+    @include('components.sponsor')
 
     @include('components.footer')
 @endsection
