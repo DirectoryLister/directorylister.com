@@ -66,7 +66,7 @@
                         Readme Rendering
                     </h3>
 
-                    Render README files directly in your directory listing to
+                    Display README files directly in your directory listing to
                     provide customized, relevant info to your users.
                 </div>
 
