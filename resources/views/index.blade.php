@@ -30,7 +30,7 @@
     @include('components.getting-started')
 
     <div class="bg-blue-100">
-        <div class="container max-w-4xl mx-auto py-24 px-4 lg:px-0">
+        <div class="container max-w-4xl mx-auto py-12 px-4 lg:px-0">
             <div class="flex flex-col mb-24 md:flex-row md:items-center">
                 <div class="leading-relaxed mb-4 md:w-2/5 md:mr-4 md:mb-0">
                     <h3 class="font-bold text-gray-600 uppercase mb-4">
