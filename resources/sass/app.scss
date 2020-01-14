@@ -15,13 +15,18 @@
 .beer-reveal[data-beer-label]::after,
 .beer-slider[data-beer-label]::after {
     background: hsla(0, 0%, 100%, 0.66);
-    // bottom: 1.5rem;
-    top: 0.55rem;
+    top: auto;
+    bottom: 1rem;
 }
 
 .beer-reveal[data-beer-label]::after {
     background: hsla(0, 0%, 0%, 0.66);
     color: white;
+    left: 1rem;
+}
+
+.beer-slider[data-beer-label]::after {
+    right: 1rem;
 }
 
 .beer-handle {
