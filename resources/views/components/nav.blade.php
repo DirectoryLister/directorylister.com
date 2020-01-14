@@ -9,7 +9,7 @@
         </div>
 
         <div class="flex items-center">
-            <a href="https://github.com/PHLAK/SemVer/releases" class="text-gray-600 hover:text-gray-800 hidden hover:underline sm:inline-block">
+            <a href="https://github.com/DirectoryLister/DirectoryLister/releases" class="text-gray-600 hover:text-gray-800 hidden hover:underline sm:inline-block">
                 v3.0.0-beta
             </a>
 
