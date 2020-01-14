@@ -1,3 +1,5 @@
 let BeerSlider = require('beerslider');
 
-new BeerSlider(document.getElementById('beer-slider'));
+window.addEventListener('load', function() {
+    new BeerSlider(document.getElementById('beer-slider'));
+});
