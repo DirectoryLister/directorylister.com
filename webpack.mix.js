@@ -1,5 +1,6 @@
 const mix = require('laravel-mix');
-const tailwindcss = require("tailwindcss");
+const tailwindcss = require('tailwindcss');
+require('laravel-mix-purgecss');
 
 /*
  |--------------------------------------------------------------------------
@@ -25,8 +26,11 @@ mix.options({
     postCss: [tailwindcss('tailwind.config.js')]
 });
 
-// mix.purgeCss({
-//     whitelist: ["html", "body", "code", "pre", "fab", "far", "fas", "fal", "fad"],
-//     whitelistPatterns: [/^fa\-/],
-//     whitelistPatternsChildren: [/^markdown/, /^token/]
-// });
+mix.purgeCss({
+    whitelist: ['html', 'body', 'fab', 'far', 'fas'],
+    whitelistPatterns: [/^fa\-/, /^beer\-/],
+});
+
+if (mix.inProduction()) {
+    mix.version();
+}
