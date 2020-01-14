@@ -11,3 +11,19 @@
 
 // Beer Slider
 @import "../../node_modules/beerslider/dist/BeerSlider.css";
+
+.beer-reveal[data-beer-label]::after,
+.beer-slider[data-beer-label]::after {
+    background: hsla(0, 0%, 100%, 0.66);
+    // bottom: 1.5rem;
+    top: 0.55rem;
+}
+
+.beer-reveal[data-beer-label]::after {
+    background: hsla(0, 0%, 0%, 0.66);
+    color: white;
+}
+
+.beer-handle {
+    background: hsla(0, 0%, 90%, 0.5);
+}
