@@ -77,6 +77,8 @@
         </div>
     </div>
 
+    @include('components.help-and-support')
+
     <div class="bg-white">
         <div class="container max-w-4xl mx-auto px-4 py-12 lg:px-0">
             <h2 class="text-lg text-gray-600 text-center uppercase mb-6">
