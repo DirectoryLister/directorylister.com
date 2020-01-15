@@ -4,8 +4,12 @@
             Get Directory Lister
         </a>
 
-        <p class="mt-6 font-serif font-light text-lg">
-            List the contents of any web-accessible directory in less than a minute.
+        <p class="font-serif font-light text-lg mt-6">
+            <i class="fas fa-question-circle fa-lg fa-fw"></i>
+
+            Join our
+            <a href="https://spectrum.chat/directory-lister" class="underline">Community Forum</a>
+            for help and support.
         </p>
     </div>
 </div>
