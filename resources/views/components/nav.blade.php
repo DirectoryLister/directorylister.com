@@ -9,8 +9,10 @@
         </div>
 
         <div class="flex items-center pt-4 sm:pt-0">
-            <a href="https://github.com/DirectoryLister/DirectoryLister/releases" class="text-gray-600 hover:text-gray-800 hover:underline inline-block">
-                v3.0.0-beta
+            <a href="{{ $release->html_url ?? 'https://github.com/DirectoryLister/DirectoryLister/releases/latest' }}"
+                class="text-gray-600 hover:text-gray-800 hover:underline inline-block"
+            >
+                {{ $release->tag_name ?? '3.X.X' }}
             </a>
 
             <a href="https://github.com/DirectoryLister/DirectoryLister" title="GitHub" class="text-gray-600 ml-4 hover:text-gray-800">
