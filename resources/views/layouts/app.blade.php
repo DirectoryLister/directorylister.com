@@ -13,7 +13,7 @@
     @yield('content')
 </div>
 
-@if(app()->isProduction()))
+@if(app()->isProduction())
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ config('services.google.analytics_id') }}"></script>
     <script>
