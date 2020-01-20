@@ -1,4 +1,4 @@
-<div class="bg-blue-600 text-white">
+<div class="bg-blue-700 text-white">
     <div class="container max-w-4xl mx-auto px-4 py-12 flex justify-center items-center lg:px-0">
         <i class="fas fa-question-circle text-4xl mr-4"></i>
 

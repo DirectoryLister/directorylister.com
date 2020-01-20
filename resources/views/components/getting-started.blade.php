@@ -6,12 +6,10 @@
             Get Directory Lister
         </a>
 
-        <p class="font-serif font-light text-lg mt-6">
-            <i class="fas fa-question-circle fa-lg fa-fw"></i>
+        <p class="font-serif font-light mt-6">
+            <i class="fas fa-info-circle fa-fw"></i>
 
-            Join our
-            <a href="https://spectrum.chat/directory-lister" class="underline">Community Forum</a>
-            for help and support.
+            Directory Lister requires PHP 7.2+
         </p>
     </div>
 </div>
