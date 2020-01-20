@@ -35,4 +35,8 @@ return [
         'token' => env('GITHUB_TOKEN'),
     ],
 
+    'google' => [
+        'analytics_id' => env('GOOGLE_ANALYTICS_ID'),
+    ],
+
 ];
