@@ -23,10 +23,6 @@
                 <i class="fab fa-twitter fa-lg"></i>
             </a>
 
-            <a href="https://ln.phlak.net/join-slack" title="Slack" class="text-gray-600 ml-4 hover:text-gray-800">
-                <i class="fab fa-slack fa-lg"></i>
-            </a>
-
             <a href="https://spectrum.chat/directory-lister" title="Spectrum" class="text-gray-600 ml-4 hover:text-gray-800">
                 <i class="fas fa-comments fa-lg"></i>
             </a>
