@@ -15,15 +15,15 @@
                 {{ $release->tag_name ?? '3.X.X' }}
             </a>
 
-            <a href="https://github.com/DirectoryLister/DirectoryLister" title="GitHub" class="text-gray-600 ml-4 hover:text-gray-800">
+            <a href="https://github.com/DirectoryLister/DirectoryLister" title="GitHub" class="text-gray-600 ml-4 hover:text-github">
                 <i class="fab fa-github fa-lg"></i>
             </a>
 
-            <a href="https://twitter.com/DirectoryLister" title="Twitter" class="text-gray-600 ml-4 hover:text-gray-800">
+            <a href="https://twitter.com/DirectoryLister" title="Twitter" class="text-gray-600 ml-4 hover:text-twitter">
                 <i class="fab fa-twitter fa-lg"></i>
             </a>
 
-            <a href="https://spectrum.chat/directory-lister" title="Spectrum" class="text-gray-600 ml-4 hover:text-gray-800">
+            <a href="https://spectrum.chat/directory-lister" title="Spectrum" class="text-gray-600 ml-4 hover:text-spectrum">
                 <i class="fas fa-comments fa-lg"></i>
             </a>
         </div>
