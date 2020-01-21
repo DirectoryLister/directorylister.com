@@ -27,4 +27,5 @@
                 <i class="fas fa-comments fa-lg"></i>
             </a>
         </div>
+    </div>
 </nav>
