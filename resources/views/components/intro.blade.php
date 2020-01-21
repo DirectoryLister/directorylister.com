@@ -15,8 +15,10 @@
             </div>
         </div>
 
-        <p class="text-lg text-center text-gray-500">
-            Demo coming soon...
+        <p class="text-lg text-center text-gray-600">
+            <a href="https://demo.beta.directorylister.com" class="underline hover:text-gray-800">
+                View the demo
+            </a>
         </p>
     </div>
 </div>
