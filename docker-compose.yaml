@@ -7,12 +7,12 @@ services:
       context: .
       target: development
     environment:
-      APP_ENV: 'local'
+      APP_ENV: 'docker'
       LOG_CHANNEL: 'stderr'
       DB_HOST: 'directorylister-dot-com-mysql'
       DB_PORT: 3306
-      DB_DATABASE: ${DB_DATABASE:-laravel}
-      DB_USERNAME: ${DB_USERNAME:-laravel}
+      DB_DATABASE: ${DB_DATABASE:-homestead}
+      DB_USERNAME: ${DB_USERNAME:-homestead}
       DB_PASSWORD: ${DB_PASSWORD:-secret}
       CACHE_DRIVER: 'redis'
       REDIS_HOST: 'directorylister-dot-com-redis'
@@ -29,8 +29,8 @@ services:
       - ${DB_PORT:-3306}:3306
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
-      MYSQL_DATABASE: ${DB_DATABASE:-laravel}
-      MYSQL_USER: ${DB_USERNAME:-laravel}
+      MYSQL_DATABASE: ${DB_DATABASE:-homestead}
+      MYSQL_USER: ${DB_USERNAME:-homestead}
       MYSQL_PASSWORD: ${DB_PASSWORD:-secret}
     restart: unless-stopped
 

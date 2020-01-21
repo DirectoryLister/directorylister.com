@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use App\GitHub\CachedClient as CachedGitHubClient;
 use App\GitHub\Client as GitHubClient;
-use App\Providers\TelescopeServiceProvider;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -16,10 +15,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if ($this->app->isLocal()) {
-            $this->app->register(TelescopeServiceProvider::class);
-        }
-
         $this->app->bind(GitHubClient::class, function ($app) {
             return new CachedGitHubClient(config('services.github.token'));
         });
