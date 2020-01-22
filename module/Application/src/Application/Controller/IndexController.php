@@ -122,6 +122,11 @@ class IndexController extends AbstractActionController
             // Pass releases to the view
             $view->releases = json_decode($apiResults);
 
+            // Remove prereleases
+            $view->releases = array_filter($view->releases, function ($release) {
+                return $release->prerelease === false;
+            });
+
             // Cache the data
             $cache->setItem('releases', $view->releases);
 
