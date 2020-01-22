@@ -3,7 +3,7 @@
         <div class="flex flex-col mb-24 md:flex-row md:items-center">
             <div class="leading-relaxed mb-4 md:w-2/5 md:mr-4 md:mb-0">
                 <h3 class="font-bold text-gray-600 uppercase mb-4">
-                    Directory Search
+                    File Search
                 </h3>
 
                 Find what you're looking for fast with built-in search.

@@ -29,7 +29,7 @@
                 <ul class="list-outside pl-6 list-disc">
                     <li class="py-4">
                         <span class="bg-green-600 text-white text-xs rounded px-2 py-1 uppercase">New</span>
-                        <span class="font-bold">Directory search</span>
+                        <span class="font-bold">File search</span>
                         helps you locate the files you need quickly and
                         efficiently.
                     </li>
