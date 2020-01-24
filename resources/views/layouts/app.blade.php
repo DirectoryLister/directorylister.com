@@ -7,7 +7,7 @@
 <link rel="icon" href="{{ asset('images/favicon.png') }}">
 <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
-<title>Directory Lister</title>
+<title>Directory Lister &bull; The Simple (PHP) Web Directory Lister</title>
 
 <div id="app" class="font-sans text-gray-900">
     @yield('content')
