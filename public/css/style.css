@@ -50,7 +50,7 @@ body {
     background: url(/img/patterns/retina_wood.png) transparent repeat center center;
     overflow: hidden;
     margin-bottom: 0;
-    padding-top: 125px;
+    padding-top: 140px;
     position: relative;
     text-align: center;
 }
@@ -453,14 +453,19 @@ body {
 
 .beta-banner {
     background: #2B6CB0;
-    background: linear-gradient(90deg, #2B6CB0 0%, #6B46C1 100%);
-    font-size: 1.5rem;
+    background: linear-gradient(90deg, #2B6CB0 0%, #6B46C1 80%);
     color: #FFF;
     padding: 12px 0;
 }
 
+.beta-banner h3 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
 .beta-banner a {
     color: #FFF;
+    font-size: 1.25rem;
     text-decoration: underline;
 }
 
