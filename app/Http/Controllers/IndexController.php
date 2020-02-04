@@ -9,7 +9,7 @@ class IndexController extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param \App\GitHub\CachedClient $github
+     * @param \App\GitHub\Client $github
      *
      * @return \Illuminate\Http\Response
      */
