@@ -3,7 +3,7 @@
 @section('content')
     @include('components.nav')
     @include('components.intro')
-    @include('components.getting-started')
+    @include('components.download')
     @include('components.feature-images')
     @include('components.features-list')
     @include('components.help-and-support')
