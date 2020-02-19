@@ -11,7 +11,7 @@
                         {{ preg_replace(
                             sprintf('/^DirectoryLister-%s\./', preg_quote($release->tag_name)), '', $asset->name
                         ) }}
-                    </strong>
+                    </span>
                 </a>
             @endforeach
         </div>
