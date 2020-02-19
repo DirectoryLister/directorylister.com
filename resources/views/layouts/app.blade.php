@@ -23,6 +23,9 @@
 
         gtag("config", "{{ config('services.google.analytics_id') }}");
     </script>
+
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-1239753369879086" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 @endif
 
 @yield('scripts')
