@@ -22,6 +22,12 @@
                         <span class="font-bold">Custom sort ordering</span>
                         gives you control of the ordering of your files/folders.
                     </li>
+
+                    <li class="py-4">
+                        <span class="bg-green-600 text-white text-xs rounded px-2 py-1 uppercase">New</span>
+                        <span class="font-bold">Multi-lingual support</span>
+                        brings Directory Lister to the language of your choice.
+                    </li>
                 </ul>
             </div>
 
@@ -45,6 +51,11 @@
                         <span class="font-bold">Readme rendering</span>
                         allows exposing the contents of READMEs directly on
                         the page.
+                    </li>
+
+                    <li class="py-4">
+                        <span class="font-bold">Zip downloads</span>
+                        for fetching an entire directory of files in a single action.
                     </li>
                 </ul>
             </div>
