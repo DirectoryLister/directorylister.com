@@ -6,13 +6,13 @@
             <h1 class="font-serif text-3xl">
                 Directory Lister
             </h1>
+        </p>
+
         </div>
 
         <div class="flex items-center pt-4 sm:pt-0">
-            <a href="{{ $release->html_url ?? 'https://github.com/DirectoryLister/DirectoryLister/releases/latest' }}"
-                class="text-gray-600 hover:text-gray-800 hover:underline inline-block"
-            >
-                {{ $release->tag_name ?? '3.X.X' }}
+            <a href="https://github.com/DirectoryLister/DirectoryLister/wiki" class="text-gray-600 hover:text-gray-800 hover:underline inline-block">
+                Documentation
             </a>
 
             <a href="https://github.com/DirectoryLister/DirectoryLister" title="GitHub" class="text-gray-600 ml-4 hover:text-github">

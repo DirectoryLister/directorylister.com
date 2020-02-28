@@ -15,16 +15,10 @@
             </div>
         </div>
 
-        <div class="flex justify-center items-center text-lg text-center text-gray-600">
+        <p class="text-lg text-center text-gray-600">
             <a href="https://demo.directorylister.com" class="underline hover:text-gray-800">
                 View the demo
             </a>
-
-            <div class="text-xl px-2">&bull;</div>
-
-            <a href="https://github.com/DirectoryLister/DirectoryLister/wiki" class="underline hover:text-gray-800">
-                Documentation
-            </a>
-        </div>
+        </p>
     </div>
 </div>

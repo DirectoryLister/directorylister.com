@@ -18,7 +18,6 @@
 
         <p class="font-serif font-light mt-6">
             <i class="fas fa-info-circle fa-fw"></i>
-
             Directory Lister requires PHP 7.2+
         </p>
     </div>
