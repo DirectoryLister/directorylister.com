@@ -2,7 +2,7 @@
     <div class="container max-w-4xl mx-auto px-4 py-12 lg:px-0">
         <p class="font-serif leading-loose text-lg mb-12 sm:text-xl">
             <span class="font-bold">Directory Lister</span> is the easiest way
-            to expose the contents of any web-accessable folder for browsing
+            to expose the contents of any web-accessible folder for browsing
             and sharing. With a zero configuration, drag-and-drop installation
             you'll be up and running in <span class="underline">less than a minute</span>.
         </p>
