@@ -7,7 +7,7 @@
             you'll be up and running in <span class="underline">less than a minute</span>.
         </p>
 
-        <div id="beer-slider" class="beer-slider rounded-lg shadow-lg mb-6" data-beer-label="Dark">
+        <div id="beer-slider" class="beer-slider rounded-lg shadow-lg mb-6 z-0" data-beer-label="Dark">
             <img src="{{ asset('images/screenshot-dark.png') }}" alt="Directory Lister - Dark Theme">
 
             <div class="beer-reveal" data-beer-label="Light">

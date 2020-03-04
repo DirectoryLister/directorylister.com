@@ -1,3 +1,5 @@
+import 'alpinejs';
+
 let BeerSlider = require('beerslider');
 
 window.addEventListener('load', function() {

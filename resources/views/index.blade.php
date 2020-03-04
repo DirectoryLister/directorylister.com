@@ -9,4 +9,5 @@
     @include('components.help-and-support')
     @include('components.sponsor')
     @include('components.footer')
+    @include('components.sponsor-banner')
 @endsection
