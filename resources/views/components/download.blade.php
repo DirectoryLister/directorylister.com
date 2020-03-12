@@ -16,9 +16,19 @@
             @endforeach
         </div>
 
-        <p class="font-serif font-light mt-6">
-            <i class="fas fa-info-circle fa-fw"></i>
-            Directory Lister requires PHP 7.2+
-        </p>
+        <div class="flex flex-col justify-between items-center mt-6 sm:flex-row">
+            <p class="order-3 font-mono text-gray-500 mt-2 sm:order-1 sm:text-sm sm:mt-0">
+                <a href="{{ $release->html_url }}" class="hover:underline">
+                    {{ $release->name }}
+                </a>
+            </p>
+
+            <div class="order-2 border-l border-gray-500 mx-2 w-0 hidden sm:block">&nbsp;</div>
+
+            <p class="order-1 font-serif font-light text-gray-500 sm:order-3">
+                <i class="fas fa-info-circle fa-fw"></i>
+                Directory Lister requires PHP 7.2+
+            </p>
+        </div>
     </div>
 </div>
