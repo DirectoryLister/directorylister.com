@@ -6,8 +6,6 @@
             <h1 class="font-serif text-3xl">
                 Directory Lister
             </h1>
-        </p>
-
         </div>
 
         <div class="flex items-center pt-4 sm:pt-0">
