@@ -1,5 +1,5 @@
 # Install PHP dependencies
-FROM composer:1.9 AS php-dependencies
+FROM composer:1.10 AS php-dependencies
 COPY . /app
 
 # Install and compile JavaScript assets
