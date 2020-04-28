@@ -16,7 +16,7 @@ class IndexController extends Controller
     public function __invoke(GitHubClient $github)
     {
         return view('index', [
-            'release' => $github->latestPrerelease('DirectoryLister', 'DirectoryLister'),
+            'release' => $github->latestRelease('DirectoryLister', 'DirectoryLister'),
         ]);
     }
 }

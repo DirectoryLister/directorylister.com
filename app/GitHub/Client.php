@@ -51,27 +51,4 @@ class Client
 
         return json_decode((string) $response->getBody(), false, 512, JSON_THROW_ON_ERROR);
     }
-
-    /**
-     * Get the latest release for a repository.
-     *
-     * @param string $owner The repository owner
-     * @param string $repo  The repository name
-     *
-     * @throws JsonException
-     *
-     * @return object
-     */
-    public function latestPrerelease(string $owner, string $repo): object
-    {
-        try {
-            $response = $this->client->get("repos/{$owner}/{$repo}/releases");
-        } catch (ClientException $exception) {
-            Log::error($exception);
-
-            return json_decode('{}');
-        }
-
-        return json_decode((string) $response->getBody(), false, 512, JSON_THROW_ON_ERROR)[0];
-    }
 }
