@@ -20,7 +20,6 @@ services:
       VIRTUAL_HOST: directorylister.local
     volumes:
       - ./:/var/www/html
-    restart: on-failure
 
   mysql:
     container_name: directorylister-dot-com-mysql
@@ -32,14 +31,12 @@ services:
       MYSQL_DATABASE: ${DB_DATABASE:-homestead}
       MYSQL_USER: ${DB_USERNAME:-homestead}
       MYSQL_PASSWORD: ${DB_PASSWORD:-secret}
-    restart: on-failure
 
   redis:
     container_name: directorylister-dot-com-redis
     image: redis:5.0
     ports:
       - ${REDIS_PORT:-6379}:6379
-    restart: on-failure
 
 networks:
   default:
