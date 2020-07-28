@@ -1,7 +1,7 @@
-<div class="fixed bottom-0 left-0 right-0 m-4 transition" x-data="{ show: false }" x-show.transition="show"
+<div class="fixed bottom-0 left-0 right-0 m-4 transition z-50" x-data="{ show: false }" x-show.transition="show"
     x-init="localStorage.getItem('hideBanner') === null ? (setTimeout(() => show = true, 500)) : (show = false)"
 >
-    <div class="container flex justify-between items-center flex-wrap rounded-lg bg-black shadow-lg text-white px-4 py-2 mx-auto z-50 sm:flex-row">
+    <div class="container flex justify-between items-center flex-wrap rounded-lg bg-black shadow-lg text-white px-4 py-2 mx-auto sm:flex-row">
         <p class="w-0 flex-1">
             <span class="font-bold">Love Directory Lister?</span>
 
