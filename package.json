@@ -23,6 +23,6 @@
     "dependencies": {
         "alpinejs": "^2.5.0",
         "beerslider": "^1.0.3",
-        "tailwindcss": "^1.6.2"
+        "tailwindcss": "^1.7.3"
     }
 }
