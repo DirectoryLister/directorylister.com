@@ -15,11 +15,6 @@ mix.options({
     postCss: [tailwindcss('tailwind.config.js')]
 });
 
-mix.purgeCss({
-    whitelist: ['html', 'body', 'fab', 'far', 'fas'],
-    whitelistPatterns: [/^fa\-/, /^beer\-/],
-});
-
 if (mix.inProduction()) {
     mix.version();
 }
