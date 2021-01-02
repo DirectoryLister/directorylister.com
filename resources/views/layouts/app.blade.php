@@ -24,7 +24,7 @@
 
 <title>Directory Lister &bull; The Simple (PHP) Web Directory Lister</title>
 
-<div id="app" class="font-sans text-gray-900">
+<div id="app" class="font-sans text-gray-900 antialiased">
     @yield('content')
 </div>
 

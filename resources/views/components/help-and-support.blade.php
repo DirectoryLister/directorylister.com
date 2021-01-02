@@ -3,9 +3,9 @@
         <i class="fas fa-question-circle text-4xl mb-4 sm:mb-0 sm:mr-4"></i>
 
         <p class="mt font-serif font-light text-lg text-center">
-            Join our
-            <a href="https://spectrum.chat/directory-lister" class="underline">Community Forum</a>
-            for help and support.
+            Reach out on the
+            <a href="https://github.com/DirectoryLister/DirectoryLister/discussions" class="underline">GitHub Discussions</a>
+            board for help and support.
         </p>
     </div>
 </div>
