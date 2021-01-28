@@ -3,7 +3,7 @@
         <div>
             @foreach ($release->assets as $asset)
                 <a href="{{ $asset->browser_download_url }}" onclick="gtag('event', 'click', { 'event_category': 'Download', 'event_label': '{{ $asset->name }}' });"
-                    class="inline-block rounded-lg bg-blue-600 shadow my-2 px-6 py-4 text-lg text-white w-full hover:bg-blue-700 hover:shadow-md sm:w-auto sm:mx-2 sm:my-0"
+                    class="inline-block rounded-lg bg-blue-600 shadow my-2 px-6 py-4 text-lg text-white w-full transform transition hover:scale-105 hover:shadow-md sm:w-auto sm:mx-2 sm:my-0"
                 >
                     <i class="fas fa-download fa-lg fa-fw"></i> Download
 

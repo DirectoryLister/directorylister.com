@@ -12,7 +12,6 @@ module.exports = {
             colors: {
                 blue: colors.lightBlue,
                 gray: colors.blueGray,
-                purple: colors.violet,
             },
             fontFamily: {
                 serif: ['Merriweather', ...defaultTheme.fontFamily.serif]
