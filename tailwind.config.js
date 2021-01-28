@@ -1,8 +1,7 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
+
 module.exports = {
-    future: {
-        purgeLayersByDefault: true,
-        removeDeprecatedGapUtilities: true
-    },
     plugins: [],
     purge: [
         'resources/**/*.js',
@@ -10,15 +9,13 @@ module.exports = {
     ],
     theme: {
         extend: {
+            colors: {
+                blue: colors.lightBlue,
+                gray: colors.blueGray,
+                purple: colors.violet,
+            },
             fontFamily: {
-                serif: [
-                    "Merriweather",
-                    "Georgia",
-                    "Cambria",
-                    '"Times New Roman"',
-                    "Times",
-                    "serif"
-                ]
+                serif: ['Merriweather', ...defaultTheme.fontFamily.serif]
             },
             textColor: {
                 github: "#171515",
