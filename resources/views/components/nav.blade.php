@@ -9,7 +9,7 @@
         </div>
 
         <div class="flex items-center pt-4 sm:pt-0">
-            <a href="https://github.com/DirectoryLister/DirectoryLister/wiki" class="text-gray-600 hover:text-gray-800 hover:underline inline-block">
+            <a href="https://docs.directorylister.com" class="text-gray-600 hover:text-gray-800 hover:underline inline-block">
                 Documentation
             </a>
 
