@@ -88,7 +88,7 @@ jobs:
         run: npm ci
 
       - name: Lint JavaScript Files
-        run: npx eslint resources/js/**/*.{js,vue}
+        run: npx eslint resources/js/*.js
 
       - name: Compile Assets
         run: npm run production --verbose
