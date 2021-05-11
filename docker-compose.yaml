@@ -2,39 +2,60 @@ version: '3.4'
 
 services:
   app:
-    container_name: directorylister-dot-com-app
-    build:
-      context: .
-      target: development
+    container_name: directorylister-app
+    build: .
+    image: phlak/dev-env:local
+    depends_on:
+      - mysql
+      - redis
     environment:
-      APP_ENV: 'local'
-      LOG_CHANNEL: 'stderr'
-      DB_HOST: 'directorylister-dot-com-mysql'
-      DB_PORT: 3306
-      DB_DATABASE: ${DB_DATABASE:-homestead}
-      DB_USERNAME: ${DB_USERNAME:-homestead}
+      APP_ENV: local
+      LOG_CHANNEL: stderr
+      DB_HOST: mysql
+      DB_PORT: ${DB_PORT:-3306}
+      DB_DATABASE: ${DB_DATABASE:-app}
+      DB_USERNAME: ${DB_USERNAME:-laravel}
       DB_PASSWORD: ${DB_PASSWORD:-secret}
-      CACHE_DRIVER: 'redis'
-      REDIS_HOST: 'directorylister-dot-com-redis'
+      CACHE_DRIVER: redis
+      REDIS_HOST: redis
       REDIS_PORT: 6379
     ports:
       - ${APP_PORT:-80}:80
+    extra_hosts:
+      - directorylister.local:127.0.0.1
+    user: ${HOST_USER_ID:-0}:${HOST_GROUP_ID:-0}
     volumes:
       - ./:/var/www/html
+      - ./.docker/php/config/php.ini:/usr/local/etc/php/php.ini
+      - ./.docker/apache2/config/000-default.conf:/etc/apache2/sites-available/000-default.conf
 
   mysql:
-    container_name: directorylister-dot-com-mysql
-    image: mysql:5.7
+    container_name: directorylister-mysql
+    image: mysql:8.0
     ports:
       - ${DB_PORT:-3306}:3306
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
-      MYSQL_DATABASE: ${DB_DATABASE:-homestead}
-      MYSQL_USER: ${DB_USERNAME:-homestead}
+      MYSQL_DATABASE: ${DB_DATABASE:-app}
+      MYSQL_USER: ${DB_USERNAME:-laravel}
       MYSQL_PASSWORD: ${DB_PASSWORD:-secret}
+    volumes:
+      - mysql-data:/var/lib/mysql
 
   redis:
-    container_name: directorylister-dot-com-redis
-    image: redis:5.0
+    container_name: directorylister-redis
+    image: redis:6.0
     ports:
       - ${REDIS_PORT:-6379}:6379
+
+  npm:
+    container_name: directorylister-npm
+    image: phlak/dev-env:local
+    volumes:
+      - ./:/var/www/html
+    user: ${HOST_USER_ID:-0}:${HOST_GROUP_ID:-0}
+    command: npm run watch
+
+volumes:
+  mysql-data:
+    driver: local
