@@ -7,10 +7,7 @@ use Illuminate\View\View;
 
 class IndexController extends Controller
 {
-    /**
-     * Handle the incoming request.
-     *
-     */
+    /** Handle the incoming request. */
     public function __invoke(GitHubClient $github): View
     {
         return view('index', [

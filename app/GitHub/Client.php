@@ -5,7 +5,6 @@ namespace App\GitHub;
 use GuzzleHttp\Client as GuzzleHttpClient;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Log;
-use JsonException;
 
 class Client
 {
