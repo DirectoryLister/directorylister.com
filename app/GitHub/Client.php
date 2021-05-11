@@ -5,6 +5,7 @@ namespace App\GitHub;
 use GuzzleHttp\Client as GuzzleHttpClient;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Log;
+use JsonException;
 
 class Client
 {
@@ -34,8 +35,6 @@ class Client
      *
      * @param string $owner The repository owner
      * @param string $repo The repository name
-     *
-     * @throws JsonException
      */
     public function latestRelease(string $owner, string $repo): object
     {

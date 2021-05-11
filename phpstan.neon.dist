@@ -1,0 +1,20 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
+    - phpstan-baseline.neon
+
+parameters:
+
+  paths:
+    - app
+    - config
+    - database
+    - routes
+    - tests
+
+  level: 5 # 0 - 8 (higher = more strict)
+
+  checkFunctionNameCase: true
+  checkMissingIterableValueType: false
+  checkModelProperties: true
+
+  reportUnmatchedIgnoredErrors: false
