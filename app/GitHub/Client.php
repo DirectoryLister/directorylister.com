@@ -15,7 +15,7 @@ class Client
      * Create a new GitHub Client instance.
      *
      * @param string $authToken GitHub OAuth token
-     * @param array  $config    GuzzleHttp Client config
+     * @param array $config GuzzleHttp Client config
      */
     public function __construct(string $authToken, array $config = [])
     {
@@ -33,11 +33,9 @@ class Client
      * Get the latest release for a repository.
      *
      * @param string $owner The repository owner
-     * @param string $repo  The repository name
+     * @param string $repo The repository name
      *
      * @throws JsonException
-     *
-     * @return object
      */
     public function latestRelease(string $owner, string $repo): object
     {

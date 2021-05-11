@@ -9,8 +9,6 @@ class IndexController extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param \App\GitHub\Client $github
-     *
      * @return \Illuminate\Http\Response
      */
     public function __invoke(GitHubClient $github)

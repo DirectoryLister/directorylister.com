@@ -11,9 +11,7 @@ class CachedClient extends Client
      * Get a cached release.
      *
      * @param string $owner The repository owner
-     * @param string $repo  The repository name
-     *
-     * @return object
+     * @param string $repo The repository name
      */
     public function latestRelease(string $owner, string $repo): object
     {

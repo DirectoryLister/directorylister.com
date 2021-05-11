@@ -8,11 +8,7 @@ use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
+    /** Register any application services. */
     public function register()
     {
         $this->app->bind(GitHubClient::class, function ($app) {
@@ -20,11 +16,7 @@ class AppServiceProvider extends ServiceProvider
         });
     }
 
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
+    /** Bootstrap any application services. */
     public function boot()
     {
     }
