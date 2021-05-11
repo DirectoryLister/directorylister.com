@@ -98,4 +98,5 @@ jobs:
           APP_DEBUG: true
           APP_ENV: testing
           APP_KEY: ${{ secrets.APP_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: vendor/bin/phpunit --coverage-text
