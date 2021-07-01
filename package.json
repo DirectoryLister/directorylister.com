@@ -23,7 +23,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "alpinejs": "^2.8.0",
+        "alpinejs": "^3.2.1",
         "autoprefixer": "^10.2.3",
         "beerslider": "^1.0.3",
         "eslint": "^7.26.0",
