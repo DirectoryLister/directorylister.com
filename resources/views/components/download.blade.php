@@ -16,19 +16,23 @@
             @endforeach
         </div>
 
-        <div class="flex flex-col justify-between items-center mt-6 sm:flex-row">
-            <p class="order-3 font-mono text-gray-400 mt-2 sm:order-1 sm:text-sm sm:mt-0">
-                <a href="{{ $release->html_url }}" class="hover:underline">
+        <div class="flex flex-col justify-between items-center my-6 sm:flex-row">
+            <p class="font-serif font-light text-gray-400 sm:order-3">
+                <i class="fas fa-info-circle fa-fw"></i>
+                <span class="hidden sm:inline">Directory Lister</span> requires PHP 7.3+
+            </p>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg shadow-lg text-left p-6">
+            <div class="flex justify-between items-center border-b-2 pb-4 mb-4">
+                <h2 class="text-gray-800 font-bold text-xl">Recent Changes</h2>
+
+                <a href="{{ $release->html_url }}" class="text-lg font-mono text-gray-400 hover:underline">
                     {{ $release->name }}
                 </a>
-            </p>
+            </div>
 
-            <div class="order-2 border-l border-gray-400 mx-2 w-0 hidden sm:block">&nbsp;</div>
-
-            <p class="order-1 font-serif font-light text-gray-400 sm:order-3">
-                <i class="fas fa-info-circle fa-fw"></i>
-                Directory Lister requires PHP 7.3+
-            </p>
+            <x-markdown>{{ $release->body }}</x-markdown>
         </div>
     </div>
 </div>

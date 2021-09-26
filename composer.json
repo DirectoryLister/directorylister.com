@@ -26,6 +26,7 @@
     ],
     "require": {
         "php": ">=7.4",
+        "erusev/parsedown": "^1.7",
         "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "^7.0",
         "laravel/framework": "^8.0",
