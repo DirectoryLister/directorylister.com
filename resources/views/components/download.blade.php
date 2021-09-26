@@ -1,4 +1,4 @@
-<div class="bg-blue-800 text-white">
+<div id="download" class="bg-blue-800 text-white" style="scroll-margin-top: 1rem;">
     <div class="container max-w-4xl mx-auto px-4 py-12 flex flex-col justify-between items-center text-center lg:px-0">
         <div>
             @foreach ($release->assets as $asset)
