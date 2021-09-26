@@ -4,7 +4,7 @@ services:
   app:
     container_name: directorylister-app
     build: .
-    image: phlak/dev-env:local
+    image: phlak/directorylister-site:dev
     depends_on:
       - mysql
       - redis
@@ -50,7 +50,7 @@ services:
 
   npm:
     container_name: directorylister-npm
-    image: phlak/dev-env:local
+    image: phlak/directorylister-site:dev
     volumes:
       - ./:/var/www/html
     user: ${HOST_USER_ID:-0}:${HOST_GROUP_ID:-0}
