@@ -27,7 +27,7 @@
         "alpinejs": "^2.8.0",
         "autoprefixer": "^10.2.3",
         "beerslider": "^1.0.3",
-        "eslint": "^7.26.0",
+        "eslint": "^8.8.0",
         "tailwindcss": "^2.1.2"
     }
 }
