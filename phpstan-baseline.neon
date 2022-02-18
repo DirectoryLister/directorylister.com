@@ -1,7 +1,97 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Method App\\\\Http\\\\Middleware\\\\Authenticate\\:\\:redirectTo\\(\\) should return string\\|null but return statement is missing\\.$#"
+			message: "#^PHPDoc type array of property App\\\\Exceptions\\\\Handler\\:\\:\\$dontFlash is not covariant with PHPDoc type array\\<string\\> of overridden property Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\\:\\:\\$dontFlash\\.$#"
 			count: 1
-			path: app/Http/Middleware/Authenticate.php
+			path: app/Exceptions/Handler.php
+
+		-
+			message: "#^PHPDoc type array of property App\\\\Exceptions\\\\Handler\\:\\:\\$dontReport is not covariant with PHPDoc type array\\<string\\> of overridden property Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\\:\\:\\$dontReport\\.$#"
+			count: 1
+			path: app/Exceptions/Handler.php
+
+		-
+			message: "#^PHPDoc type array of property App\\\\Http\\\\Kernel\\:\\:\\$middlewarePriority is not covariant with PHPDoc type array\\<string\\> of overridden property Illuminate\\\\Foundation\\\\Http\\\\Kernel\\:\\:\\$middlewarePriority\\.$#"
+			count: 1
+			path: app/Http/Kernel.php
+
+		-
+			message: "#^Method App\\\\Providers\\\\AppServiceProvider\\:\\:boot\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: app/Providers/AppServiceProvider.php
+
+		-
+			message: "#^Method App\\\\Providers\\\\AuthServiceProvider\\:\\:boot\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: app/Providers/AuthServiceProvider.php
+
+		-
+			message: "#^Method App\\\\Providers\\\\BroadcastServiceProvider\\:\\:boot\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: app/Providers/BroadcastServiceProvider.php
+
+		-
+			message: "#^Method App\\\\Providers\\\\RouteServiceProvider\\:\\:map\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: app/Providers/RouteServiceProvider.php
+
+		-
+			message: "#^Method App\\\\Providers\\\\RouteServiceProvider\\:\\:mapApiRoutes\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: app/Providers/RouteServiceProvider.php
+
+		-
+			message: "#^Method App\\\\Providers\\\\RouteServiceProvider\\:\\:mapWebRoutes\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: app/Providers/RouteServiceProvider.php
+
+		-
+			message: "#^PHPDoc type array of property App\\\\User\\:\\:\\$fillable is not covariant with PHPDoc type array\\<string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$fillable\\.$#"
+			count: 1
+			path: app/User.php
+
+		-
+			message: "#^Method CreateUsersTable\\:\\:down\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: database/migrations/2014_10_12_000000_create_users_table.php
+
+		-
+			message: "#^Method CreateUsersTable\\:\\:up\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: database/migrations/2014_10_12_000000_create_users_table.php
+
+		-
+			message: "#^Method CreatePasswordResetsTable\\:\\:down\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: database/migrations/2014_10_12_100000_create_password_resets_table.php
+
+		-
+			message: "#^Method CreatePasswordResetsTable\\:\\:up\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: database/migrations/2014_10_12_100000_create_password_resets_table.php
+
+		-
+			message: "#^Method CreateFailedJobsTable\\:\\:down\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: database/migrations/2019_08_19_000000_create_failed_jobs_table.php
+
+		-
+			message: "#^Method CreateFailedJobsTable\\:\\:up\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: database/migrations/2019_08_19_000000_create_failed_jobs_table.php
+
+		-
+			message: "#^Method DatabaseSeeder\\:\\:run\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: database/seeds/DatabaseSeeder.php
+
+		-
+			message: "#^Method Tests\\\\Feature\\\\ExampleTest\\:\\:it_can_display_the_home_page\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Feature/ExampleTest.php
+
+		-
+			message: "#^Method Tests\\\\Unit\\\\ExampleTest\\:\\:test_basic_test\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: tests/Unit/ExampleTest.php
 

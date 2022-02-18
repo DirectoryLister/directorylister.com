@@ -11,7 +11,7 @@ parameters:
     - routes
     - tests
 
-  level: 5 # 0 - 8 (higher = more strict)
+  level: 8
 
   checkFunctionNameCase: true
   checkMissingIterableValueType: false
