@@ -11,7 +11,7 @@
         "watch-poll": "mix watch -- --watch-options-poll=1000"
     },
     "devDependencies": {
-        "@fortawesome/fontawesome-free": "^5.15.2",
+        "@fortawesome/fontawesome-free": "^6.0.0",
         "cross-env": "^7.0.3",
         "eslint-plugin-vue": "^7.9.0",
         "laravel-mix": "^6.0.11",
