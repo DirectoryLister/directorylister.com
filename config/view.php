@@ -28,9 +28,17 @@ return [
     |
     */
 
-    'compiled' => env(
-        'VIEW_COMPILED_PATH',
-        realpath(storage_path('framework/views'))
-    ),
+    'compiled' => env('VIEW_COMPILED_PATH', realpath(storage_path('framework/views'))),
+
+    /*
+    |--------------------------------------------------------------------------
+    | View Caching
+    |--------------------------------------------------------------------------
+    |
+    | Control view caching. Disabled in 'local' environments by default.
+    |
+    */
+
+    'cache' => env('VIEW_CACHE', env('APP_ENV') !== 'local'),
 
 ];

@@ -7,7 +7,7 @@ use Tests\TestCase;
 class ExampleTest extends TestCase
 {
     /** @test */
-    public function it_can_display_the_home_page()
+    public function test_the_application_returns_a_successful_response()
     {
         $response = $this->get('/');
 
