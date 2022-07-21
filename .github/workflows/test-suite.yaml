@@ -48,10 +48,6 @@ jobs:
           - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
 
-    strategy:
-      matrix:
-        php-versions: ['8.0']
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
@@ -59,7 +55,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{ matrix.php-versions }}
+          php-version: '8.1'
           extensions: intl, json, mbstring, openssl
           coverage: xdebug
 
