@@ -8,17 +8,6 @@ services:
     depends_on:
       - mysql
       - redis
-    environment:
-      APP_ENV: local
-      LOG_CHANNEL: stderr
-      DB_HOST: mysql
-      DB_PORT: ${DB_PORT:-3306}
-      DB_DATABASE: ${DB_DATABASE:-app}
-      DB_USERNAME: ${DB_USERNAME:-laravel}
-      DB_PASSWORD: ${DB_PASSWORD:-secret}
-      CACHE_DRIVER: redis
-      REDIS_HOST: redis
-      REDIS_PORT: 6379
     ports:
       - ${APP_PORT:-80}:80
     extra_hosts:
@@ -36,9 +25,9 @@ services:
       - ${DB_PORT:-3306}:3306
     environment:
       MYSQL_RANDOM_ROOT_PASSWORD: 'yes'
-      MYSQL_DATABASE: ${DB_DATABASE:-app}
-      MYSQL_USER: ${DB_USERNAME:-laravel}
-      MYSQL_PASSWORD: ${DB_PASSWORD:-secret}
+      MYSQL_DATABASE: app
+      MYSQL_USER: laravel
+      MYSQL_PASSWORD: secret
     volumes:
       - mysql-data:/var/lib/mysql
 
@@ -55,6 +44,20 @@ services:
       - ./:/var/www/html
     user: ${HOST_USER_ID:-0}:${HOST_GROUP_ID:-0}
     command: npm run watch
+
+  artisan:
+    container_name: directorylister-artisan
+    image: phlak/directorylister-site:dev
+    entrypoint: php artisan
+    depends_on:
+      - mysql
+      - redis
+    profiles: [artisan]
+    volumes:
+      - ./:/var/www/html
+      - ./.docker/php/config/php.ini:/usr/local/etc/php/php.ini
+      - ./.docker/apache2/config/000-default.conf:/etc/apache2/sites-available/000-default.conf
+    user: ${HOST_USER_ID:-0}:${HOST_GROUP_ID:-0}
 
 volumes:
   mysql-data:
