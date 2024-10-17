@@ -1,9 +1,9 @@
-FROM php:8.1-apache
+FROM php:8.3-apache
 LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>"
 
-COPY --from=composer:2.3 /usr/bin/composer /usr/bin/composer
-COPY --from=node:18.4 /usr/local/bin/node /usr/local/bin/node
-COPY --from=node:18.4 /usr/local/lib/node_modules /usr/local/lib/node_modules
+COPY --from=composer:2.7 /usr/bin/composer /usr/bin/composer
+COPY --from=node:20.17 /usr/local/bin/node /usr/local/bin/node
+COPY --from=node:20.17 /usr/local/lib/node_modules /usr/local/lib/node_modules
 
 RUN ln --symbolic ../lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm
 RUN ln --symbolic ../lib/node_modules/npm/bin/npx-cli.js /usr/local/bin/npx
