@@ -4,11 +4,9 @@ import typography from '@tailwindcss/typography';
 
 export default {
     content: [
-        'vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         'storage/framework/views/*.php',
         'resources/**/*.blade.php',
         'resources/**/*.js',
-        'resources/**/*.vue',
     ],
     plugins: [typography],
     purge: [
@@ -20,14 +18,14 @@ export default {
         extend: {
             colors: {
                 blue: colors.sky,
-                gray: colors.blueGray,
+                gray: colors.slate,
             },
             fontFamily: {
                 serif: ['Merriweather', ...defaultTheme.fontFamily.serif]
             },
             textColor: {
-                github: "#171515",
-                twitter: "#1DA1F2"
+                github: '#171515',
+                twitter: '#1DA1F2'
             }
         }
     },
