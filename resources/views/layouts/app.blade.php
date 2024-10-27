@@ -13,4 +13,4 @@
     @yield('content')
 </div>
 
-@yield('scripts')
+@stack('scripts')
