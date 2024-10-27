@@ -1,5 +1,6 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
-const colors = require('tailwindcss/colors');
+import colors from 'tailwindcss/colors';
+import typography from '@tailwindcss/typography';
 
 export default {
     content: [
@@ -9,7 +10,7 @@ export default {
         'resources/**/*.js',
         'resources/**/*.vue',
     ],
-    plugins: [require('@tailwindcss/typography')],
+    plugins: [typography],
     purge: [
         'app/View/**/*.php',
         'resources/**/*.js',
