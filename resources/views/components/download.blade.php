@@ -23,8 +23,8 @@
             </p>
         </div>
 
-        <div class="bg-gray-100 rounded-lg shadow-lg text-left p-6">
-            <div class="flex justify-between items-center border-b-2 pb-4 mb-4">
+        <div class="bg-gray-100 rounded-lg shadow-lg text-left p-6 md:min-w-80">
+            <div class="flex justify-between items-center space-x-2 border-b-2 pb-4 mb-4">
                 <h2 class="text-gray-800 font-bold text-xl">Recent Changes</h2>
 
                 <a href="{{ $release->html_url }}" class="text-lg font-mono text-gray-400 hover:underline">

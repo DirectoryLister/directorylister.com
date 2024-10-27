@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\GitHub\Client as GitHubClient;
+use App\Http\Clients\GitHub;
 use Illuminate\View\View;
 
 class IndexController extends Controller
 {
-    /** Handle the incoming request. */
-    public function __invoke(GitHubClient $github): View
+    public function __invoke(GitHub\ClientInterface $github): View
     {
         return view('index', [
             'release' => $github->latestRelease('DirectoryLister', 'DirectoryLister'),

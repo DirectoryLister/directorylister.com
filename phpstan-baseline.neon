@@ -1,97 +1,41 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^PHPDoc type array of property App\\\\Exceptions\\\\Handler\\:\\:\\$dontFlash is not covariant with PHPDoc type array\\<string\\> of overridden property Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\\:\\:\\$dontFlash\\.$#"
+			message: "#^Method App\\\\Http\\\\Clients\\\\GitHub\\\\CachedClient\\:\\:latestRelease\\(\\) should return stdClass but returns mixed\\.$#"
 			count: 1
-			path: app/Exceptions/Handler.php
+			path: app/Http/Clients/GitHub/CachedClient.php
 
 		-
-			message: "#^PHPDoc type array of property App\\\\Exceptions\\\\Handler\\:\\:\\$dontReport is not covariant with PHPDoc type array\\<string\\> of overridden property Illuminate\\\\Foundation\\\\Exceptions\\\\Handler\\:\\:\\$dontReport\\.$#"
+			message: "#^Method App\\\\Http\\\\Clients\\\\GitHub\\\\Client\\:\\:latestRelease\\(\\) should return stdClass but returns mixed\\.$#"
 			count: 1
-			path: app/Exceptions/Handler.php
+			path: app/Http/Clients/GitHub/Client.php
 
 		-
-			message: "#^PHPDoc type array of property App\\\\Http\\\\Kernel\\:\\:\\$middlewarePriority is not covariant with PHPDoc type array\\<string\\> of overridden property Illuminate\\\\Foundation\\\\Http\\\\Kernel\\:\\:\\$middlewarePriority\\.$#"
+			message: "#^Parameter \\#2 \\$string of function explode expects string, bool\\|string given\\.$#"
 			count: 1
-			path: app/Http/Kernel.php
+			path: config/app.php
 
 		-
-			message: "#^Method App\\\\Providers\\\\AppServiceProvider\\:\\:boot\\(\\) has no return type specified\\.$#"
+			message: "#^Parameter \\#1 \\$title of static method Illuminate\\\\Support\\\\Str\\:\\:slug\\(\\) expects string, bool\\|string given\\.$#"
 			count: 1
-			path: app/Providers/AppServiceProvider.php
+			path: config/cache.php
 
 		-
-			message: "#^Method App\\\\Providers\\\\AuthServiceProvider\\:\\:boot\\(\\) has no return type specified\\.$#"
+			message: "#^Parameter \\#1 \\$title of static method Illuminate\\\\Support\\\\Str\\:\\:slug\\(\\) expects string, bool\\|string given\\.$#"
 			count: 1
-			path: app/Providers/AuthServiceProvider.php
+			path: config/database.php
 
 		-
-			message: "#^Method App\\\\Providers\\\\BroadcastServiceProvider\\:\\:boot\\(\\) has no return type specified\\.$#"
+			message: "#^Parameter \\#2 \\$string of function explode expects string, bool\\|string given\\.$#"
 			count: 1
-			path: app/Providers/BroadcastServiceProvider.php
+			path: config/logging.php
 
 		-
-			message: "#^Method App\\\\Providers\\\\RouteServiceProvider\\:\\:map\\(\\) has no return type specified\\.$#"
+			message: "#^Parameter \\#1 \\$url of function parse_url expects string, bool\\|string given\\.$#"
 			count: 1
-			path: app/Providers/RouteServiceProvider.php
+			path: config/mail.php
 
 		-
-			message: "#^Method App\\\\Providers\\\\RouteServiceProvider\\:\\:mapApiRoutes\\(\\) has no return type specified\\.$#"
+			message: "#^Parameter \\#1 \\$title of static method Illuminate\\\\Support\\\\Str\\:\\:slug\\(\\) expects string, bool\\|string given\\.$#"
 			count: 1
-			path: app/Providers/RouteServiceProvider.php
-
-		-
-			message: "#^Method App\\\\Providers\\\\RouteServiceProvider\\:\\:mapWebRoutes\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: app/Providers/RouteServiceProvider.php
-
-		-
-			message: "#^PHPDoc type array of property App\\\\User\\:\\:\\$fillable is not covariant with PHPDoc type array\\<string\\> of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$fillable\\.$#"
-			count: 1
-			path: app/User.php
-
-		-
-			message: "#^Method CreateUsersTable\\:\\:down\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: database/migrations/2014_10_12_000000_create_users_table.php
-
-		-
-			message: "#^Method CreateUsersTable\\:\\:up\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: database/migrations/2014_10_12_000000_create_users_table.php
-
-		-
-			message: "#^Method CreatePasswordResetsTable\\:\\:down\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: database/migrations/2014_10_12_100000_create_password_resets_table.php
-
-		-
-			message: "#^Method CreatePasswordResetsTable\\:\\:up\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: database/migrations/2014_10_12_100000_create_password_resets_table.php
-
-		-
-			message: "#^Method CreateFailedJobsTable\\:\\:down\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: database/migrations/2019_08_19_000000_create_failed_jobs_table.php
-
-		-
-			message: "#^Method CreateFailedJobsTable\\:\\:up\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: database/migrations/2019_08_19_000000_create_failed_jobs_table.php
-
-		-
-			message: "#^Method DatabaseSeeder\\:\\:run\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: database/seeds/DatabaseSeeder.php
-
-		-
-			message: "#^Method Tests\\\\Feature\\\\ExampleTest\\:\\:it_can_display_the_home_page\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: tests/Feature/ExampleTest.php
-
-		-
-			message: "#^Method Tests\\\\Unit\\\\ExampleTest\\:\\:test_basic_test\\(\\) has no return type specified\\.$#"
-			count: 1
-			path: tests/Unit/ExampleTest.php
-
+			path: config/session.php

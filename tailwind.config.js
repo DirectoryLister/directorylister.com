@@ -1,8 +1,14 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-const colors = require('tailwindcss/colors');
+import defaultTheme from 'tailwindcss/defaultTheme';
+import colors from 'tailwindcss/colors';
+import typography from '@tailwindcss/typography';
 
-module.exports = {
-    plugins: [require('@tailwindcss/typography')],
+export default {
+    content: [
+        'storage/framework/views/*.php',
+        'resources/**/*.blade.php',
+        'resources/**/*.js',
+    ],
+    plugins: [typography],
     purge: [
         'app/View/**/*.php',
         'resources/**/*.js',
@@ -12,16 +18,15 @@ module.exports = {
         extend: {
             colors: {
                 blue: colors.sky,
-                gray: colors.blueGray,
+                gray: colors.slate,
             },
             fontFamily: {
                 serif: ['Merriweather', ...defaultTheme.fontFamily.serif]
             },
             textColor: {
-                github: "#171515",
-                twitter: "#1DA1F2"
+                github: '#171515',
+                twitter: '#1DA1F2'
             }
         }
     },
-    variants: {}
 };

@@ -1,15 +1,9 @@
-// Tailwind
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-// Fonts
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,400&display=swap");
-
-// Icons
-@import "../../node_modules/@fortawesome/fontawesome-free/css/all.css";
-
-// Beer Slider
+@import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 @import "../../node_modules/beerslider/dist/BeerSlider.css";
 
 .beer-reveal[data-beer-label]::after,
@@ -33,7 +27,6 @@
     background: hsla(0, 0%, 90%, 0.5);
 }
 
-// Miscellaneous
 #help-and-support {
     background: linear-gradient(45deg, #2b6cb0 0%, #6b46c1 80%);
 }
