@@ -4,7 +4,7 @@ dev development: # Build for development
 
 prod production: # Build for production
 	@composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader
-	@npm install --no-save && npm run production
+	@npm install --no-save && npm run build
 
 update upgrade: # Update application dependencies
 	@composer update && npm update && npm install && npm audit fix
