@@ -1,0 +1,41 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Method App\\\\Http\\\\Clients\\\\GitHub\\\\CachedClient\\:\\:latestRelease\\(\\) should return stdClass but returns mixed\\.$#"
+			count: 1
+			path: app/Http/Clients/GitHub/CachedClient.php
+
+		-
+			message: "#^Method App\\\\Http\\\\Clients\\\\GitHub\\\\Client\\:\\:latestRelease\\(\\) should return stdClass but returns mixed\\.$#"
+			count: 1
+			path: app/Http/Clients/GitHub/Client.php
+
+		-
+			message: "#^Parameter \\#2 \\$string of function explode expects string, bool\\|string given\\.$#"
+			count: 1
+			path: config/app.php
+
+		-
+			message: "#^Parameter \\#1 \\$title of static method Illuminate\\\\Support\\\\Str\\:\\:slug\\(\\) expects string, bool\\|string given\\.$#"
+			count: 1
+			path: config/cache.php
+
+		-
+			message: "#^Parameter \\#1 \\$title of static method Illuminate\\\\Support\\\\Str\\:\\:slug\\(\\) expects string, bool\\|string given\\.$#"
+			count: 1
+			path: config/database.php
+
+		-
+			message: "#^Parameter \\#2 \\$string of function explode expects string, bool\\|string given\\.$#"
+			count: 1
+			path: config/logging.php
+
+		-
+			message: "#^Parameter \\#1 \\$url of function parse_url expects string, bool\\|string given\\.$#"
+			count: 1
+			path: config/mail.php
+
+		-
+			message: "#^Parameter \\#1 \\$title of static method Illuminate\\\\Support\\\\Str\\:\\:slug\\(\\) expects string, bool\\|string given\\.$#"
+			count: 1
+			path: config/session.php
