@@ -1,7 +1,14 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
+import defaultTheme from 'tailwindcss/defaultTheme';
 const colors = require('tailwindcss/colors');
 
-module.exports = {
+export default {
+    content: [
+        'vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
+        'storage/framework/views/*.php',
+        'resources/**/*.blade.php',
+        'resources/**/*.js',
+        'resources/**/*.vue',
+    ],
     plugins: [require('@tailwindcss/typography')],
     purge: [
         'app/View/**/*.php',
@@ -23,5 +30,4 @@ module.exports = {
             }
         }
     },
-    variants: {}
 };

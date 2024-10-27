@@ -5,11 +5,11 @@ namespace App\GitHub;
 use GuzzleHttp\Client as GuzzleHttpClient;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Support\Facades\Log;
+use stdClass;
 
 class Client
 {
-    /** @var GuzzleHttpClient The HTTP client */
-    protected $client;
+    private GuzzleHttpClient $client;
 
     /**
      * Create a new GitHub Client instance.
@@ -35,7 +35,7 @@ class Client
      * @param string $owner The repository owner
      * @param string $repo The repository name
      */
-    public function latestRelease(string $owner, string $repo): object
+    public function latestRelease(string $owner, string $repo): stdClass
     {
         try {
             $response = $this->client->get("repos/{$owner}/{$repo}/releases/latest");
@@ -45,6 +45,6 @@ class Client
             return json_decode('{}');
         }
 
-        return json_decode((string) $response->getBody(), false, 512, JSON_THROW_ON_ERROR);
+        return json_decode((string) $response->getBody(), flags: JSON_THROW_ON_ERROR);
     }
 }

@@ -2,8 +2,9 @@
 
 namespace App\GitHub;
 
-use Illuminate\Support\Carbon;
+use Carbon\CarbonInterval;
 use Illuminate\Support\Facades\Cache;
+use stdClass;
 
 class CachedClient extends Client
 {
@@ -13,14 +14,12 @@ class CachedClient extends Client
      * @param string $owner The repository owner
      * @param string $repo The repository name
      */
-    public function latestRelease(string $owner, string $repo): object
+    public function latestRelease(string $owner, string $repo): stdClass
     {
         return Cache::remember(
-            "latestRelease:{$owner}:{$repo}",
-            Carbon::now()->addHours(1)->addMinutes(rand(0, 60)),
-            function () use ($owner, $repo) {
-                return parent::latestRelease($owner, $repo);
-            }
+            sprintf('latestRelease:%s:%s', $owner, $repo),
+            CarbonInterval::minutes(rand(60, 120)),
+            fn (): stdClass => parent::latestRelease($owner, $repo)
         );
     }
 }

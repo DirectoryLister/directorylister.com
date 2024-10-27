@@ -11,7 +11,7 @@ parameters:
     - routes
     - tests
 
-  level: 8
+  level: max
 
   checkFunctionNameCase: true
   checkModelProperties: true

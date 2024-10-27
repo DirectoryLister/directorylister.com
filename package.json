@@ -1,33 +1,24 @@
 {
     "private": true,
+    "type": "module",
     "scripts": {
-        "cs": "npx eslint resources/js/*.js || true",
-        "dev": "npm run development",
-        "development": "mix",
-        "hot": "mix watch --hot",
-        "prod": "npm run production",
-        "production": "mix --production",
-        "watch": "mix watch",
-        "watch-poll": "mix watch -- --watch-options-poll=1000"
+        "build": "vite build",
+        "dev": "vite"
     },
     "devDependencies": {
-        "@fortawesome/fontawesome-free": "^5.15.2",
-        "cross-env": "^7.0.3",
-        "eslint-plugin-vue": "^7.9.0",
-        "laravel-mix": "^6.0.11",
-        "lodash": "^4.17.20",
-        "postcss": "^8.2.4",
-        "resolve-url-loader": "^3.1.2",
-        "sass": "^1.32.12",
-        "sass-loader": "^11.0",
-        "vue-template-compiler": "^2.6.12"
+        "autoprefixer": "^10.4.20",
+        "axios": "^1.7.4",
+        "concurrently": "^9.0.1",
+        "laravel-vite-plugin": "^1.0",
+        "postcss": "^8.4.47",
+        "tailwindcss": "^3.4.14",
+        "vite": "^5.0"
     },
     "dependencies": {
-        "@tailwindcss/typography": "^0.4.1",
-        "alpinejs": "^2.8.0",
-        "autoprefixer": "^10.2.3",
+        "@fortawesome/fontawesome-free": "^6.6.0",
+        "@tailwindcss/typography": "^0.5.15",
+        "alpinejs": "^3.14.3",
         "beerslider": "^1.0.3",
-        "eslint": "^7.26.0",
-        "tailwindcss": "^2.1.2"
+        "sass": "^1.80.4"
     }
 }
