@@ -5,7 +5,7 @@
 
 <link rel="icon" href="{{ asset('images/favicon.png') }}">
 
-@vite(['resources/scss/app.scss', 'resources/js/app.js'])
+@vite(['resources/css/app.scss', 'resources/js/app.js'])
 
 <title>Directory Lister &bull; The Simple (PHP) Web Directory Lister</title>
 
