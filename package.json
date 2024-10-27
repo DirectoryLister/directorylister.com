@@ -19,6 +19,7 @@
         "@tailwindcss/typography": "^0.5.15",
         "alpinejs": "^3.14.3",
         "beerslider": "^1.0.3",
+        "eslint": "^9.13.0",
         "sass": "^1.80.4"
     }
 }
