@@ -15,9 +15,9 @@ class CachedClient implements GitHubClientInterface
 
     public function latestRelease(string $owner, string $repo): stdClass
     {
-        return Cache::remember(
+        return Cache::flexible(
             sprintf('latestRelease:%s:%s', $owner, $repo),
-            CarbonInterval::minutes(rand(60, 120)),
+            [CarbonInterval::minutes(60), CarbonInterval::minutes(360)],
             fn (): stdClass => $this->github->latestRelease($owner, $repo)
         );
     }
