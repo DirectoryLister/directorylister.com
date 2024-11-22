@@ -24,8 +24,8 @@ export default {
                 serif: ['Merriweather', ...defaultTheme.fontFamily.serif]
             },
             textColor: {
+                bluesky: '#0886FE',
                 github: '#171515',
-                twitter: '#1DA1F2'
             }
         }
     },

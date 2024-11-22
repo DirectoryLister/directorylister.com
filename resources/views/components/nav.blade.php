@@ -21,8 +21,8 @@
                 <i class="fab fa-github fa-lg"></i>
             </a>
 
-            <a href="https://twitter.com/DirectoryLister" title="Twitter" class="text-gray-600 hover:text-twitter">
-                <i class="fab fa-twitter fa-lg"></i>
+            <a href="https://bsky.app/profile/directorylister.com" title="Bluesky" class="text-gray-600 hover:text-bluesky">
+                <i class="fab fa-bluesky fa-lg"></i>
             </a>
 
             <a href="https://github.com/DirectoryLister/DirectoryLister/discussions" title="Discussions" class="text-gray-600 ml-4 hover:text-purple-600">
