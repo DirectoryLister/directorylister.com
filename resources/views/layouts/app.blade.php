@@ -14,3 +14,5 @@
 </div>
 
 @stack('scripts')
+
+@includeWhen(app()->isProduction(), 'partials.analytics')
