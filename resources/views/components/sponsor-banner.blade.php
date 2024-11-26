@@ -15,11 +15,15 @@
         </p>
 
         <div class="flex justify-between items-center flex-shrink-0 w-full order-3 mt-2 sm:order-2 sm:mt-0 sm:w-auto">
-            <a href="https://github.com/sponsors/PHLAK" class="block rounded bg-pink-600 text-center px-4 py-2 w-full mr-1 hover:bg-pink-700 hover:shadow-md sm:w-auto">
+            <a href="https://github.com/sponsors/PHLAK" data-umami-event="sponsor" data-umami-event-location="banner"
+                class="block rounded bg-pink-600 text-center px-4 py-2 w-full mr-1 hover:bg-pink-700 hover:shadow-md sm:w-auto"
+            >
                 <i class="fas fa-heart fa-fw"></i> Sponsor
             </a>
 
-            <a href="https://www.paypal.me/ChrisKankiewicz/10.00" class="block rounded bg-green-600 text-center px-4 py-2 w-full ml-1 hover:bg-green-700 hover:shadow-md sm:w-auto">
+            <a href="https://www.paypal.me/ChrisKankiewicz/10.00" data-umami-event="donate" data-umami-event-location="banner"
+                class="block rounded bg-green-600 text-center px-4 py-2 w-full ml-1 hover:bg-green-700 hover:shadow-md sm:w-auto"
+            >
                 <i class="fas fa-donate fa-fw"></i> Donate
             </a>
         </div>
