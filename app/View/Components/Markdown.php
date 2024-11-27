@@ -7,6 +7,14 @@ use Parsedown;
 
 class Markdown extends Component
 {
+    private const array REPLACEMENTS = [
+        '[!NOTE]' => 'ℹ️',
+        '[!TIP]' => '💡',
+        '[!IMPORTANT]' => '❕',
+        '[!WARNING]' => '⚠️',
+        '[!CAUTION]' => '⛔️',
+    ];
+
     /**
      * Get the view / contents that represent the component.
      *
@@ -14,6 +22,10 @@ class Markdown extends Component
      */
     public function render()
     {
-        return fn (array $data): string => sprintf('<article class="prose">%s</article>', (new Parsedown)->text($data['slot']));
+        return function (array $data): string {
+            $replaced = str_replace(array_keys(self::REPLACEMENTS), array_values(self::REPLACEMENTS), $data['slot']);
+
+            return sprintf('<article class="prose">%s</article>', (new Parsedown)->text($replaced));
+        };
     }
 }

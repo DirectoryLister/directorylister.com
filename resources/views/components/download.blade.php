@@ -32,7 +32,7 @@
                 </a>
             </div>
 
-            <x-markdown>{{ $release->body }}</x-markdown>
+            <x-markdown>{!! $release->body !!}</x-markdown>
         </div>
     </div>
 </div>
