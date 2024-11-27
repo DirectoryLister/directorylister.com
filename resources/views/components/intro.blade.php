@@ -16,7 +16,7 @@
         </div>
 
         <p class="text-lg text-center text-gray-600">
-            <a href="https://demo.directorylister.com" class="underline hover:text-gray-800">
+            <a href="https://demo.directorylister.com" class="underline hover:text-gray-800" data-umami-event="view-demo">
                 View the demo
             </a>
         </p>

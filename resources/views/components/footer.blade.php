@@ -7,7 +7,7 @@
 
         <p class="my-4">
             &copy; {{ date('Y') }}
-            <a href="https://www.chriskankiewicz.com" class="underline hover:text-gray-800">
+            <a href="https://www.chriskankiewicz.com" class="underline hover:text-gray-800" data-umami-event="chriskankiewicz-link">
                 Chris Kankiewicz
             </a>
         </p>

@@ -4,7 +4,7 @@
 
         <p class="mt font-serif font-light text-lg text-center">
             Reach out on the
-            <a href="https://github.com/DirectoryLister/DirectoryLister/discussions" class="underline">GitHub Discussions</a>
+            <a href="https://github.com/DirectoryLister/DirectoryLister/discussions" class="underline" data-umami-event="discussions-link" data-umami-event-location="help and support section">GitHub Discussions</a>
             board for help and support.
         </p>
     </div>
