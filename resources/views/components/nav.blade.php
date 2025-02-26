@@ -18,15 +18,15 @@
             </a>
 
             <a href="https://github.com/DirectoryLister/DirectoryLister" title="GitHub" class="text-gray-600 hover:text-github" data-umami-event="github-link">
-                <i class="fab fa-github fa-lg"></i>
+                <i class="fab fa-github fa-xl"></i>
             </a>
 
             <a href="https://bsky.app/profile/directorylister.com" title="Bluesky" class="text-gray-600 hover:text-bluesky" data-umami-event="bluesky-link">
-                <i class="fab fa-bluesky fa-lg"></i>
+                <i class="fab fa-bluesky fa-xl"></i>
             </a>
 
             <a href="https://github.com/DirectoryLister/DirectoryLister/discussions" title="Discussions" class="text-gray-600 ml-4 hover:text-purple-600" data-umami-event="discussions-link" data-umami-event-location="nav bar">
-                <i class="fas fa-comments fa-lg"></i>
+                <i class="fas fa-comments fa-xl"></i>
             </a>
         </div>
     </div>
