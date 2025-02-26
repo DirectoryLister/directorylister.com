@@ -5,9 +5,8 @@
 
 <link rel="icon" href="{{ asset('images/favicon.png') }}">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,400&display=swap">
-
 @vite(['resources/css/app.css', 'resources/js/app.js'])
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,400&display=swap">
 
 <title>Directory Lister &bull; The Simple (PHP) Web Directory Lister</title>
 

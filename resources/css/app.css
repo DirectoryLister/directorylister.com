@@ -1,18 +1,19 @@
 @import "tailwindcss";
 
-@import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+@import "../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 @import "../../node_modules/beerslider/dist/BeerSlider.css";
 
-@source "../**/*.{blade.php,js}";
+@source "../views/**/*.blade.php";
+@source "../**/*.js";
 
 @plugin "@tailwindcss/typography";
 
 @theme {
+    --color-bluesky: #0886FE;
+    --color-github: #171515;
+
     --font-serif: Merriweather, serif;
     --font-mono: Source Code Pro, mono;
-
-    --text-bluesky: '#0886FE',
-    --text-github: '#171515',
 }
 
 .beer-reveal[data-beer-label]::after,
