@@ -1,41 +1,61 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Method App\\\\Http\\\\Clients\\\\GitHub\\\\CachedClient\\:\\:latestRelease\\(\\) should return stdClass but returns mixed\\.$#"
+			message: '#^Method App\\Http\\Clients\\GitHub\\CachedClient\:\:latestRelease\(\) should return stdClass but returns mixed\.$#'
+			identifier: return.type
 			count: 1
 			path: app/Http/Clients/GitHub/CachedClient.php
 
 		-
-			message: "#^Method App\\\\Http\\\\Clients\\\\GitHub\\\\Client\\:\\:latestRelease\\(\\) should return stdClass but returns mixed\\.$#"
+			message: '#^Method App\\Http\\Clients\\GitHub\\Client\:\:latestRelease\(\) should return stdClass but returns mixed\.$#'
+			identifier: return.type
 			count: 1
 			path: app/Http/Clients/GitHub/Client.php
 
 		-
-			message: "#^Parameter \\#2 \\$string of function explode expects string, bool\\|string given\\.$#"
+			message: '#^Parameter \#2 \.\.\.\$values of function sprintf expects bool\|float\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/View/Components/Markdown.php
+
+		-
+			message: '#^Parameter \#3 \$subject of function str_replace expects array\<string\>\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/View/Components/Markdown.php
+
+		-
+			message: '#^Parameter \#2 \$string of function explode expects string, bool\|string given\.$#'
+			identifier: argument.type
 			count: 1
 			path: config/app.php
 
 		-
-			message: "#^Parameter \\#1 \\$title of static method Illuminate\\\\Support\\\\Str\\:\\:slug\\(\\) expects string, bool\\|string given\\.$#"
+			message: '#^Parameter \#1 \$title of static method Illuminate\\Support\\Str\:\:slug\(\) expects string, bool\|string given\.$#'
+			identifier: argument.type
 			count: 1
 			path: config/cache.php
 
 		-
-			message: "#^Parameter \\#1 \\$title of static method Illuminate\\\\Support\\\\Str\\:\\:slug\\(\\) expects string, bool\\|string given\\.$#"
+			message: '#^Parameter \#1 \$title of static method Illuminate\\Support\\Str\:\:slug\(\) expects string, bool\|string given\.$#'
+			identifier: argument.type
 			count: 1
 			path: config/database.php
 
 		-
-			message: "#^Parameter \\#2 \\$string of function explode expects string, bool\\|string given\\.$#"
+			message: '#^Parameter \#2 \$string of function explode expects string, bool\|string given\.$#'
+			identifier: argument.type
 			count: 1
 			path: config/logging.php
 
 		-
-			message: "#^Parameter \\#1 \\$url of function parse_url expects string, bool\\|string given\\.$#"
+			message: '#^Parameter \#1 \$url of function parse_url expects string, bool\|string given\.$#'
+			identifier: argument.type
 			count: 1
 			path: config/mail.php
 
 		-
-			message: "#^Parameter \\#1 \\$title of static method Illuminate\\\\Support\\\\Str\\:\\:slug\\(\\) expects string, bool\\|string given\\.$#"
+			message: '#^Parameter \#1 \$title of static method Illuminate\\Support\\Str\:\:slug\(\) expects string, bool\|string given\.$#'
+			identifier: argument.type
 			count: 1
 			path: config/session.php
