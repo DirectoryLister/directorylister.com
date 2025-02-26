@@ -1,10 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@import url("https://fonts.googleapis.com/css?family=Merriweather:300,400&display=swap");
 @import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 @import "../../node_modules/beerslider/dist/BeerSlider.css";
+
+@source "../**/*.{blade.php,js}";
+
+@plugin "@tailwindcss/typography";
+
+@theme {
+    --font-serif: Merriweather, serif;
+    --font-mono: Source Code Pro, mono;
+
+    --text-bluesky: '#0886FE',
+    --text-github: '#171515',
+}
 
 .beer-reveal[data-beer-label]::after,
 .beer-slider[data-beer-label]::after {
@@ -25,8 +34,4 @@
 
 .beer-handle {
     background: hsla(0, 0%, 90%, 0.5);
-}
-
-#help-and-support {
-    background: linear-gradient(45deg, #2b6cb0 0%, #6b46c1 80%);
 }

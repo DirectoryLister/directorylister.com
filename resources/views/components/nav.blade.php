@@ -9,23 +9,23 @@
         </div>
 
         <div class="flex items-center space-x-4 pt-4 sm:pt-0">
-            <a href="#download" class="text-gray-600 hover:text-gray-800 hover:underline inline-block">
+            <a href="#download" class="text-slate-600 hover:text-slate-800 hover:underline inline-block">
                 Download
             </a>
 
-            <a href="https://docs.directorylister.com" class="text-gray-600 hover:text-gray-800 hover:underline inline-block">
+            <a href="https://docs.directorylister.com" class="text-slate-600 hover:text-slate-800 hover:underline inline-block">
                 Documentation
             </a>
 
-            <a href="https://github.com/DirectoryLister/DirectoryLister" title="GitHub" class="text-gray-600 hover:text-github" data-umami-event="github-link">
+            <a href="https://github.com/DirectoryLister/DirectoryLister" title="GitHub" class="text-slate-600 hover:text-github" data-umami-event="github-link">
                 <i class="fab fa-github fa-xl"></i>
             </a>
 
-            <a href="https://bsky.app/profile/directorylister.com" title="Bluesky" class="text-gray-600 hover:text-bluesky" data-umami-event="bluesky-link">
+            <a href="https://bsky.app/profile/directorylister.com" title="Bluesky" class="text-slate-600 hover:text-bluesky" data-umami-event="bluesky-link">
                 <i class="fab fa-bluesky fa-xl"></i>
             </a>
 
-            <a href="https://github.com/DirectoryLister/DirectoryLister/discussions" title="Discussions" class="text-gray-600 ml-4 hover:text-purple-600" data-umami-event="discussions-link" data-umami-event-location="nav bar">
+            <a href="https://github.com/DirectoryLister/DirectoryLister/discussions" title="Discussions" class="text-slate-600 hover:text-purple-600" data-umami-event="discussions-link" data-umami-event-location="nav bar">
                 <i class="fas fa-comments fa-xl"></i>
             </a>
         </div>

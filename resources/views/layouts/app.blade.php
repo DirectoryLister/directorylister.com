@@ -5,11 +5,13 @@
 
 <link rel="icon" href="{{ asset('images/favicon.png') }}">
 
-@vite(['resources/css/app.scss', 'resources/js/app.js'])
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,400&display=swap">
+
+@vite(['resources/css/app.css', 'resources/js/app.js'])
 
 <title>Directory Lister &bull; The Simple (PHP) Web Directory Lister</title>
 
-<div id="app" class="font-sans text-gray-900 antialiased">
+<div id="app" class="font-sans text-slate-900 antialiased">
     @yield('content')
 </div>
 

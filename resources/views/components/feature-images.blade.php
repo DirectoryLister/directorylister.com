@@ -1,8 +1,8 @@
-<div class="bg-blue-50">
+<div class="bg-sky-50">
     <div class="container max-w-4xl mx-auto py-12 px-4 lg:px-0">
         <div class="flex flex-col mb-24 md:flex-row md:items-center">
             <div class="leading-relaxed mb-4 md:w-2/5 md:mr-4 md:mb-0">
-                <h3 class="font-bold text-gray-600 uppercase mb-4">
+                <h3 class="font-bold text-slate-600 uppercase mb-4">
                     File Search
                 </h3>
 
@@ -16,7 +16,7 @@
 
         <div class="flex flex-col mb-24 md:flex-row-reverse md:items-center">
             <div class="leading-relaxed mb-4 md:w-2/5 md:ml-4 md:mb-0">
-                <h3 class="font-bold text-gray-600 uppercase mb-4">
+                <h3 class="font-bold text-slate-600 uppercase mb-4">
                     File Hashes
                 </h3>
 
@@ -31,7 +31,7 @@
 
         <div class="flex flex-col md:flex-row md:items-center">
             <div class="mr-4 leading-relaxed mb-4 md:w-2/5 md:mb-0">
-                <h3 class="font-bold text-gray-600 uppercase mb-4">
+                <h3 class="font-bold text-slate-600 uppercase mb-4">
                     Readme Rendering
                 </h3>
 
