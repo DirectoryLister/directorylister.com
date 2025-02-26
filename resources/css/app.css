@@ -1,10 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,400&display=swap");
+
 @import "tailwindcss";
 
 @import "../../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 @import "../../node_modules/beerslider/dist/BeerSlider.css";
-
-@source "../views/**/*.blade.php";
-@source "../**/*.js";
 
 @plugin "@tailwindcss/typography";
 
