@@ -19,7 +19,7 @@
         <div class="flex flex-col justify-between items-center my-6 sm:flex-row">
             <p class="font-serif font-light text-slate-400 sm:order-3">
                 <i class="fas fa-info-circle fa-fw"></i>
-                <span class="hidden sm:inline">Directory Lister</span> requires PHP 8.1+
+                <span class="hidden sm:inline">Directory Lister</span> requires PHP 8.2+
             </p>
         </div>
 
