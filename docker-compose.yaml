@@ -8,6 +8,7 @@ services:
       - ${APP_PORT:-80}:80
     extra_hosts:
       - directorylister.local:127.0.0.1
+      - host.docker.internal:host-gateway
     user: ${HOST_USER_ID:-0}:${HOST_GROUP_ID:-0}
     volumes:
       - ./:/var/www/html
