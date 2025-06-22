@@ -9,6 +9,7 @@
         "erusev/parsedown": "^1.7",
         "guzzlehttp/guzzle": "^7.9",
         "laravel/framework": "^12.19",
+        "laravel/nightwatch": "^1.7",
         "laravel/tinker": "^2.9"
     },
     "require-dev": {
