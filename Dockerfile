@@ -1,18 +1,18 @@
-FROM php:8.3-apache
-LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>"
+FROM php:8.4-apache
+LABEL maintainer="Chris Kankiewicz <Chris@Kankiewicz.com>"
 
-COPY --from=composer:2.7 /usr/bin/composer /usr/bin/composer
-COPY --from=node:20.17 /usr/local/bin/node /usr/local/bin/node
-COPY --from=node:20.17 /usr/local/lib/node_modules /usr/local/lib/node_modules
+COPY --from=composer:2.9 /usr/bin/composer /usr/bin/composer
+COPY --from=node:26.1 /usr/local/bin/node /usr/local/bin/node
+COPY --from=node:26.1 /usr/local/lib/node_modules /usr/local/lib/node_modules
 
 RUN ln --symbolic ../lib/node_modules/npm/bin/npm-cli.js /usr/local/bin/npm
 RUN ln --symbolic ../lib/node_modules/npm/bin/npx-cli.js /usr/local/bin/npx
 
-ENV HOME="/home/dev"
+ENV HOME="/home/app"
 ENV COMPOSER_HOME="${HOME}/.config/composer"
 ENV XDG_CONFIG_HOME="${HOME}/.config"
 
-RUN useradd --create-home --shell /bin/bash dev
+RUN useradd --create-home --shell /bin/bash app
 
 RUN a2enmod rewrite
 
@@ -26,4 +26,4 @@ RUN docker-php-ext-configure intl \
 COPY ./.docker/php/config/php.ini /usr/local/etc/php/php.ini
 COPY ./.docker/apache2/config/000-default.conf /etc/apache2/sites-available/000-default.conf
 
-USER dev
+USER app
