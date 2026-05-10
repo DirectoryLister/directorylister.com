@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit bootstrap="vendor/autoload.php" colors="true"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<phpunit
+    bootstrap="vendor/autoload.php" colors="true" cacheDirectory=".cache/phpunit" requireCoverageMetadata="true"
     xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 >
     <testsuites>
         <testsuite name="Unit">

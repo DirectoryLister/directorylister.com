@@ -1,19 +1,14 @@
-includes:
-    - ./vendor/larastan/larastan/extension.neon
-    - phpstan-baseline.neon
-
 parameters:
-
-  paths:
-    - app
-    - config
-    - database
-    - routes
-    - tests
-
   level: max
+  paths: [app, config, database, routes, tests]
+
+  tmpDir: .cache/phpstan
 
   checkFunctionNameCase: true
   checkModelProperties: true
 
   reportUnmatchedIgnoredErrors: false
+
+includes:
+  - ./vendor/larastan/larastan/extension.neon
+  - phpstan-baseline.neon

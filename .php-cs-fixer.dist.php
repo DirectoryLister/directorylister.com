@@ -9,4 +9,6 @@ $finder = PhpCsFixer\Finder::create()->in([
     __DIR__ . DIRECTORY_SEPARATOR . 'tests',
 ]);
 
-return PHLAK\CodingStandards\ConfigFactory::make($finder);
+return PHLAK\CodingStandards\ConfigFactory::make($finder)->setCacheFile(
+    implode(DIRECTORY_SEPARATOR, [__DIR__, '.cache', 'php-cs-fixer.cache'])
+);
