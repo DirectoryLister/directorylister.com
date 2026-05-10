@@ -1,19 +1,50 @@
-/.phpunit.cache
-/node_modules
-/public/css
-/public/build
+# ----------------------------------------
+# Application files and folders
+# ----------------------------------------
+
+/public/build/*
 /public/hot
-/public/js
 /public/storage
-/storage/*.key
-/vendor
-.env
-.env.backup
-.env.production
-.php-cs-fixer.cache
-.phpunit.result.cache
-Homestead.json
-Homestead.yaml
-auth.json
-npm-debug.log
-yarn-error.log
+/storage/app/*
+/storage/framework/*
+/storage/logs/*
+
+/.env
+/.env.*
+!/.env.example
+
+# ----------------------------------------
+# Application dependencies
+# ----------------------------------------
+
+/node_modules/
+/vendor/
+/.npmrc
+
+# ----------------------------------------
+# Development files and folders
+# ----------------------------------------
+
+/.cache/
+
+# ----------------------------------------
+# Laravel Boost generated files
+# ----------------------------------------
+
+/.ai/
+/.agents/
+/.amp/
+/.claude/
+/.codex/
+/.cursor/
+/.gemini/
+/.github/skills/
+/.junie/
+/.kiro/
+
+/.mcp.json
+/boost.json
+/opencode.json
+/AGENTS.md
+/CLAUDE.md
+/GEMINI.md

@@ -15,6 +15,7 @@
     "require-dev": {
         "fakerphp/faker": "^1.23",
         "larastan/larastan": "^3.0",
+        "laravel/boost": "^2.4",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.1",
         "phlak/coding-standards": "^5.0",
@@ -38,7 +39,8 @@
             "@php artisan package:discover --ansi"
         ],
         "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force",
+            "test ! -f boost.json && true || php artisan boost:update --ansi --discover"
         ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
