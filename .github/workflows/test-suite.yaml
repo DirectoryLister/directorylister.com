@@ -13,7 +13,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.3
+          php-version: 8.5
           extensions: intl, json, mbstring, openssl
           coverage: xdebug
 
@@ -34,7 +34,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.3
+          php-version: 8.5
           extensions: intl, json, mbstring, openssl
           coverage: xdebug
 
@@ -47,6 +47,10 @@ jobs:
   tests:
     name: Tests
     runs-on: 'ubuntu-latest'
+
+    strategy:
+      matrix:
+        php-version: ['8.4', '8.5']
 
     env:
       DB_DATABASE: app
@@ -69,7 +73,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.3'
+          php-version: ${{ matrix.php-version }}
           extensions: intl, json, mbstring, openssl
           coverage: xdebug
 
