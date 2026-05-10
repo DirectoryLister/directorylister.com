@@ -1,6 +1,10 @@
 name: DirectoryLister.com Test Suite
 on: [push]
 
+env:
+  PHP_VERSION: 8.5
+  NODE_VERSION: 24
+
 jobs:
   coding-standards:
     name: Coding Standards
@@ -13,7 +17,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.5
+          php-version: ${{ env.PHP_VERSION }}
           extensions: intl, json, mbstring, openssl
           coverage: xdebug
 
@@ -34,7 +38,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: 8.5
+          php-version: ${{ env.PHP_VERSION }}
           extensions: intl, json, mbstring, openssl
           coverage: xdebug
 
@@ -76,6 +80,12 @@ jobs:
           php-version: ${{ matrix.php-version }}
           extensions: intl, json, mbstring, openssl
           coverage: xdebug
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
 
       - name: Get Composer Cache Directory
         id: composer-cache
